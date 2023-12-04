@@ -6,7 +6,7 @@ options{
 } 
 tokens
 {
-Node_Commands;
+Node_Bloc;
 Node_Exprlist;
 Node_Output;
 Node_Input;
@@ -15,6 +15,13 @@ Node_For;
 Node_While;
 Node_If;
 Node_Affectation;
+Node_Function;
+Node_Left;
+Node_Right;
+Node_Head;
+Node_Tail;
+Node_Cons;
+Node_List;
 }
 
 //Fragments
@@ -29,7 +36,7 @@ fragment Dec
 //Tokens
 Variable        :	Maj(Maj|Min|Dec)*('!'|'?')?;
 
-Symbol          :	Min(Maj|Min|Dec)*('!'|'?')?;
+Symbol          :	Min(Maj|Min|Dec)*('!'|'?')?; 
 
 WS  :   ( ' '
         | '\t'
@@ -43,10 +50,10 @@ WS  :   ( ' '
 program 
 	:	function program? ;
 function	
-	:	'function' Symbol ':' WS* definition  -> ^('function' Symbol ':' definition) ; 
+	:	'function' Symbol ':' WS* definition  -> ^(Node_Function  Symbol  definition) ; 
 
 definition 
-	:	'read' input WS* '%' commands '%' WS* 'write' output WS* -> ^('read' input commands 'write' output);
+	:	'read' input WS* '%' commands '%' WS* 'write' output WS* -> input commands output; 
 input 	
 	: 	inputSub? ->^(Node_Input inputSub?);	
 inputSub
@@ -54,11 +61,11 @@ inputSub
 output	
 	:	Variable (',' Variable)* -> ^(Node_Output Variable+);	
 vars	
-	:	Variable (',' Variable)* -> Variable+;
+	:	Variable (',' Variable)* -> ^(Node_Left Variable+);
 exprs	
-	:	expression (',' expression)* -> expression+; 
+	:	expression (',' expression)* -> ^(Node_Right expression+); 
 commands 
-	:	WS* command (';' command)* WS* -> ^(Node_Commands command+); 
+	:	WS* command (';' command)* WS* -> ^(Node_Bloc command+); 
 command      
 	:	'foreach' Variable 'in' expression 'do' commands 'od' ^(Node_ForEach expression commands)
 		| 'for' expression 'do' commands 'od' -> ^(Node_For expression commands)
@@ -69,10 +76,10 @@ command
 		;  
 exprBase     
 	 :	'(' Symbol lExpr ')'
-		| '(' 'hd' exprBase ')' 
-		| '(' 'tl' exprBase ')'
-		| '(' 'cons' lExpr ')'
-		| '(' 'list' lExpr ')'
+		| '(' 'hd' exprBase ')' ->  ^(Node_Head exprBase)
+		| '(' 'tl' exprBase ')' -> ^(Node_Tail exprBase)
+		| '(' 'cons' lExpr ')' -> ^(Node_Cons lExpr)
+		| '(' 'list' lExpr ')' -> ^(Node_List lExpr)
 		| 'nil' 
 		| Variable
 		| Symbol;
