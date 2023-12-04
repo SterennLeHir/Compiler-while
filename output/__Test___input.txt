@@ -1,0 +1,27 @@
+function sub : 
+read Op1, Op2
+%
+Result := Op1;
+Result2, Result3 := Op3, Op4;
+for Op2 do
+Result := (tl Result)
+od 
+%
+write Result, Result1
+function add : 
+read Op1, Op2 
+% 
+ Result := Op1 ; 
+for Op2 do
+ Result := ( cons nil (cons nil nil) ) 
+od 
+% 
+write Result 
+function mul : 
+read Op1, Op2 
+% 
+for Op1 do 
+ Result := (add Result Op2) 
+od 
+% 
+write Result
