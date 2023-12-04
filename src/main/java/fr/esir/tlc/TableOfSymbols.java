@@ -22,7 +22,7 @@ public class TableOfSymbols {
      * @param key The identifier of a symbol
      * @param value The line at which it is first found/created
      */
-    public void AddToTable(String key, int value){
+    public void addToTable(String key, int value){
         table.put(key,value);
     }
 
