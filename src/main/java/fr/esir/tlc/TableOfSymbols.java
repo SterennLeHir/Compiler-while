@@ -1,29 +1,51 @@
 package fr.esir.tlc;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
+
+
+/*
+On crée une nouvelle table à chaque truc.
+Une table pour les fonctions.
+Une table pour les paramètres.
+Une table pour les variables locales.
+
+Faut faire un pattern visitor sur l'AST pour générer la table des symboles
+Donc, il faut que la table ait un type, un nom (la fonction pour les paramètres/variables locales ; le programme pour les fonctions)
+
+Il faut que la table stocke soit :
+- Le nom des fonctions ainsi que le nombre de paramètres et de sorties.
+- Le nom des paramètres.
+- Le nom des variables locales.
+
+Il faut stocker plusieurs noms, ainsi que donner le type de table.
+Si type = "fonction" : sauver aussi la taille entrée et sortie.
+ */
 
 public class TableOfSymbols {
-    private final String name;
-    private final Map<String,Integer> table;
-
+    private final String name; //refers to the parent function or program
+    private final String type; //Refers to what type of table it is (functions/parameters/variables)
+    private Set<String> set;
+    private final int entries;
+    private final int outputs;
     /**
      * This is the constructor.
-     * @param name The name of the table, corresponding to the name of the function,
-     *             followed by a number, indicating which loop we are in. (e.g. : {})
+     * @param name The name of the symbol
      */
-    public TableOfSymbols(String name){
+    public TableOfSymbols(String name, String type){
         this.name = name;
-        table = new HashMap<>();
+        this.type = type;
+        this.set = new HashSet<>();
+        this.entries=0;
+        this.outputs=0;
     }
 
-    /**
-     * This function adds a pair (key, value) to the map of symbols.
-     * @param key The identifier of a symbol
-     * @param value The line at which it is first found/created
-     */
-    public void addToTable(String key, int value){
-        table.put(key,value);
+    public TableOfSymbols(String name, String type, int entries, int outputs){
+        this.name = name;
+        this.type = type;
+        this.set = new HashSet<>();
+        this.entries = entries;
+        this.outputs = outputs;
     }
 
     /**
@@ -40,15 +62,15 @@ public class TableOfSymbols {
      * @return The toString version of the table
      */
     public String toString (){
-        return this.name+" : "+this.table.toString();
+        return this.name+" ("+type+") : ";
     }
 
     /**
-     * This function returns true if the key is present in the table.
+     * This function returns true if the key is present in the set.
      * @param key : a key to find
      * @return true if present, false if not
      */
     public boolean foundKey (String key){
-        return this.table.containsKey(key);
+        return this.set.contains(key);
     }
 }
