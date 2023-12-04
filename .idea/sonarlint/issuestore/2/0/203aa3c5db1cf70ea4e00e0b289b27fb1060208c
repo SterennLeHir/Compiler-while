@@ -1,5 +1,7 @@
 
-@
-java:S3457	"%String contains no format specifiers.(Šª„ıÿÿÿÿ
-E	java:S106	"+Replace this use of System.out by a logger.(Šª„ıÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(Ğö¶üÿÿÿÿ
+m
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(…á„¸8˜ğÎÃ1
+L	java:S106"+Replace this use of System.out by a logger.(ÃÌ‚÷øÿÿÿÿ8šğÎÃ1
+G	java:S106"+Replace this use of System.out by a logger.(«Æœ8šğÎÃ1
+G	java:S106"+Replace this use of System.out by a logger.(àôğ8šğÎÃ1
+L	java:S106"+Replace this use of System.out by a logger.(ĞŞõ«ùÿÿÿÿ8šğÎÃ1
