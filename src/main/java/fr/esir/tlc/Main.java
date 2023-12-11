@@ -3,6 +3,7 @@ package fr.esir.tlc;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
+import org.antlr.runtime.tree.Tree;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -11,12 +12,13 @@ public class Main {
 
         whileParser g = new whileParser(tokens, null);
         try {
-            g.program();
+            whileParser.program_return prog = g.program();
             System.out.println("j'essaie");
+            Tree t = (Tree) prog.getTree();
+            System.out.println(t.toStringTree());
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
         System.out.println("j'ai fini");
-        System.out.println(g.program().tree.toString());
     }
 }
