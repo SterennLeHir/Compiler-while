@@ -79,8 +79,6 @@ public class whileParser extends Parser {
 
     public String[] getTokenNames() { return whileParser.tokenNames; }
     public String getGrammarFileName() { return "C:\\Users\\slh35\\Documents\\COURS\\ESIR2\\SEMESTRE 1\\TLC\\TP\\compiler-while\\while.g"; }
-
-
     public static class program_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
