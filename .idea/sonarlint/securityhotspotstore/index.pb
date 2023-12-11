@@ -9,10 +9,6 @@ Z
 *src/main/java/fr/esir/tlc/whileParser.java,4\f\4fa6362936b446a2e6dbadc42e90367fd1858b16
 ]
 -src/main/java/fr/esir/tlc/TableOfSymbols.java,5\0\502790f81372d236dd4ff4d4b3d898cc18eead06
-U
-%src/main/java/fr/esir/tlc/module.java,6\7\67bea52b7f436238d1549b394d6cef1770f1f538
-Z
-*src/main/java/fr/esir/tlc/module_info.java,5\4\542215daef35da7d8b9918e9fddc0992af765917
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
@@ -40,3 +36,9 @@ Q.idea/sonarlint/securityhotspotstore/6/7/67bea52b7f436238d1549b394d6cef1770f1f5
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+X
+(src/main/java/fr/esir/tlc/Visitable.java,6\8\68f71fc513bc3c6e9d29f66d9c1bdc91067e908d
+V
+&src/main/java/fr/esir/tlc/Visitor.java,6\a\6a0797b57580a5edeb82ec7b24fb145b2c503af7
+^
+.src/main/java/fr/esir/tlc/concreteVisitor.java,5\a\5ada4f70b07cb939c7adbbdbed475f15a180f8ca
