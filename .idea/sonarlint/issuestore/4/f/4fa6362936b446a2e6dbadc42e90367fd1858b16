@@ -363,17 +363,17 @@ java:S1199ø"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
 I
 java:S1199Ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
 `
-java:S2583ñ"CChange this condition so that it does not always evaluate to "true"(æ×‡f8«÷‘ŸÃ1
+java:S2583ñ"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÓÆ©ÈÅ1
 `
-java:S2583¢"CChange this condition so that it does not always evaluate to "true"(æ×‡f8®÷‘ŸÃ1
+java:S2583ş"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÔÆ©ÈÅ1
 `
-java:S2583“"CChange this condition so that it does not always evaluate to "true"(æ×‡f8­÷‘ŸÃ1
+java:S2583“"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÔÆ©ÈÅ1
 `
-java:S2583õ"CChange this condition so that it does not always evaluate to "true"(æ×‡f8¯÷‘ŸÃ1
+java:S2583¢"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÕÆ©ÈÅ1
 `
-java:S2583á"CChange this condition so that it does not always evaluate to "true"(æ×‡f8¬÷‘ŸÃ1
+java:S2583õ"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÖÆ©ÈÅ1
 `
-java:S2583ş"CChange this condition so that it does not always evaluate to "true"(æ×‡f8®÷‘ŸÃ1
+java:S2583á"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ÖÆ©ÈÅ1
 t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(øÅ‡Ğûÿÿÿÿ
 o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ïÈÌ
 t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§ÆÙÎÿÿÿÿÿ
@@ -428,28 +428,28 @@ u	java:S115»"ZRename this constant name to match the regular expression '^[A-
 u	java:S115½"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(°Áÿ¸ùÿÿÿÿ
 u	java:S115¿"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ¯ø¡ûÿÿÿÿ
 ¤
-java:S1845ó"€Rename method "input" to prevent any misunderstanding/clash with field "input" defined in superclass "org.antlr.runtime.Parser".(ŞÑ’úÿÿÿÿ8·÷‘ŸÃ1
+java:S1845ó"€Rename method "input" to prevent any misunderstanding/clash with field "input" defined in superclass "org.antlr.runtime.Parser".(ŞÑ’úÿÿÿÿ8İÆ©ÈÅ1
 8
 java:S2386"Make this member "protected".(ôñËçüÿÿÿÿ
 W
-java:S1161Q":Add the "@Override" annotation above this method signature(ë…‚Ú8Â÷‘ŸÃ1
+java:S1161Q":Add the "@Override" annotation above this method signature(ë…‚Ú8æÆ©ÈÅ1
 \
-java:S1161R":Add the "@Override" annotation above this method signature(òÉ‹¿ÿÿÿÿÿ8Ã÷‘ŸÃ1
+java:S1161R":Add the "@Override" annotation above this method signature(òÉ‹¿ÿÿÿÿÿ8çÆ©ÈÅ1
 \
-java:S1161W":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8Å÷‘ŸÃ1
+java:S1161W":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8èÆ©ÈÅ1
 7
 java:S1116X"Remove this empty statement.(ôŸìúÿÿÿÿ
 Q	java:S125["<This block of commented-out lines of code should be removed.(è¦®¼
 F
-java:S1905l")Remove this unnecessary cast to "Object".(÷ªˆº8Ê÷‘ŸÃ1
+java:S1905l")Remove this unnecessary cast to "Object".(÷ªˆº8êÆ©ÈÅ1
 <	java:S131{""Add a default case to this switch.(Ò…šşşÿÿÿÿ
 G
-java:S1905")Remove this unnecessary cast to "Object".(ÌÊâ8Í÷‘ŸÃ1
+java:S1905")Remove this unnecessary cast to "Object".(ÌÊâ8ëÆ©ÈÅ1
 G
-java:S1905—")Remove this unnecessary cast to "Object".(›«8Î÷‘ŸÃ1
+java:S1905—")Remove this unnecessary cast to "Object".(›«8ìÆ©ÈÅ1
 >	java:S108š")Either remove or fill this block of code.(˜£­
 ]
-java:S1161¢":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8Ğ÷‘ŸÃ1
+java:S1161¢":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8íÆ©ÈÅ1
 8
 java:S1116£"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -468,18 +468,18 @@ java:S1119Ë";Refactor the code to remove this label and the need for it.(Ÿ¾Ô
 H
 java:S1481õ"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905÷")Remove this unnecessary cast to "Object".(÷ªˆº8Ö÷‘ŸÃ1
+java:S1905÷")Remove this unnecessary cast to "Object".(÷ªˆº8ñÆ©ÈÅ1
 F
-java:S1905ü")Remove this unnecessary cast to "Object".(ùùÄF8×÷‘ŸÃ1
+java:S1905ü")Remove this unnecessary cast to "Object".(ùùÄF8òÆ©ÈÅ1
 L
-java:S1905ı")Remove this unnecessary cast to "Object".(ÚÅúêÿÿÿÿÿ8×÷‘ŸÃ1
+java:S1905ı")Remove this unnecessary cast to "Object".(ÚÅúêÿÿÿÿÿ8òÆ©ÈÅ1
 G
-java:S1905")Remove this unnecessary cast to "Object".(ÌÊâ8Ø÷‘ŸÃ1
+java:S1905")Remove this unnecessary cast to "Object".(ÌÊâ8óÆ©ÈÅ1
 G
-java:S1905”")Remove this unnecessary cast to "Object".(›«8Ø÷‘ŸÃ1
+java:S1905”")Remove this unnecessary cast to "Object".(›«8ôÆ©ÈÅ1
 >	java:S108—")Either remove or fill this block of code.(˜£­
 ]
-java:S1161Ÿ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8Ú÷‘ŸÃ1
+java:S1161Ÿ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8õÆ©ÈÅ1
 8
 java:S1116 "Remove this empty statement.(ôŸìúÿÿÿÿ
 i
@@ -510,18 +510,18 @@ java:S1119Ÿ";Refactor the code to remove this label and the need for it.(«øÇş
 H
 java:S1481Ã"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905Å")Remove this unnecessary cast to "Object".(÷ªˆº8ã÷‘ŸÃ1
+java:S1905Å")Remove this unnecessary cast to "Object".(÷ªˆº8ûÆ©ÈÅ1
 F
-java:S1905Ê")Remove this unnecessary cast to "Object".(ùùÄF8ä÷‘ŸÃ1
+java:S1905Ê")Remove this unnecessary cast to "Object".(ùùÄF8üÆ©ÈÅ1
 L
-java:S1905Ë")Remove this unnecessary cast to "Object".(ĞÅŸîûÿÿÿÿ8ä÷‘ŸÃ1
+java:S1905Ë")Remove this unnecessary cast to "Object".(ĞÅŸîûÿÿÿÿ8üÆ©ÈÅ1
 G
-java:S1905Ü")Remove this unnecessary cast to "Object".(ÌÊâ8å÷‘ŸÃ1
+java:S1905Ü")Remove this unnecessary cast to "Object".(ÌÊâ8ıÆ©ÈÅ1
 G
-java:S1905ã")Remove this unnecessary cast to "Object".(›«8å÷‘ŸÃ1
+java:S1905ã")Remove this unnecessary cast to "Object".(›«8şÆ©ÈÅ1
 >	java:S108æ")Either remove or fill this block of code.(˜£­
 ]
-java:S1161î":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8æ÷‘ŸÃ1
+java:S1161î":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8şÆ©ÈÅ1
 8
 java:S1116ï"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -531,20 +531,20 @@ R	java:S125ò"<This block of commented-out lines of code should be removed.(ËŒ
 H
 java:S1481¢"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905¤")Remove this unnecessary cast to "Object".(÷ªˆº8é÷‘ŸÃ1
+java:S1905¤")Remove this unnecessary cast to "Object".(÷ªˆº8Ç©ÈÅ1
 F
-java:S1905©")Remove this unnecessary cast to "Object".(ùùÄF8é÷‘ŸÃ1
+java:S1905©")Remove this unnecessary cast to "Object".(ùùÄF8‚Ç©ÈÅ1
 L
-java:S1905ª")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8é÷‘ŸÃ1
+java:S1905ª")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8‚Ç©ÈÅ1
 L
-java:S1905ª")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8é÷‘ŸÃ1
+java:S1905ª")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8ƒÇ©ÈÅ1
 G
-java:S1905½")Remove this unnecessary cast to "Object".(ÌÊâ8ë÷‘ŸÃ1
+java:S1905½")Remove this unnecessary cast to "Object".(ÌÊâ8ƒÇ©ÈÅ1
 G
-java:S1905Ä")Remove this unnecessary cast to "Object".(›«8ì÷‘ŸÃ1
+java:S1905Ä")Remove this unnecessary cast to "Object".(›«8„Ç©ÈÅ1
 >	java:S108Ç")Either remove or fill this block of code.(˜£­
 ]
-java:S1161Ï":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8í÷‘ŸÃ1
+java:S1161Ï":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8…Ç©ÈÅ1
 8
 java:S1116Ğ"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -561,14 +561,14 @@ java:S1119ì";Refactor the code to remove this label and the need for it.(½çü’
 H
 java:S1481“"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905•")Remove this unnecessary cast to "Object".(÷ªˆº8ò÷‘ŸÃ1
+java:S1905•")Remove this unnecessary cast to "Object".(÷ªˆº8‰Ç©ÈÅ1
 G
-java:S1905¨")Remove this unnecessary cast to "Object".(ÌÊâ8ó÷‘ŸÃ1
+java:S1905¨")Remove this unnecessary cast to "Object".(ÌÊâ8‰Ç©ÈÅ1
 G
-java:S1905¯")Remove this unnecessary cast to "Object".(›«8ó÷‘ŸÃ1
+java:S1905¯")Remove this unnecessary cast to "Object".(›«8ŠÇ©ÈÅ1
 >	java:S108²")Either remove or fill this block of code.(˜£­
 ]
-java:S1161º":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8õ÷‘ŸÃ1
+java:S1161º":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8‹Ç©ÈÅ1
 8
 java:S1116»"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -585,20 +585,20 @@ java:S1119×";Refactor the code to remove this label and the need for it.(…ş•–
 H
 java:S1481ş"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905€")Remove this unnecessary cast to "Object".(÷ªˆº8ù÷‘ŸÃ1
+java:S1905€")Remove this unnecessary cast to "Object".(÷ªˆº8Ç©ÈÅ1
 F
-java:S1905…")Remove this unnecessary cast to "Object".(ùùÄF8ú÷‘ŸÃ1
+java:S1905…")Remove this unnecessary cast to "Object".(ùùÄF8Ç©ÈÅ1
 L
-java:S1905†")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8ú÷‘ŸÃ1
+java:S1905†")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8Ç©ÈÅ1
 L
-java:S1905†")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8ú÷‘ŸÃ1
+java:S1905†")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8Ç©ÈÅ1
 G
-java:S1905›")Remove this unnecessary cast to "Object".(ÌÊâ8û÷‘ŸÃ1
+java:S1905›")Remove this unnecessary cast to "Object".(ÌÊâ8Ç©ÈÅ1
 G
-java:S1905¢")Remove this unnecessary cast to "Object".(›«8û÷‘ŸÃ1
+java:S1905¢")Remove this unnecessary cast to "Object".(›«8Ç©ÈÅ1
 >	java:S108¥")Either remove or fill this block of code.(˜£­
 ]
-java:S1161­":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8ü÷‘ŸÃ1
+java:S1161­":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8‘Ç©ÈÅ1
 8
 java:S1116®"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -615,14 +615,14 @@ java:S1119Ê";Refactor the code to remove this label and the need for it.(¾İ»‡ù
 H
 java:S1481ñ"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905ó")Remove this unnecessary cast to "Object".(÷ªˆº8ø‘ŸÃ1
+java:S1905ó")Remove this unnecessary cast to "Object".(÷ªˆº8•Ç©ÈÅ1
 G
-java:S1905†")Remove this unnecessary cast to "Object".(ÌÊâ8‚ø‘ŸÃ1
+java:S1905†")Remove this unnecessary cast to "Object".(ÌÊâ8•Ç©ÈÅ1
 G
-java:S1905")Remove this unnecessary cast to "Object".(›«8ƒø‘ŸÃ1
+java:S1905")Remove this unnecessary cast to "Object".(›«8–Ç©ÈÅ1
 >	java:S108")Either remove or fill this block of code.(˜£­
 ]
-java:S1161˜":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8„ø‘ŸÃ1
+java:S1161˜":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8—Ç©ÈÅ1
 8
 java:S1116™"Remove this empty statement.(ôŸìúÿÿÿÿ
 W
@@ -635,14 +635,14 @@ java:S1119·";Refactor the code to remove this label and the need for it.(£Öì«
 H
 java:S1481á"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905ã")Remove this unnecessary cast to "Object".(÷ªˆº8‡ø‘ŸÃ1
+java:S1905ã")Remove this unnecessary cast to "Object".(÷ªˆº8šÇ©ÈÅ1
 G
-java:S1905ö")Remove this unnecessary cast to "Object".(ÌÊâ8ˆø‘ŸÃ1
+java:S1905ö")Remove this unnecessary cast to "Object".(ÌÊâ8šÇ©ÈÅ1
 G
-java:S1905ı")Remove this unnecessary cast to "Object".(›«8‰ø‘ŸÃ1
+java:S1905ı")Remove this unnecessary cast to "Object".(›«8›Ç©ÈÅ1
 >	java:S108€")Either remove or fill this block of code.(˜£­
 ]
-java:S1161ˆ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8‰ø‘ŸÃ1
+java:S1161ˆ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8œÇ©ÈÅ1
 8
 java:S1116‰"Remove this empty statement.(ôŸìúÿÿÿÿ
 i
@@ -665,20 +665,20 @@ java:S1119è";Refactor the code to remove this label and the need for it.(¤œ¹›
 H
 java:S1481Œ	"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905	")Remove this unnecessary cast to "Object".(÷ªˆº8ø‘ŸÃ1
+java:S1905	")Remove this unnecessary cast to "Object".(÷ªˆº8 Ç©ÈÅ1
 F
-java:S1905“	")Remove this unnecessary cast to "Object".(ùùÄF8ø‘ŸÃ1
+java:S1905“	")Remove this unnecessary cast to "Object".(ùùÄF8¡Ç©ÈÅ1
 G
-java:S1905”	")Remove this unnecessary cast to "Object".(‘îñ8ø‘ŸÃ1
+java:S1905”	")Remove this unnecessary cast to "Object".(‘îñ8¡Ç©ÈÅ1
 G
-java:S1905”	")Remove this unnecessary cast to "Object".(‘îñ8ø‘ŸÃ1
+java:S1905”	")Remove this unnecessary cast to "Object".(‘îñ8¡Ç©ÈÅ1
 G
-java:S1905©	")Remove this unnecessary cast to "Object".(ÌÊâ8‘ø‘ŸÃ1
+java:S1905©	")Remove this unnecessary cast to "Object".(ÌÊâ8¢Ç©ÈÅ1
 G
-java:S1905°	")Remove this unnecessary cast to "Object".(›«8‘ø‘ŸÃ1
+java:S1905°	")Remove this unnecessary cast to "Object".(›«8¢Ç©ÈÅ1
 >	java:S108³	")Either remove or fill this block of code.(˜£­
 ]
-java:S1161»	":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8’ø‘ŸÃ1
+java:S1161»	":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8£Ç©ÈÅ1
 8
 java:S1116¼	"Remove this empty statement.(ôŸìúÿÿÿÿ
 n
@@ -720,104 +720,104 @@ java:S1481’
 ""Add a default case to this switch.(Å¦úÿÿÿÿ
 G
 java:S1905É
-")Remove this unnecessary cast to "Object".(÷ªˆº8™ø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(÷ªˆº8ªÇ©ÈÅ1
 L
 java:S1905Ì
-")Remove this unnecessary cast to "Object".(íÎí„üÿÿÿÿ8šø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(íÎí„üÿÿÿÿ8«Ç©ÈÅ1
 G
 java:S1905Ğ
-")Remove this unnecessary cast to "Object".(¼ø²ï8šø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(¼ø²ï8«Ç©ÈÅ1
 L
 java:S1905Ô
-")Remove this unnecessary cast to "Object".(ßÑÎÄÿÿÿÿÿ8šø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(ßÑÎÄÿÿÿÿÿ8«Ç©ÈÅ1
 G
 java:S1905Ş
-")Remove this unnecessary cast to "Object".(½¿åŸ8›ø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(½¿åŸ8¬Ç©ÈÅ1
 L
 java:S1905è
-")Remove this unnecessary cast to "Object".(¶»ç¬úÿÿÿÿ8›ø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(¶»ç¬úÿÿÿÿ8¬Ç©ÈÅ1
 L
 java:S1905ì
-")Remove this unnecessary cast to "Object".(Ù£ÁÉúÿÿÿÿ8›ø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(Ù£ÁÉúÿÿÿÿ8¬Ç©ÈÅ1
 L
 java:S1905í
-")Remove this unnecessary cast to "Object".(éÍ¢½ıÿÿÿÿ8›ø‘ŸÃ1
+")Remove this unnecessary cast to "Object".(éÍ¢½ıÿÿÿÿ8­Ç©ÈÅ1
 H
 java:S1481¤"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905¦")Remove this unnecessary cast to "Object".(÷ªˆº8ø‘ŸÃ1
+java:S1905¦")Remove this unnecessary cast to "Object".(÷ªˆº8®Ç©ÈÅ1
 F
-java:S1905«")Remove this unnecessary cast to "Object".(ùùÄF8ø‘ŸÃ1
+java:S1905«")Remove this unnecessary cast to "Object".(ùùÄF8¯Ç©ÈÅ1
 L
-java:S1905¬")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8ø‘ŸÃ1
+java:S1905¬")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8¯Ç©ÈÅ1
 L
-java:S1905¬")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8Ÿø‘ŸÃ1
+java:S1905¬")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8¯Ç©ÈÅ1
 H
 java:S1481Û"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905İ")Remove this unnecessary cast to "Object".(÷ªˆº8 ø‘ŸÃ1
+java:S1905İ")Remove this unnecessary cast to "Object".(÷ªˆº8°Ç©ÈÅ1
 F
-java:S1905â")Remove this unnecessary cast to "Object".(ùùÄF8 ø‘ŸÃ1
+java:S1905â")Remove this unnecessary cast to "Object".(ùùÄF8±Ç©ÈÅ1
 G
-java:S1905ã")Remove this unnecessary cast to "Object".(·ó¼‚8 ø‘ŸÃ1
+java:S1905ã")Remove this unnecessary cast to "Object".(·ó¼‚8±Ç©ÈÅ1
 G
-java:S1905ã")Remove this unnecessary cast to "Object".(·ó¼‚8¡ø‘ŸÃ1
+java:S1905ã")Remove this unnecessary cast to "Object".(·ó¼‚8±Ç©ÈÅ1
 =
 java:S1219ú"&Remove this misleading "loop14" label.(çé‚ 
 =
 java:S1219İ"&Remove this misleading "loop17" label.(—™ç´
 G
-java:S1905ó")Remove this unnecessary cast to "Object".(÷ªˆº8¡ø‘ŸÃ1
+java:S1905ó")Remove this unnecessary cast to "Object".(÷ªˆº8±Ç©ÈÅ1
 L
-java:S1905ö")Remove this unnecessary cast to "Object".(Ğô‹Éıÿÿÿÿ8¢ø‘ŸÃ1
+java:S1905ö")Remove this unnecessary cast to "Object".(Ğô‹Éıÿÿÿÿ8²Ç©ÈÅ1
 R
 java:S1119ú";Refactor the code to remove this label and the need for it.(çé‚ 
 L
-java:S1905‰")Remove this unnecessary cast to "Object".(‘‡õ¯ùÿÿÿÿ8¢ø‘ŸÃ1
+java:S1905‰")Remove this unnecessary cast to "Object".(‘‡õ¯ùÿÿÿÿ8²Ç©ÈÅ1
 L
-java:S1905œ")Remove this unnecessary cast to "Object".(Êßğúüÿÿÿÿ8£ø‘ŸÃ1
+java:S1905œ")Remove this unnecessary cast to "Object".(Êßğúüÿÿÿÿ8³Ç©ÈÅ1
 G
-java:S1905¦")Remove this unnecessary cast to "Object".(Œä“ğ8£ø‘ŸÃ1
+java:S1905¦")Remove this unnecessary cast to "Object".(Œä“ğ8³Ç©ÈÅ1
 7	java:S131¬""Add a default case to this switch.(²…¨f
 =
 java:S1219±"&Remove this misleading "loop15" label.(íªï¹
 R
 java:S1119±";Refactor the code to remove this label and the need for it.(íªï¹
 L
-java:S1905À")Remove this unnecessary cast to "Object".(ÚÁ£¯ùÿÿÿÿ8¥ø‘ŸÃ1
+java:S1905À")Remove this unnecessary cast to "Object".(ÚÁ£¯ùÿÿÿÿ8´Ç©ÈÅ1
 L
-java:S1905Í")Remove this unnecessary cast to "Object".(¸²—øÿÿÿÿ8¥ø‘ŸÃ1
+java:S1905Í")Remove this unnecessary cast to "Object".(¸²—øÿÿÿÿ8µÇ©ÈÅ1
 R
 java:S1119İ";Refactor the code to remove this label and the need for it.(—™ç´
 F
-java:S1905ì")Remove this unnecessary cast to "Object".(³ÍÎ	8¦ø‘ŸÃ1
+java:S1905ì")Remove this unnecessary cast to "Object".(³ÍÎ	8µÇ©ÈÅ1
 F
-java:S1905ù")Remove this unnecessary cast to "Object".(ã°Ñd8¦ø‘ŸÃ1
+java:S1905ù")Remove this unnecessary cast to "Object".(ã°Ñd8¶Ç©ÈÅ1
 G
-java:S1905ı")Remove this unnecessary cast to "Object".(¤ÿÉå8§ø‘ŸÃ1
+java:S1905ı")Remove this unnecessary cast to "Object".(¤ÿÉå8¶Ç©ÈÅ1
 G
-java:S1905ş")Remove this unnecessary cast to "Object".(„šó 8§ø‘ŸÃ1
+java:S1905ş")Remove this unnecessary cast to "Object".(„šó 8¶Ç©ÈÅ1
 G
-java:S1905–")Remove this unnecessary cast to "Object".(÷ªˆº8¨ø‘ŸÃ1
+java:S1905–")Remove this unnecessary cast to "Object".(÷ªˆº8·Ç©ÈÅ1
 L
-java:S1905™")Remove this unnecessary cast to "Object".(Ê­Äııÿÿÿÿ8¨ø‘ŸÃ1
+java:S1905™")Remove this unnecessary cast to "Object".(Ê­Äııÿÿÿÿ8·Ç©ÈÅ1
 H
 java:S1481»"2Remove this unused "stream_retval" local variable.(æ×‡f
 G
-java:S1905½")Remove this unnecessary cast to "Object".(÷ªˆº8ªø‘ŸÃ1
+java:S1905½")Remove this unnecessary cast to "Object".(÷ªˆº8¸Ç©ÈÅ1
 F
-java:S1905Â")Remove this unnecessary cast to "Object".(ùùÄF8ªø‘ŸÃ1
+java:S1905Â")Remove this unnecessary cast to "Object".(ùùÄF8¸Ç©ÈÅ1
 G
-java:S1905Ã")Remove this unnecessary cast to "Object".(½° ó8ªø‘ŸÃ1
+java:S1905Ã")Remove this unnecessary cast to "Object".(½° ó8¹Ç©ÈÅ1
 G
-java:S1905Ã")Remove this unnecessary cast to "Object".(½° ó8ªø‘ŸÃ1
+java:S1905Ã")Remove this unnecessary cast to "Object".(½° ó8¹Ç©ÈÅ1
 G
-java:S1905Ô")Remove this unnecessary cast to "Object".(ÌÊâ8«ø‘ŸÃ1
+java:S1905Ô")Remove this unnecessary cast to "Object".(ÌÊâ8¹Ç©ÈÅ1
 G
-java:S1905Û")Remove this unnecessary cast to "Object".(›«8«ø‘ŸÃ1
+java:S1905Û")Remove this unnecessary cast to "Object".(›«8ºÇ©ÈÅ1
 >	java:S108Ş")Either remove or fill this block of code.(˜£­
 ]
-java:S1161æ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8¬ø‘ŸÃ1
+java:S1161æ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8ºÇ©ÈÅ1
 8
 java:S1116ç"Remove this empty statement.(ôŸìúÿÿÿÿ
 P
@@ -825,99 +825,99 @@ java:S1854£"9Remove this useless assignment to local variable "alt19".(Å°•Î
 W	java:S125ê"<This block of commented-out lines of code should be removed.(ÀöÚşúÿÿÿÿ
 8	java:S131¥""Add a default case to this switch.(º½ÛŠ
 G
-java:S1905©")Remove this unnecessary cast to "Object".(÷ªˆº8±ø‘ŸÃ1
+java:S1905©")Remove this unnecessary cast to "Object".(÷ªˆº8¿Ç©ÈÅ1
 L
-java:S1905¬")Remove this unnecessary cast to "Object".(´Ş†Äıÿÿÿÿ8±ø‘ŸÃ1
+java:S1905¬")Remove this unnecessary cast to "Object".(´Ş†Äıÿÿÿÿ8¿Ç©ÈÅ1
 G
-java:S1905°")Remove this unnecessary cast to "Object".(–µ†8±ø‘ŸÃ1
+java:S1905°")Remove this unnecessary cast to "Object".(–µ†8ÀÇ©ÈÅ1
 G
-java:S1905º")Remove this unnecessary cast to "Object".(ÇóÜ­8²ø‘ŸÃ1
+java:S1905º")Remove this unnecessary cast to "Object".(ÇóÜ­8ÀÇ©ÈÅ1
 G
-java:S1905Ã")Remove this unnecessary cast to "Object".(÷ªˆº8²ø‘ŸÃ1
+java:S1905Ã")Remove this unnecessary cast to "Object".(÷ªˆº8ÀÇ©ÈÅ1
 G
-java:S1905Æ")Remove this unnecessary cast to "Object".(Ú„¾£8²ø‘ŸÃ1
+java:S1905Æ")Remove this unnecessary cast to "Object".(Ú„¾£8ÁÇ©ÈÅ1
 L
-java:S1905Ê")Remove this unnecessary cast to "Object".(Úˆœ„üÿÿÿÿ8³ø‘ŸÃ1
+java:S1905Ê")Remove this unnecessary cast to "Object".(Úˆœ„üÿÿÿÿ8ÁÇ©ÈÅ1
 L
-java:S1905Ô")Remove this unnecessary cast to "Object".(î‰£Ëşÿÿÿÿ8³ø‘ŸÃ1
+java:S1905Ô")Remove this unnecessary cast to "Object".(î‰£Ëşÿÿÿÿ8ÂÇ©ÈÅ1
 G
-java:S1905İ")Remove this unnecessary cast to "Object".(÷ªˆº8³ø‘ŸÃ1
+java:S1905İ")Remove this unnecessary cast to "Object".(÷ªˆº8ÂÇ©ÈÅ1
 G
-java:S1905à")Remove this unnecessary cast to "Object".(³ˆ®†8´ø‘ŸÃ1
+java:S1905à")Remove this unnecessary cast to "Object".(³ˆ®†8ÂÇ©ÈÅ1
 G
-java:S1905ä")Remove this unnecessary cast to "Object".(½‡­Ö8´ø‘ŸÃ1
+java:S1905ä")Remove this unnecessary cast to "Object".(½‡­Ö8ÃÇ©ÈÅ1
 L
-java:S1905î")Remove this unnecessary cast to "Object".(ÇÇ²úÿÿÿÿ8µø‘ŸÃ1
+java:S1905î")Remove this unnecessary cast to "Object".(ÇÇ²úÿÿÿÿ8ÄÇ©ÈÅ1
 G
-java:S1905÷")Remove this unnecessary cast to "Object".(÷ªˆº8µø‘ŸÃ1
+java:S1905÷")Remove this unnecessary cast to "Object".(÷ªˆº8ÄÇ©ÈÅ1
 L
-java:S1905ú")Remove this unnecessary cast to "Object".(ä“¤Üüÿÿÿÿ8µø‘ŸÃ1
+java:S1905ú")Remove this unnecessary cast to "Object".(ä“¤Üüÿÿÿÿ8ÅÇ©ÈÅ1
 L
-java:S1905ş")Remove this unnecessary cast to "Object".(¡ÒÕÂúÿÿÿÿ8¶ø‘ŸÃ1
+java:S1905ş")Remove this unnecessary cast to "Object".(¡ÒÕÂúÿÿÿÿ8ÅÇ©ÈÅ1
 G
-java:S1905ˆ")Remove this unnecessary cast to "Object".(›Ôíœ8¶ø‘ŸÃ1
+java:S1905ˆ")Remove this unnecessary cast to "Object".(›Ôíœ8ÅÇ©ÈÅ1
 G
-java:S1905‘")Remove this unnecessary cast to "Object".(÷ªˆº8¶ø‘ŸÃ1
+java:S1905‘")Remove this unnecessary cast to "Object".(÷ªˆº8ÆÇ©ÈÅ1
 F
-java:S1905”")Remove this unnecessary cast to "Object".(ÕÜÍ8·ø‘ŸÃ1
+java:S1905”")Remove this unnecessary cast to "Object".(ÕÜÍ8ÆÇ©ÈÅ1
 G
-java:S1905˜")Remove this unnecessary cast to "Object".(ôÖ–³8·ø‘ŸÃ1
+java:S1905˜")Remove this unnecessary cast to "Object".(ôÖ–³8ÆÇ©ÈÅ1
 L
-java:S1905¢")Remove this unnecessary cast to "Object".(˜¶Ú£şÿÿÿÿ8·ø‘ŸÃ1
+java:S1905¢")Remove this unnecessary cast to "Object".(˜¶Ú£şÿÿÿÿ8ÇÇ©ÈÅ1
 G
-java:S1905«")Remove this unnecessary cast to "Object".(÷ªˆº8¸ø‘ŸÃ1
+java:S1905«")Remove this unnecessary cast to "Object".(÷ªˆº8ÇÇ©ÈÅ1
 G
-java:S1905®")Remove this unnecessary cast to "Object".(Ú›Íÿ8¸ø‘ŸÃ1
+java:S1905®")Remove this unnecessary cast to "Object".(Ú›Íÿ8ÇÇ©ÈÅ1
 G
-java:S1905·")Remove this unnecessary cast to "Object".(÷ªˆº8¸ø‘ŸÃ1
+java:S1905·")Remove this unnecessary cast to "Object".(÷ªˆº8ÈÇ©ÈÅ1
 G
-java:S1905º")Remove this unnecessary cast to "Object".(ıªÔÂ8¸ø‘ŸÃ1
+java:S1905º")Remove this unnecessary cast to "Object".(ıªÔÂ8ÈÇ©ÈÅ1
 G
-java:S1905Ã")Remove this unnecessary cast to "Object".(÷ªˆº8¸ø‘ŸÃ1
+java:S1905Ã")Remove this unnecessary cast to "Object".(÷ªˆº8ÈÇ©ÈÅ1
 G
-java:S1905Æ")Remove this unnecessary cast to "Object".(š‚Ú8¹ø‘ŸÃ1
+java:S1905Æ")Remove this unnecessary cast to "Object".(š‚Ú8ÈÇ©ÈÅ1
 G
-java:S1905Ğ")Remove this unnecessary cast to "Object".(ÌÊâ8¹ø‘ŸÃ1
+java:S1905Ğ")Remove this unnecessary cast to "Object".(ÌÊâ8ÉÇ©ÈÅ1
 G
-java:S1905×")Remove this unnecessary cast to "Object".(›«8¹ø‘ŸÃ1
+java:S1905×")Remove this unnecessary cast to "Object".(›«8ÉÇ©ÈÅ1
 >	java:S108Ú")Either remove or fill this block of code.(˜£­
 ]
-java:S1161â":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8»ø‘ŸÃ1
+java:S1161â":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8ÊÇ©ÈÅ1
 8
 java:S1116ã"Remove this empty statement.(ôŸìúÿÿÿÿ
 W	java:S125æ"<This block of commented-out lines of code should be removed.(Ñ×›¦ûÿÿÿÿ
 G
-java:S1905ù")Remove this unnecessary cast to "Object".(÷ªˆº8¼ø‘ŸÃ1
+java:S1905ù")Remove this unnecessary cast to "Object".(÷ªˆº8ÌÇ©ÈÅ1
 =	java:S131ˆ""Add a default case to this switch.(¢å¤Ëûÿÿÿÿ
 L
-java:S1905")Remove this unnecessary cast to "Object".(€ù¢µüÿÿÿÿ8½ø‘ŸÃ1
+java:S1905")Remove this unnecessary cast to "Object".(€ù¢µüÿÿÿÿ8ÌÇ©ÈÅ1
 G
-java:S1905¡")Remove this unnecessary cast to "Object".(ÌÊâ8¾ø‘ŸÃ1
+java:S1905¡")Remove this unnecessary cast to "Object".(ÌÊâ8ÍÇ©ÈÅ1
 G
-java:S1905¨")Remove this unnecessary cast to "Object".(›«8¾ø‘ŸÃ1
+java:S1905¨")Remove this unnecessary cast to "Object".(›«8ÍÇ©ÈÅ1
 >	java:S108«")Either remove or fill this block of code.(˜£­
 ]
-java:S1161³":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8¿ø‘ŸÃ1
+java:S1161³":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8ÎÇ©ÈÅ1
 8
 java:S1116´"Remove this empty statement.(ôŸìúÿÿÿÿ
 R	java:S125·"<This block of commented-out lines of code should be removed.(í£¦Ô
 G
-java:S1905È")Remove this unnecessary cast to "Object".(÷ªˆº8Àø‘ŸÃ1
+java:S1905È")Remove this unnecessary cast to "Object".(÷ªˆº8ÏÇ©ÈÅ1
 =	java:S131Ñ""Add a default case to this switch.(¦ÕÅ¬ıÿÿÿÿ
 G
-java:S1905ì")Remove this unnecessary cast to "Object".(ÌÊâ8Âø‘ŸÃ1
+java:S1905ì")Remove this unnecessary cast to "Object".(ÌÊâ8ÑÇ©ÈÅ1
 G
-java:S1905ó")Remove this unnecessary cast to "Object".(›«8Âø‘ŸÃ1
+java:S1905ó")Remove this unnecessary cast to "Object".(›«8ÑÇ©ÈÅ1
 >	java:S108ö")Either remove or fill this block of code.(˜£­
 X
-java:S1161±":Add the "@Override" annotation above this method signature(Îüş8Äø‘ŸÃ1
+java:S1161±":Add the "@Override" annotation above this method signature(Îüş8ÓÇ©ÈÅ1
 X
-java:S1161ë":Add the "@Override" annotation above this method signature(Îüş8Åø‘ŸÃ1
+java:S1161ë":Add the "@Override" annotation above this method signature(Îüş8ÕÇ©ÈÅ1
 N
-java:S1128",Remove this unused import 'java.util.Stack'.(ŞÈ†üúÿÿÿÿ8Êø‘ŸÃ1
+java:S1128",Remove this unused import 'java.util.Stack'.(ŞÈ†üúÿÿÿÿ8ÚÇ©ÈÅ1
 M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Êø‘ŸÃ1
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÚÇ©ÈÅ1
 M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Êø‘ŸÃ1
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ÚÇ©ÈÅ1
 ã
 java:S6541À	"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 375 to 64, Complexity from 26 to 14, Nesting Level from 5 to 2, Number of Variables from 88 to 6.(Ö¸Øúÿÿÿÿ
