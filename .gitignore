@@ -32,9 +32,6 @@ build/
 .vscode/
 
 ### Mac OS ###
-<<<<<<< Updated upstream
-.DS_Store
-=======
 .DS_Store
 .idea/sonarlint/issuestore/4/a/4a1deba9e1fbcfc1f2875dbe68b5236a80abe796
 *.pb
@@ -46,4 +43,3 @@ build/
 .idea/sonarlint/issuestore/index.pb
 .idea/sonarlint/securityhotspotstore/index.pb
 .idea/sonarlint/issuestore/index.pb
->>>>>>> Stashed changes
