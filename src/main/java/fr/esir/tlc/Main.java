@@ -3,6 +3,7 @@ package fr.esir.tlc;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
+import org.antlr.runtime.RecognizerSharedState;
 import org.antlr.runtime.tree.Tree;
 
 import java.io.IOException;
@@ -13,9 +14,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         whileLexer var1 = new whileLexer(new ANTLRFileStream("C:\\Users\\slh35\\Documents\\COURS\\ESIR2\\SEMESTRE 1\\TLC\\TP\\compiler-while\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream var2 = new CommonTokenStream(var1);
-        whileParser parser = new whileParser(var2, null);
+        whileParser var3 = new whileParser(var2, null);
         try {
-            whileParser.program_return retour = parser.program();
+            whileParser.program_return retour = var3.program();
             Tree ast = (Tree) retour.getTree();
             System.out.println(ast.toStringTree());
         } catch (RecognitionException var5) {
@@ -23,3 +24,4 @@ public class Main {
         }
     }
 }
+

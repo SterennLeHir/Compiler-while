@@ -67,10 +67,10 @@ exprs
 commands 
 	:	WS* command (';' command)* WS* -> ^(Node_Bloc command+); 
 command      
-	:	'foreach' Variable 'in' expression 'do' commands 'od' ^(Node_ForEach expression commands)
+	:	'foreach' Variable 'in' expression 'do' commands 'od' -> ^(Node_ForEach expression commands)
 		| 'for' expression 'do' commands 'od' -> ^(Node_For expression commands)
 		| 'while' expression 'do' commands 'od' -> ^(Node_While expression commands)
-		| 'if' WS* expression 'then'  commands 'od' (WS*'else' commands)? WS* 'fi' ^(Node_If expression commands)
+		| 'if' expression 'then'  commands ('else' commands)? 'fi' -> ^(Node_If expression commands)
 		| 'nop'
 		| vars ':=' exprs -> ^(Node_Affectation vars exprs) 
 		;  
