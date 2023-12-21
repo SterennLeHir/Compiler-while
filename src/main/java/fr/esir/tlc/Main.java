@@ -1,5 +1,6 @@
 package fr.esir.tlc;
 
+
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -22,6 +23,7 @@ public class Main {
         } catch (RecognitionException var5) {
             var5.printStackTrace();
         }
+
     }
 }
 
