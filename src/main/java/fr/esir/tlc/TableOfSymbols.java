@@ -24,8 +24,13 @@ Si type = "fonction" : sauver aussi la taille entrée et sortie.
 public class TableOfSymbols {
     private final String name; //refers to the parent function or program
     private final Set<String> set;
-    private final int entries;
-    private final int outputs;
+
+    private final Set<String> parameters;
+
+
+
+    private int inputs;
+    private int outputs;
 
     /**
      * This is the constructor.
@@ -34,22 +39,9 @@ public class TableOfSymbols {
     public TableOfSymbols(String name){
         this.name = name;
         this.set = new HashSet<>();
-        this.entries=0;
+        this.parameters=new HashSet<>();
+        this.inputs=0;
         this.outputs=0;
-    }
-
-    /**
-     * This is the constructor for a Table affiliated with a parent function.
-     * @param name The name of the parent function.
-     * @param entries The number of parameters.
-     * @param outputs The number of outputs.
-     * @param parameters The parameters of the function.
-     */
-    public TableOfSymbols(String name, int entries, int outputs, Set<String> parameters){
-        this.name = name;
-        this.set = parameters;
-        this.entries = entries;
-        this.outputs = outputs;
     }
 
     /**
@@ -66,7 +58,7 @@ public class TableOfSymbols {
      * @return The toString version of the table
      */
     public String toString (){
-        return this.name+" ("+entries+","+outputs+") : "+ set.toString();
+        return this.name+" ("+inputs+","+outputs+") : "+ set.toString();
     }
 
     /**
@@ -85,4 +77,39 @@ public class TableOfSymbols {
     public void addVariableToSet(String variable){
         if (!foundVariable(variable)) this.set.add(variable);
     }
+    public void addVarToParameters(String variable){
+        if (!this.parameters.contains(variable)){
+            parameters.add(variable);
+        }
+    }
+
+    public int getInputs() {
+        return inputs;
+    }
+
+    public int getOutputs() {
+        return outputs;
+    }
+
+    public void setInputs(int i){
+        this.inputs=i;
+    }
+
+    public void setOutputs(int i){
+        this.outputs=i;
+    }
+
+    public void addParameters(Set<String> s){
+        set.addAll(s);
+    }
+
+    public Set<String> getParameters(){
+        return parameters;
+    }
+
+    public Set<String> getSet(){
+        return set;
+    }
+
+
 }
