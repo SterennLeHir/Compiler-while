@@ -7,10 +7,15 @@ import java.util.Set;
 
 public class VisitorSemantic {
 
-    private TreeTable treeTable;
+    private Table rootTable;
+    private Table currentTable;
+
+    private boolean correctSemantic;
 
     public VisitorSemantic(){
-        treeTable=null;
+        this.rootTable=null;
+        this.currentTable=null;
+        this.correctSemantic = true;
     }
 
     public void visit(Tree t){
@@ -98,26 +103,27 @@ public class VisitorSemantic {
 
 
     public void treatingRoot(Tree t){
-        treeTable = new TreeTable();
-        currentTable= new Table("Root");
+        this.rootTable = new Table("_ROOT_");
         for (int i = 0 ; i < t.getChildCount();i++){
+            this.currentTable = this.rootTable; //très important
             visit(t.getChild(i));
         }
+        System.out.println("PARCOURS TERMINÉ");
     }
+
+    //Concernant les fonctions
 
     public void treatingFunction(Tree t){
-        //System.out.println("Function has "+t.getChildCount()+" children."); //Name ; Input ; Bloc ; Output
-
-        Table tableOfSymbols = new Table(t.getChild(0).toStringTree()); //The first Child is always the name of the function
-        System.out.println(currentTable);
-        currentTable = tableOfSymbols;
+        Table table = new Table(t.getChild(0).toStringTree()); //On crée la table de la fonction(The first Child is always the name of the function)
+        this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
+        System.out.println(table);
         for (int i = 1;i<t.getChildCount();i++){
+            this.currentTable = table;//On place notre table comme table courante
             visit(t.getChild(i));
         }
-        treeTable.getRoot().addChild(currentTable); //Puisque toutes les fonctions sont au même niveau dans l'AST, on peut y accéder directement.
     }
 
-    public void treatingInput(Tree t){
+    public void treatingInput(Tree t){ //Ajoute les paramètres et le nombre de paramètres à la table
         Set<String> set = new HashSet<>();
         for (int i =0;i<t.getChildCount();i++){
             set.add(t.getChild(i).toStringTree());
@@ -135,10 +141,35 @@ public class VisitorSemantic {
         }
     }
 
+    //Affectations
+
     public void treatingAffection(Tree t){
         //Le nœud Affectation possède deux enfants : Node_Left, Node_Right
         //Node Left est le nom de la variable, Node_Right, sa valeur
-        t.getChild(0);
+
+        //Vérification du bon nombre
+        int n_left = t.getChild(0).getChildCount();
+        int n_right = t.getChild(1).getChildCount();
+
+        if(n_left!=n_right){
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - MAUVAISE MULTIPLICITE D'AFFECTATION");
+            return; //fin du parcours de l'AST car erreur dans le code while
+        }
+
+        //Left
+        for(int i = 0; i<n_left; i++){
+            //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
+           currentTable.addVar(t.getChild(0).getChild(i).toStringTree());
+        }
+
+        //Right
+        for(int i = 0; i<n_right; i++){
+            //L'enfant peut-être soit un (Node_Cons/Head/Tail), soit une variable pré-définie, soit un (Node_Call)
+
+        }
+
+
     }
 
     public void treatingLeft(Tree t){
@@ -152,21 +183,52 @@ public class VisitorSemantic {
         }
     }
 
+
+    //Structures de contrôle
+
     public void treatingIf(Tree t){
-        Table oldTable = currentTable;
-        currentTable= new Table("forEach");
-        //Trois enfants : Op, Node_Bloc, Node_Else (optionnel)
-        if (true /* À METTRE UNE CONDITION, MAIS JE NE VOIS PAS LAQUELLE*/){
-            visit(t.getChild(1));
-        } else if (t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
+        Table table = new Table("if1");
+        currentTable.addChild(table);
+        Table oldTable = currentTable; //pour le else
+        //Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
+        currentTable = table;
+        visit(t.getChild(1));
+
+        if(t.getChildCount()>=2){ //On s'assure de l'existence de l'instruction Else
+            currentTable = oldTable;
             visit(t.getChild(2));
         }
-        currentTable=oldTable;
     }
 
     public void treatingElse(Tree t){
+        Table table = new Table("else1");
+        currentTable.addChild(table);
+        currentTable = table;
         visit(t.getChild(0)); //Toujours un enfant : Node_Block
     }
+
+    public void treatingFor(Tree t){
+        Table table = new Table("for1");
+        currentTable.addChild(table);
+        currentTable= table;
+        visit(t.getChild(1)); //Toujours un Node_Bloc
+    }
+
+    public void treatingForEach(Tree t){
+        Table table = new Table("foreach1");
+        currentTable.addChild(table);
+        currentTable= table;
+        visit(t.getChild(1)); //Toujours un Node_Bloc
+    }
+
+    public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
+        Table table = new Table("while1");
+        currentTable.addChild(table);
+        currentTable= table;
+        visit(t.getChild(1)); //Toujours un Node_Bloc
+    }
+
+    //Constructeurs
 
     public void treatingCons(Tree t){
         for (int i = 0 ; i < t.getChildCount() ; i ++){
@@ -181,28 +243,6 @@ public class VisitorSemantic {
             //Les enfants de t sont les élements de la liste
             t.getChild(i);
         }
-    }
-
-    public void treatingFor(Tree t){
-        Table oldTable = currentTable;
-        currentTable= new Table("for");
-        visit(t.getChild(1)); //Toujours un Node_Bloc
-        currentTable=oldTable;
-    }
-
-    public void treatingForEach(Tree t){
-        Table oldTable = currentTable;
-        currentTable= new Table("forEach");
-        currentTable.addVar(t.getChild(0).toStringTree());
-        visit(t.getChild(2)); //Toujours un Node_Bloc
-        currentTable=oldTable;
-    }
-
-    public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
-        Table oldTable = currentTable;
-        currentTable=new Table("while");
-        visit(t.getChild(1));
-        currentTable=oldTable;
     }
 
     //Appels de fonctions

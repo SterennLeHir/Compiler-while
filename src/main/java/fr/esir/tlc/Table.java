@@ -1,5 +1,6 @@
 package fr.esir.tlc;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,6 +30,10 @@ public class Table {
     private int n_inputs;
     private int n_outputs;
 
+    //parents et enfants
+    private Table parent;
+    private final ArrayList<Table> children;
+
     /**
      * This is the constructor.
      * @param name The name of the parent class/
@@ -37,8 +42,33 @@ public class Table {
         this.name = name;
         this.vars = new HashSet<>();
         this.params =new HashSet<>();
+
         this.n_inputs =0;
         this.n_outputs =0;
+
+        this.parent = null;
+        this.children=new ArrayList<>();
+    }
+
+    public Table getParent(){
+        return this.parent;
+    }
+
+    public Table getChild(int i){
+        return this.children.get(i);
+    }
+
+    public ArrayList<Table> getChildren(){
+        return this.children;
+    }
+
+    public void addChild(Table table){
+        this.children.add(table);
+        table.setParent(this);
+    }
+
+    private void setParent(Table table) {
+        this.parent = table;
     }
 
     /**
@@ -100,6 +130,4 @@ public class Table {
     public Set<String> getVars(){
         return vars;
     }
-
-
 }
