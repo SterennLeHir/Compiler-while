@@ -11,7 +11,7 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        whileLexer lex = new whileLexer(new ANTLRFileStream("C:\\Users\\hywel\\OneDrive\\Documents\\BOULOT\\M1\\S1\\TLC\\Projet\\Compiler-while\\output\\__Test___input.txt", "UTF8"));
+        whileLexer lex = new whileLexer(new ANTLRFileStream("C:\\Users\\aleco\\IdeaProjects\\Compiler-while\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
 
         whileParser g = new whileParser(tokens, null);
