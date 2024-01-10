@@ -8,7 +8,7 @@ import java.util.Set;
 public class Visitor {
 
     private TreeTable treeTable;
-    private TableOfSymbols currentTable;
+    private Table currentTable;
 
     public Visitor(){
         treeTable=null;
@@ -118,7 +118,7 @@ public class Visitor {
 
     public void treatingRoot(Tree t){
         treeTable = new TreeTable();
-        currentTable= new TableOfSymbols("Root");
+        currentTable= new Table("Root");
         for (int i = 0 ; i < t.getChildCount();i++){
             visit(t.getChild(i));
         }
@@ -127,7 +127,7 @@ public class Visitor {
     public void treatingFunction(Tree t){
         //System.out.println("Function has "+t.getChildCount()+" children."); //Name ; Input ; Bloc ; Output
 
-        TableOfSymbols tableOfSymbols = new TableOfSymbols(t.getChild(0).toStringTree()); //The first Child is always the name of the function
+        Table tableOfSymbols = new Table(t.getChild(0).toStringTree()); //The first Child is always the name of the function
         System.out.println(currentTable);
         currentTable = tableOfSymbols;
         for (int i = 1;i<t.getChildCount();i++){
@@ -173,8 +173,8 @@ public class Visitor {
     }
 
     public void treatingIf(Tree t){
-        TableOfSymbols oldTable = currentTable;
-        currentTable= new TableOfSymbols("forEach");
+        Table oldTable = currentTable;
+        currentTable= new Table("forEach");
         //Trois enfants : Op, Node_Bloc, Node_Else (optionnel)
         if (true /* À METTRE UNE CONDITION, MAIS JE NE VOIS PAS LAQUELLE*/){
             visit(t.getChild(1));
@@ -204,23 +204,23 @@ public class Visitor {
     }
 
     public void treatingFor(Tree t){
-        TableOfSymbols oldTable = currentTable;
-        currentTable= new TableOfSymbols("for");
+        Table oldTable = currentTable;
+        currentTable= new Table("for");
         visit(t.getChild(1)); //Toujours un Node_Bloc
         currentTable=oldTable;
     }
 
     public void treatingForEach(Tree t){
-        TableOfSymbols oldTable = currentTable;
-        currentTable= new TableOfSymbols("forEach");
+        Table oldTable = currentTable;
+        currentTable= new Table("forEach");
         currentTable.addVariableToSet(t.getChild(0).toStringTree());
         visit(t.getChild(2)); //Toujours un Node_Bloc
         currentTable=oldTable;
     }
 
     public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
-        TableOfSymbols oldTable = currentTable;
-        currentTable=new TableOfSymbols("while");
+        Table oldTable = currentTable;
+        currentTable=new Table("while");
         visit(t.getChild(1));
         currentTable=oldTable;
     }

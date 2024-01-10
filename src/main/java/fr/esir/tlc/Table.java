@@ -21,7 +21,7 @@ Il faut stocker plusieurs noms, ainsi que donner le type de table.
 Si type = "fonction" : sauver aussi la taille entrée et sortie.
  */
 
-public class TableOfSymbols {
+public class Table {
     private final String name; //refers to the parent function or program
     private final Set<String> set;
 
@@ -36,7 +36,7 @@ public class TableOfSymbols {
      * This is the constructor.
      * @param name The name of the parent class/
      */
-    public TableOfSymbols(String name){
+    public Table(String name){
         this.name = name;
         this.set = new HashSet<>();
         this.parameters=new HashSet<>();

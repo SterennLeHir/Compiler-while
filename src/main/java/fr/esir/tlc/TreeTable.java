@@ -1,29 +1,22 @@
 package fr.esir.tlc;
 
-import org.antlr.runtime.tree.CommonTree;
-import org.antlr.runtime.tree.Tree;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Set;
 
 public class TreeTable {
-
-    private Node root;
-
+    private final Node root;
     public TreeTable(){
-        this.root=new Node(new TableOfSymbols(""));
+        this.root=new Node(new Table(""));
     }
 
-
     public class Node {
-        public ArrayList<Node> children;
+        public Table table;
         public Node parent;
-        public TableOfSymbols value;
+        public ArrayList<Node> children;
 
-        public Node(TableOfSymbols table){
-            this.value = table;
-            children=new ArrayList<>();
+
+        public Node(Table table){
+            this.table = table;
+            this.children=new ArrayList<>();
         }
 
         public Node getChild(int i){
@@ -34,7 +27,7 @@ public class TreeTable {
             return this.children;
         }
 
-        public void addChild(TableOfSymbols table){
+        public void addChild(Table table){
             this.children.add(new Node(table));
         }
     }
