@@ -5,12 +5,11 @@ import org.antlr.runtime.tree.Tree;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Visitor {
+public class VisitorSemantic {
 
     private TreeTable treeTable;
-    private Table currentTable;
 
-    public Visitor(){
+    public VisitorSemantic(){
         treeTable=null;
     }
 
@@ -97,24 +96,6 @@ public class Visitor {
 
     }
 
-    public void treatingCall(Tree t){
-        //Child 0 is order
-        //Child 1 is value
-        visit(t.getChild(1));
-    }
-
-
-    private void treatingTail(Tree t) {
-        //The child is the one that you are getting the tail of
-    }
-
-    private void treatingHead(Tree t) {
-        //The child is the one that you are getting the head of
-    }
-
-    private void treatingExprList(Tree t) {
-        //The child is the one that you are getting the tail of
-    }
 
     public void treatingRoot(Tree t){
         treeTable = new TreeTable();
@@ -137,16 +118,15 @@ public class Visitor {
     }
 
     public void treatingInput(Tree t){
-        this.currentTable.setInputs(t.getChildCount());
         Set<String> set = new HashSet<>();
         for (int i =0;i<t.getChildCount();i++){
             set.add(t.getChild(i).toStringTree());
         }
-        this.currentTable.addParameters(set);
+        this.currentTable.addParams(set);
     }
 
     public void treatingOutput(Tree t){
-        this.currentTable.setOutputs(t.getChildCount());
+        this.currentTable.setN_outputs(t.getChildCount());
     }
 
     public void treatingBloc(Tree t){
@@ -213,7 +193,7 @@ public class Visitor {
     public void treatingForEach(Tree t){
         Table oldTable = currentTable;
         currentTable= new Table("forEach");
-        currentTable.addVariableToSet(t.getChild(0).toStringTree());
+        currentTable.addVar(t.getChild(0).toStringTree());
         visit(t.getChild(2)); //Toujours un Node_Bloc
         currentTable=oldTable;
     }
@@ -223,5 +203,25 @@ public class Visitor {
         currentTable=new Table("while");
         visit(t.getChild(1));
         currentTable=oldTable;
+    }
+
+    //Appels de fonctions
+
+    public void treatingCall(Tree t){
+        //Child 0 is order
+        //Child 1 is value
+        visit(t.getChild(1));
+    }
+
+    private void treatingTail(Tree t) {
+        //The child is the one that you are getting the tail of
+    }
+
+    private void treatingHead(Tree t) {
+        //The child is the one that you are getting the head of
+    }
+
+    private void treatingExprList(Tree t) {
+        //The child is the one that you are getting the tail of
     }
 }

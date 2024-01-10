@@ -23,14 +23,11 @@ Si type = "fonction" : sauver aussi la taille entrée et sortie.
 
 public class Table {
     private final String name; //refers to the parent function or program
-    private final Set<String> set;
+    private final Set<String> params;
+    private final Set<String> vars;
 
-    private final Set<String> parameters;
-
-
-
-    private int inputs;
-    private int outputs;
+    private int n_inputs;
+    private int n_outputs;
 
     /**
      * This is the constructor.
@@ -38,10 +35,10 @@ public class Table {
      */
     public Table(String name){
         this.name = name;
-        this.set = new HashSet<>();
-        this.parameters=new HashSet<>();
-        this.inputs=0;
-        this.outputs=0;
+        this.vars = new HashSet<>();
+        this.params =new HashSet<>();
+        this.n_inputs =0;
+        this.n_outputs =0;
     }
 
     /**
@@ -58,7 +55,7 @@ public class Table {
      * @return The toString version of the table
      */
     public String toString (){
-        return this.name+" ("+inputs+","+outputs+") : "+ set.toString();
+        return this.name+" ("+ n_inputs +","+ n_outputs +") : "+ vars.toString();
     }
 
     /**
@@ -67,48 +64,41 @@ public class Table {
      * @return true if present, false if not
      */
     public boolean foundVariable (String variable){
-        return this.set.contains(variable);
+        return this.vars.contains(variable);
+    }
+
+    public void addParams(Set<String> s){
+        vars.addAll(s);
+        this.n_inputs = s.size();
     }
 
     /**
      * This function adds the variable to the set, if the variable isn't there.
      * @param variable The variable to add to the table
      */
-    public void addVariableToSet(String variable){
-        if (!foundVariable(variable)) this.set.add(variable);
-    }
-    public void addVarToParameters(String variable){
-        if (!this.parameters.contains(variable)){
-            parameters.add(variable);
-        }
+    public void addVar(String variable){
+        if (!foundVariable(variable)) this.vars.add(variable);
     }
 
-    public int getInputs() {
-        return inputs;
+    public int getN_inputs() {
+        return n_inputs;
     }
 
-    public int getOutputs() {
-        return outputs;
+    public int getN_outputs() {
+        return n_outputs;
     }
 
-    public void setInputs(int i){
-        this.inputs=i;
+
+    public void setN_outputs(int i){
+        this.n_outputs =i;
     }
 
-    public void setOutputs(int i){
-        this.outputs=i;
+    public Set<String> getParams(){
+        return params;
     }
 
-    public void addParameters(Set<String> s){
-        set.addAll(s);
-    }
-
-    public Set<String> getParameters(){
-        return parameters;
-    }
-
-    public Set<String> getSet(){
-        return set;
+    public Set<String> getVars(){
+        return vars;
     }
 
 

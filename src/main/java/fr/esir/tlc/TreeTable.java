@@ -4,19 +4,31 @@ import java.util.ArrayList;
 
 public class TreeTable {
     private final Node root;
+    private Node current;
     public TreeTable(){
-        this.root=new Node(new Table(""));
+        this.root=new Node(new Table("_ROOT_"));
+        this.current=root;
     }
 
     public class Node {
-        public Table table;
-        public Node parent;
-        public ArrayList<Node> children;
-
+        private final Table table;
+        private final Node parent;
+        private final ArrayList<Node> children;
 
         public Node(Table table){
             this.table = table;
+            this.parent = null;
             this.children=new ArrayList<>();
+        }
+
+        public Node(Table table, Node parent){
+            this.table = table;
+            this.parent = parent;
+            this.children=new ArrayList<>();
+        }
+
+        public Node getParent(){
+            return this.parent;
         }
 
         public Node getChild(int i){
@@ -28,12 +40,18 @@ public class TreeTable {
         }
 
         public void addChild(Table table){
-            this.children.add(new Node(table));
+            this.children.add(new Node(table, this)); //On ajoute un enfant qui a la table donnée et le pointeur vers le parent
         }
     }
 
     public Node getRoot(){
-        return root;
+        return this.root;
     }
 
+    public Node getCurrent(){
+        return this.current;
+    }
+    public void setCurrent(Node node){
+        this.current = node;
+    }
 }

@@ -1,24 +1,24 @@
-function add : 
-read Op1, Op2 
+function add :
+read Op1, Op2
 % 
 Result := Op1;
 if Op2 then
-Result := (cons nil Result) 
-else 
+Result := (cons nil Result)
+else
  Result := (cons nil nil)
 fi
 % 
-write Result 
+write Result
 
-function sub : 
-read Op1, Op2 
-% 
+function sub :
+read Op1, Op2
+%
  Result := Op1;
-for Op2 do 
- Result := (tl Result) 
+for Op2 do
+ Result := (tl Result)
 od;
 foreach Element in Op2 do
 Result := (cons Result Element)
 od
-% 
-write Result 
+%
+write Result
