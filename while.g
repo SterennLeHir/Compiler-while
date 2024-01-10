@@ -14,10 +14,13 @@ Node_ForEach;
 Node_For;
 Node_While;
 Node_If;
+Node_Else;
 Node_Affectation;
+Node_Params;
 Node_Function;
 Node_Left;
 Node_Right;
+Node_Call;
 Node_Head;
 Node_Tail;
 Node_Cons;
@@ -50,7 +53,7 @@ WS  :   ( ' '
 program 
 	:	function program? ;
 function	
-	:	'function' Symbol ':' WS* definition  -> ^(Node_Function  Symbol  definition) ; 
+	:	'function' Symbol ':' WS* definition  -> ^(Node_Function  Symbol  definition) ;  
 
 definition 
 	:	'read' input WS* '%' commands '%' WS* 'write' output WS* -> input commands output; 
@@ -67,15 +70,15 @@ exprs
 commands 
 	:	WS* command (';' command)* WS* -> ^(Node_Bloc command+); 
 command      
-	:	'foreach' Variable 'in' expression 'do' commands 'od' -> ^(Node_ForEach expression commands)
+	:	'foreach' Variable 'in' expression 'do' commands 'od' -> ^(Node_ForEach Variable expression commands)
 		| 'for' expression 'do' commands 'od' -> ^(Node_For expression commands)
 		| 'while' expression 'do' commands 'od' -> ^(Node_While expression commands)
-		| 'if' expression 'then'  commands ('else' commands)? 'fi' -> ^(Node_If expression commands)
+		| 'if' expression 'then'  commands ('else' commands)? 'fi' -> ^(Node_If expression commands ^(Node_Else commands)?)
 		| 'nop'
 		| vars ':=' exprs -> ^(Node_Affectation vars exprs) 
 		;  
 exprBase     
-	 :	'(' Symbol lExpr ')'
+	 :	'(' Symbol lExpr ')' -> ^(Node_Call Symbol ^(Node_Params lExpr))
 		| '(' 'hd' exprBase ')' ->  ^(Node_Head exprBase)
 		| '(' 'tl' exprBase ')' -> ^(Node_Tail exprBase)
 		| '(' 'cons' lExpr ')' -> ^(Node_Cons lExpr)

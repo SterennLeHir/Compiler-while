@@ -2,6 +2,8 @@ package fr.esir.tlc.ThreeAdressesCode;
 
 
 public abstract class Operation {
+    // Cette classe correspond à toutes les opérations possibles en code 3 adresses et utiles pour while
+
     /**
      * @return a string corresponding to the Operation
      */

@@ -10,7 +10,7 @@ public class Affectation extends Operation {
     }
     @Override
     public String toThreeAdressesCode() {
-       return variableLeft.name + "=" + variableRight;
+        return variableLeft.name + "=" + variableRight;
     }
 
     @Override

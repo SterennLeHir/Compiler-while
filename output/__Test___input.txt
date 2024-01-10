@@ -9,16 +9,30 @@ else
 fi
 % 
 write Result 
-
-function sub : 
+function mul : 
 read Op1, Op2 
 % 
- Result := Op1;
-for Op2 do 
- Result := (tl Result) 
-od;
-foreach Element in Op2 do
-Result := (cons Result Element)
-od
+for Op1 do 
+ Result := (add Result Op2) ;
+Op1 := (hd Op1)
+od 
 % 
 write Result 
+function test: 
+read Op1
+%
+Result := nil;
+foreach X in Op1 do
+Result := (list Result X)
+od
+%
+write Result
+function test2: 
+read Op1
+%
+Result := nil;
+while Op1 do
+Result := (cons Result nil)
+od
+%
+write Result
