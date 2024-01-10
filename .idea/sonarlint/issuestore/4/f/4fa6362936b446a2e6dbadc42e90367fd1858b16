@@ -1,641 +1,1021 @@
 
-k
-java:S1192â"ODefine a constant instead of duplicating this literal "token Variable" 3 times.(ë›×´ùÿÿÿÿ
-c
-java:S1192õ"MDefine a constant instead of duplicating this literal "rule retval" 11 times.(æ×‡f
-e
-java:S1192º"IDefine a constant instead of duplicating this literal "token WS" 3 times.(í†Áòüÿÿÿÿ
-e
-java:S1192á"IDefine a constant instead of duplicating this literal "token 24" 4 times.(¾¸Êœüÿÿÿÿ
-k	java:S117`"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-k	java:S117v"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÏ’ıùÿÿÿÿ
-l	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÚ™Æÿÿÿÿÿ
-l	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‡şÿÿÿÿÿ
-g	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñó×á
-g	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰ï
-g	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Í•
-g	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ†£µ
-g	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰å
-g	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€—ˆâ
-g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Ö±ó
-l	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¶¢–úÿÿÿÿ
-l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ
-f	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëıÈ[
-g	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”“ 
-g	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔØ‰à
-f	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çøå§ùÿÿÿÿ
-g	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾·ªê
-l	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½àşÿÿÿÿ
-l	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éàè±øÿÿÿÿ
-g	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶íáù
-l	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼À†–ÿÿÿÿÿ
-l	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö•ÿıÿÿÿÿ
-g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äô¶é
-l	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àîìüÿÿÿÿ
-l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÔú×øÿÿÿÿ
-g	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÒÛ
-l	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¸¬şüÿÿÿÿ
-f	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À°ƒ;
-l	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÇÚôıÿÿÿÿ
-g	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë…
-l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞªäÒúÿÿÿÿ
-l	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ
-f	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆˆˆU
-g	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Æ©
-l	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÆèøÿÿÿÿ
-g	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì‘
-l	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËŞº¨ÿÿÿÿÿ
-l	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á…Õüıÿÿÿÿ
-g	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ´ìà
-f	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õßúÿÿÿÿ
-l	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èù´¡ÿÿÿÿÿ
-f	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™‘¢¾
-g	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¥“á
-g	java:S117Ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í© ú
-l	java:S117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ‘“°ûÿÿÿÿ
-l	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïá„üÿÿÿÿ
-f	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«çÜ
-l	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¸Êœüÿÿÿÿ
-l	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ
-g	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êó»ï
-f	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-l	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½èí×
-l	java:S117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃùÓùÿÿÿÿ
-g	java:S117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“á¡ˆ
-l	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğñ¸«üÿÿÿÿ
-g	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïãÑ
-g	java:S117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğï€
-l	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¸Êœüÿÿÿÿ
-l	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ
-g	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´’´
-f	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡íË·
-g	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ºò–
-l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úñğåùÿÿÿÿ
-g	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¬²ÿ
-l	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ…¡¼ÿÿÿÿÿ
-l	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×²Áíüÿÿÿÿ
-l	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¸Êœüÿÿÿÿ
-l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ
-g	java:S117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥¢
-f	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-l	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä˜ƒéûÿÿÿÿ
-g	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¶«è
-l	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾¸Êœüÿÿÿÿ
-l	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ä‹ùÿÿÿÿ
-l	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şíò˜øÿÿÿÿ
-f	java:S117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-l	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ—”
-g	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¼×
-g	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºˆ¯
-l	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°õ€Àıÿÿÿÿ
-g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ç•
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûö¦Ù
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÙ÷
-l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ
-l	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¹ƒ¶üÿÿÿÿ
-f	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´è§
-f	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞñÆY
-l	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãì£øûÿÿÿÿ
-f	java:S117Œ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117“	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117Ä	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117Æ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¼“âûÿÿÿÿ
-l	java:S117Ç	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶‘¤üÿÿÿÿÿ
-g	java:S117È	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Šø›
-l	java:S117É	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÄØøùÿÿÿÿ
-l	java:S117Ê	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹éí‚ÿÿÿÿÿ
-g	java:S117Ë	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¹ˆÕ
-l	java:S117Ì	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( °ùüÿÿÿÿ
-l	java:S117Í	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Å—æıÿÿÿÿ
-g	java:S117Î	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÿĞ‚
-l	java:S117Ï	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æüæıÿÿÿÿ
-l	java:S117Ğ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûšØ¡ıÿÿÿÿ
-l	java:S117Ñ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾²¤ùşÿÿÿÿ
-l	java:S117Ò	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß®ïşÿÿÿÿ
-l	java:S117Ó	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈŠ¥‘ûÿÿÿÿ
-l	java:S117Ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñîâşÿÿÿÿÿ
-l	java:S117Õ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜­¬¸ıÿÿÿÿ
-f	java:S117Ö	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÂ˜"
-l	java:S117×	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ïşşûÿÿÿÿ
-l	java:S117Ø	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü†·ãúÿÿÿÿ
-l	java:S117Ù	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ê÷ªÿÿÿÿÿ
-g	java:S117Ú	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÈ¥
-g	java:S117Û	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êĞ›Ö
-l	java:S117Ü	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÖÍúÿÿÿÿ
-f	java:S117ü	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó›’+
-l	java:S117ı	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıìˆÂüÿÿÿÿ
-f	java:S117ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åç‘<
-g	java:S117ÿ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾åÅ
-l	java:S117€
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÂáèşÿÿÿÿ
-l	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ä¤®ùÿÿÿÿ
-l	java:S117‚
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥†û»şÿÿÿÿ
-l	java:S117ƒ
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôñÂŞùÿÿÿÿ
-g	java:S117„
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à’§¡
-g	java:S117…
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ƒ‹Ã
-g	java:S117†
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆıÜî
-l	java:S117‡
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Æ†½ıÿÿÿÿ
-g	java:S117ˆ
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØíÄ„
-g	java:S117‰
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ´¨
-l	java:S117Š
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯×´„øÿÿÿÿ
-g	java:S117‹
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ğÜÓ
-l	java:S117Œ
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜ‹‰úÿÿÿÿ
-l	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¢±Öüÿÿÿÿ
-l	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çÿ·«üÿÿÿÿ
-g	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢‡Î
-l	java:S117
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓçÒ®ùÿÿÿÿ
-l	java:S117‘
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤™¾áùÿÿÿÿ
-g	java:S117’
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â´¶ß
-g	java:S117“
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç™†ä
-l	java:S117”
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¥‚Äùÿÿÿÿ
-f	java:S117•
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áıW
-g	java:S117–
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ìµê
-g	java:S117—
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì“
-l	java:S117˜
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ä‹ùÿÿÿÿ
-l	java:S117™
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úèşíøÿÿÿÿ
-l	java:S117š
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»‰ğñûÿÿÿÿ
-g	java:S117›
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì‘
-f	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-f	java:S117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢·½¿ùÿÿÿÿ
-l	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ùüÿÿÿÿ
-l	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ã–Šùÿÿÿÿ
-f	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f
-f	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF
-l	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”åóş
-l	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØÓ¶şÿÿÿÿ
-g	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒä±ÿ
-g	java:S117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãíÿ
-g	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğàé“
-g	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ºªı
-l	java:S117÷"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ŠàÛùÿÿÿÿ
-l	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îß¼úÿÿÿÿ
-g	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÑ³É
-g	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãî²¯
-g	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡©“Š
-l	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âµÚÍÿÿÿÿÿ
-g	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ½Ü”
-g	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íê¼ù
-g	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÆèò
-g	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şŞÂÔ
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½™–²úÿÿÿÿ
-f	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïîæ_
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÛ©üÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èşŸ«
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔéË¹
-l	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ßÊ×ûÿÿÿÿ
-l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÕ¼ıøÿÿÿÿ
-l	java:S117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿©º¤ÿÿÿÿÿ
-l	java:S117”"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌìµÑûÿÿÿÿ
-l	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï£©Ğúÿÿÿÿ
-g	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ëùÿ
-l	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·…üıÿÿÿÿ
-g	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”èÿ
-g	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÏ¹í
-g	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”„Ë¬
-l	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¥›§şÿÿÿÿ
-g	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÊõÒ
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É†‘Íşÿÿÿÿ
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œíúŠ
-g	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¶Òİ
-l	java:S117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢±ÒÚûÿÿÿÿ
-l	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ä®åûÿÿÿÿ
-l	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÎÙ¨ÿÿÿÿÿ
-l	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ
-g	java:S117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‘Ä
-f
-java:S1301{"KReplace this "switch" statement by "if" statements to increase readability.(Ò…šşşÿÿÿÿ
-b
-java:S1301Õ"KReplace this "switch" statement by "if" statements to increase readability.(ˆóø
+r
+java:S1192Ø"ODefine a constant instead of duplicating this literal "token Variable" 3 times.(ë›×´ùÿÿÿÿ8ö²³¤Ï1
+j
+java:S1192ö"MDefine a constant instead of duplicating this literal "rule retval" 15 times.(æ×‡f8ö²³¤Ï1
 g
-java:S1301Ş"KReplace this "switch" statement by "if" statements to increase readability.(³Ş£úÿÿÿÿ
-g
-java:S1301…"KReplace this "switch" statement by "if" statements to increase readability.(‹€’ªşÿÿÿÿ
-g
-java:S1301©"KReplace this "switch" statement by "if" statements to increase readability.(¸Ó×úÿÿÿÿ
-g
-java:S1301ˆ"KReplace this "switch" statement by "if" statements to increase readability.(üÆÇ·şÿÿÿÿ
-g
-java:S1301ö"KReplace this "switch" statement by "if" statements to increase readability.(Â±øŸøÿÿÿÿ
-b
-java:S1301á"KReplace this "switch" statement by "if" statements to increase readability.(¡ºŒÈ
-b
-java:S1301Ô"KReplace this "switch" statement by "if" statements to increase readability.(²«Èü
-a
-java:S1301Á"KReplace this "switch" statement by "if" statements to increase readability.(Ğëq
-a
-java:S1301°"KReplace this "switch" statement by "if" statements to increase readability.(šÚé
-g
-java:S1301Ñ"KReplace this "switch" statement by "if" statements to increase readability.(¾Ùùùÿÿÿÿ
-b
-java:S1301ò"KReplace this "switch" statement by "if" statements to increase readability.(ÆıÄõ
-b
-java:S1301„"KReplace this "switch" statement by "if" statements to increase readability.(—ç´„
-a
-java:S1301¬"KReplace this "switch" statement by "if" statements to increase readability.(²…¨f
-b
-java:S1301»"KReplace this "switch" statement by "if" statements to increase readability.(¤î¾¼
-b
-java:S1301ç"KReplace this "switch" statement by "if" statements to increase readability.(ˆÕå
-g
-java:S1301ˆ"KReplace this "switch" statement by "if" statements to increase readability.(¢å¤Ëûÿÿÿÿ
-g
-java:S1301Ñ"KReplace this "switch" statement by "if" statements to increase readability.(¦ÕÅ¬ıÿÿÿÿ
-b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(§‘š
-g	java:S101U"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(òÜ‘§ÿÿÿÿÿ
-b	java:S101 "MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(èâÎ/
-c	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³Óšİ
-h	java:S101ì"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ªêáùÿÿÿÿ
-c	java:S101Í"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¾›ëá
-c	java:S101¸"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŒË•º
-h	java:S101«"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ÿ­¿Æùÿÿÿÿ
-h	java:S101–"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÖÒ‚€üÿÿÿÿ
-h	java:S101†"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(•ÑúÖøÿÿÿÿ
-c	java:S101¹	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¤ˆöí
-c	java:S101ä"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ôü„±
-b	java:S101à"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ßÚu
-h	java:S101±"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãëŒƒùÿÿÿÿ
-H
-java:S1199k"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199À"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199ù"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199û"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199É"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199Ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199É"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199€"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¦"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¨"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199—"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199Ò"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199‚"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199„"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199Å"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199õ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¯"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199å"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¤"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199’	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¨"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199ª"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199ß"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199á"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199¿"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199Á"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199ø"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-I
-java:S1199Ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(øÅ‡Ğûÿÿÿÿ
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ïÈÌ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§ÆÙÎÿÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿ìÜÜıÿÿÿÿ
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ˆ¡õ¬
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(âÅÿ…
-n	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µãä
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(åŞ­Î
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ä°µ¼şÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(İ£Èøÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÅùÄúÿÿÿÿ
-n	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(…‚Üv
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ù•óØ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­‚½éÿÿÿÿÿ
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¦•‹©øÿÿÿÿ
-o	java:S115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ĞÍÏ 
-t	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‘–¾šÿÿÿÿÿ
-t	java:S115""ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‡º´«ÿÿÿÿÿ
-o	java:S115#"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ã´¯§
-t	java:S115$"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿êø¸úÿÿÿÿ
-t	java:S115%"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ï¸§ùÿÿÿÿ
-t	java:S115&"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ôû°³üÿÿÿÿ
-n	java:S115'"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’ü%
-n	java:S115("ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ğ‘÷p
-o	java:S115)"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æã™Î
-o	java:S115*"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¹üéš
-n	java:S115+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ôáp
-t	java:S115,"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ğª°ùÿÿÿÿ
-o	java:S115-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( ‰„
-o	java:S115."ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Â³ÿ
-t	java:S115/"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æâáëûÿÿÿÿ
-o	java:S1150"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ú¸¥Â
-o	java:S1151"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‹ Ò‰
-o	java:S1152"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(÷Ä±
-t	java:S1153"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ñ¼ıÿÿÿÿ
-t	java:S1154"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ğˆ±ïøÿÿÿÿ
-n	java:S1155"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(—ˆN
-t	java:S1156"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(»³ …üÿÿÿÿ
-t	java:S1157"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¸š¿éøÿÿÿÿ
-t	java:S1158"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(›»¬èúÿÿÿÿ
-n	java:S1159"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÿ•Í1
-o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş›¥N
-u	java:S115ƒ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®ÔÙ«şÿÿÿÿ
-u	java:S115…"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÑÕ¦úÿÿÿÿ
-u	java:S115‡"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(™äò¹ùÿÿÿÿ
-p	java:S115‰"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ØøÃ
-p	java:S115‹"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ğãŞ–
-p	java:S115µ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ñ‚æ
-u	java:S115·"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(±“é¾ûÿÿÿÿ
-u	java:S115¹"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(öäúƒıÿÿÿÿ
-u	java:S115»"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§Û’Ñÿÿÿÿÿ
-u	java:S115½"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(°Áÿ¸ùÿÿÿÿ
-u	java:S115¿"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ¯ø¡ûÿÿÿÿ
-8
-java:S2386"Make this member "protected".(ôñËçüÿÿÿÿ
-7
-java:S1116X"Remove this empty statement.(ôŸìúÿÿÿÿ
-Q	java:S125["<This block of commented-out lines of code should be removed.(è¦®¼
-<	java:S131{""Add a default case to this switch.(Ò…šşşÿÿÿÿ
->	java:S108š")Either remove or fill this block of code.(˜£­
-8
-java:S1116£"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854õ"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125¦"<This block of commented-out lines of code should be removed.(Íù­É
-P
-java:S1481´"9Remove this unused "string_literal3_tree" local variable.(‹Í•
-H
-java:S1481µ"1Remove this unused "Symbol4_tree" local variable.(Œ†£µ
-N
-java:S1481¶"7Remove this unused "char_literal5_tree" local variable.(‰å
-D
-java:S1481·"-Remove this unused "WS6_tree" local variable.(€—ˆâ
-R
-java:S1119Ë";Refactor the code to remove this label and the need for it.(Ÿ¾Ô
-H
-java:S1481õ"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108—")Either remove or fill this block of code.(˜£­
-8
-java:S1116 "Remove this empty statement.(ôŸìúÿÿÿÿ
+java:S1192Ù"IDefine a constant instead of duplicating this literal "token 31" 4 times.(£ì“8ö²³¤Ï1
+l
+java:S1192¼"IDefine a constant instead of duplicating this literal "token WS" 3 times.(í†Áòüÿÿÿÿ8ö²³¤Ï1
+r	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ú²³¤Ï1
+r	java:S117w"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÏ’ıùÿÿÿÿ8ú²³¤Ï1
+s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ú²³¤Ï1
+s	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÚ™Æÿÿÿÿÿ8ú²³¤Ï1
+s	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸‡şÿÿÿÿÿ8ú²³¤Ï1
+n	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñó×á8ú²³¤Ï1
+n	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ‰ï8ú²³¤Ï1
+n	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Í•8ú²³¤Ï1
+n	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ†£µ8ú²³¤Ï1
+n	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰å8ú²³¤Ï1
+n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€—ˆâ8ú²³¤Ï1
+s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÃÇûúÿÿÿÿ8ú²³¤Ï1
+n	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÉ¹ğ8ú²³¤Ï1
+n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Ö±ó8ú²³¤Ï1
+s	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ8ú²³¤Ï1
+n	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ”“ 8ú²³¤Ï1
+n	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔØ‰à8ú²³¤Ï1
+m	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ú²³¤Ï1
+m	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ú²³¤Ï1
+s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ú²³¤Ï1
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çøå§ùÿÿÿÿ8ú²³¤Ï1
+n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾·ªê8ú²³¤Ï1
+s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•½àşÿÿÿÿ8ú²³¤Ï1
+s	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(éàè±øÿÿÿÿ8ú²³¤Ï1
+n	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶íáù8ú²³¤Ï1
+s	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼À†–ÿÿÿÿÿ8ú²³¤Ï1
+s	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö•ÿıÿÿÿÿ8ú²³¤Ï1
+n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äô¶é8ú²³¤Ï1
+s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àîìüÿÿÿÿ8ú²³¤Ï1
+s	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÔú×øÿÿÿÿ8ú²³¤Ï1
+n	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úÒÛ8ú²³¤Ï1
+s	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ¸¬şüÿÿÿÿ8ú²³¤Ï1
+m	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(À°ƒ;8ú²³¤Ï1
+s	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÇÚôıÿÿÿÿ8ú²³¤Ï1
+s	java:S117¿"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï¥‚Äùÿÿÿÿ8û²³¤Ï1
+m	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áıW8û²³¤Ï1
+s	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ8û²³¤Ï1
+n	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ìµê8û²³¤Ï1
+n	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Æ©8û²³¤Ï1
+s	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÆèøÿÿÿÿ8û²³¤Ï1
+n	java:S117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì‘8û²³¤Ï1
+s	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËŞº¨ÿÿÿÿÿ8û²³¤Ï1
+s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á…Õüıÿÿÿÿ8û²³¤Ï1
+n	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ´ìà8û²³¤Ï1
+m	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8û²³¤Ï1
+s	java:S117î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8û²³¤Ï1
+s	java:S117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õßúÿÿÿÿ8û²³¤Ï1
+s	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èù´¡ÿÿÿÿÿ8û²³¤Ï1
+m	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8û²³¤Ï1
+m	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8û²³¤Ï1
+s	java:S117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8û²³¤Ï1
+n	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™‘¢¾8û²³¤Ï1
+n	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·¥“á8û²³¤Ï1
+n	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í© ú8û²³¤Ï1
+s	java:S117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ‘“°ûÿÿÿÿ8û²³¤Ï1
+s	java:S117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïá„üÿÿÿÿ8û²³¤Ï1
+m	java:S117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«çÜ8û²³¤Ï1
+s	java:S117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ8û²³¤Ï1
+n	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì“8û²³¤Ï1
+n	java:S117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êó»ï8û²³¤Ï1
+m	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8û²³¤Ï1
+s	java:S117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8û²³¤Ï1
+n	java:S117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½èí×8û²³¤Ï1
+s	java:S117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃùÓùÿÿÿÿ8û²³¤Ï1
+n	java:S117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“á¡ˆ8û²³¤Ï1
+s	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğñ¸«üÿÿÿÿ8û²³¤Ï1
+n	java:S117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïãÑ8û²³¤Ï1
+n	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğï€8ü²³¤Ï1
+s	java:S117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ8ü²³¤Ï1
+n	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì“8ü²³¤Ï1
+n	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´’´8ü²³¤Ï1
+m	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ü²³¤Ï1
+m	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ü²³¤Ï1
+s	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ü²³¤Ï1
+n	java:S117¯"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡íË·8ü²³¤Ï1
+n	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ºò–8ü²³¤Ï1
+s	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úñğåùÿÿÿÿ8ü²³¤Ï1
+n	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¬²ÿ8ü²³¤Ï1
+s	java:S117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ…¡¼ÿÿÿÿÿ8ü²³¤Ï1
+s	java:S117µ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×²Áíüÿÿÿÿ8ü²³¤Ï1
+s	java:S117¶"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›×´ùÿÿÿÿ8ü²³¤Ï1
+n	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì“8ü²³¤Ï1
+n	java:S117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™¥¢8ü²³¤Ï1
+m	java:S117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ü²³¤Ï1
+m	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ü²³¤Ï1
+s	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ü²³¤Ï1
+s	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä˜ƒéûÿÿÿÿ8ü²³¤Ï1
+n	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê¶«è8ü²³¤Ï1
+n	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì“8ü²³¤Ï1
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ä‹ùÿÿÿÿ8ü²³¤Ï1
+s	java:S117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şíò˜øÿÿÿÿ8ü²³¤Ï1
+m	java:S117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ü²³¤Ï1
+m	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ü²³¤Ï1
+s	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ü²³¤Ï1
+n	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ—”8ü²³¤Ï1
+n	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¼×8ü²³¤Ï1
+n	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºˆ¯8ü²³¤Ï1
+s	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°õ€Àıÿÿÿÿ8ü²³¤Ï1
+n	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†ç•8ü²³¤Ï1
+n	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûö¦Ù8ü²³¤Ï1
+s	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(í†Áòüÿÿÿÿ8ü²³¤Ï1
+s	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ŞÈåıÿÿÿÿ8ı²³¤Ï1
+s	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰¹ƒ¶üÿÿÿÿ8ı²³¤Ï1
+m	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´è§8ı²³¤Ï1
+m	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞñÆY8ı²³¤Ï1
+s	java:S117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãì£øûÿÿÿÿ8ı²³¤Ï1
+m	java:S117“	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ı²³¤Ï1
+m	java:S117š	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ı²³¤Ï1
+s	java:S117Ë	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ı²³¤Ï1
+s	java:S117Í	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¼“âûÿÿÿÿ8ı²³¤Ï1
+s	java:S117Î	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶‘¤üÿÿÿÿÿ8ı²³¤Ï1
+n	java:S117Ï	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Šø›8ı²³¤Ï1
+s	java:S117Ğ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÄØøùÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ñ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹éí‚ÿÿÿÿÿ8ı²³¤Ï1
+n	java:S117Ò	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğ¹ˆÕ8ı²³¤Ï1
+s	java:S117Ó	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( °ùüÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ô	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬Å—æıÿÿÿÿ8ı²³¤Ï1
+n	java:S117Õ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÿĞ‚8ı²³¤Ï1
+s	java:S117Ö	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æüæıÿÿÿÿ8ı²³¤Ï1
+s	java:S117×	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûšØ¡ıÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ø	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾²¤ùşÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ù	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß®ïşÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ú	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈŠ¥‘ûÿÿÿÿ8ı²³¤Ï1
+s	java:S117Û	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñîâşÿÿÿÿÿ8ı²³¤Ï1
+s	java:S117Ü	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜­¬¸ıÿÿÿÿ8ı²³¤Ï1
+m	java:S117İ	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÂ˜"8ı²³¤Ï1
+s	java:S117Ş	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ïşşûÿÿÿÿ8ı²³¤Ï1
+s	java:S117ß	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü†·ãúÿÿÿÿ8ı²³¤Ï1
+s	java:S117à	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ê÷ªÿÿÿÿÿ8ı²³¤Ï1
+n	java:S117á	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŒÈ¥8ı²³¤Ï1
+n	java:S117â	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êĞ›Ö8ı²³¤Ï1
+s	java:S117ã	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤ÖÍúÿÿÿÿ8ı²³¤Ï1
+m	java:S117ƒ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó›’+8ı²³¤Ï1
+s	java:S117„
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıìˆÂüÿÿÿÿ8ı²³¤Ï1
+m	java:S117…
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åç‘<8ı²³¤Ï1
+n	java:S117†
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾åÅ8ı²³¤Ï1
+s	java:S117‡
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÂáèşÿÿÿÿ8ı²³¤Ï1
+s	java:S117ˆ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Ä¤®ùÿÿÿÿ8ı²³¤Ï1
+s	java:S117‰
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥†û»şÿÿÿÿ8ı²³¤Ï1
+s	java:S117Š
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôñÂŞùÿÿÿÿ8ı²³¤Ï1
+n	java:S117‹
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à’§¡8ı²³¤Ï1
+n	java:S117Œ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ƒ‹Ã8ı²³¤Ï1
+n	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆıÜî8ı²³¤Ï1
+s	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Æ†½ıÿÿÿÿ8ı²³¤Ï1
+n	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØíÄ„8ı²³¤Ï1
+n	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ´¨8ı²³¤Ï1
+s	java:S117‘
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯×´„øÿÿÿÿ8ı²³¤Ï1
+n	java:S117’
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ğÜÓ8ı²³¤Ï1
+s	java:S117“
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÜ‹‰úÿÿÿÿ8ı²³¤Ï1
+s	java:S117”
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚¢±Öüÿÿÿÿ8ı²³¤Ï1
+s	java:S117•
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Çÿ·«üÿÿÿÿ8ı²³¤Ï1
+n	java:S117–
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤¢‡Î8ı²³¤Ï1
+s	java:S117—
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓçÒ®ùÿÿÿÿ8ı²³¤Ï1
+s	java:S117˜
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤™¾áùÿÿÿÿ8ı²³¤Ï1
+n	java:S117™
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â´¶ß8ı²³¤Ï1
+m	java:S117š
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨÷^8ı²³¤Ï1
+n	java:S117›
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÄâ‚8ı²³¤Ï1
+s	java:S117œ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖµåÙşÿÿÿÿ8ı²³¤Ï1
+n	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç™†ä8ı²³¤Ï1
+n	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â°˜¦8ı²³¤Ï1
+s	java:S117Ÿ
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿ä‹ùÿÿÿÿ8ı²³¤Ï1
+s	java:S117 
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úèşíøÿÿÿÿ8ı²³¤Ï1
+s	java:S117¡
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»‰ğñûÿÿÿÿ8ş²³¤Ï1
+n	java:S117¢
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ì‘8ş²³¤Ï1
+m	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ş²³¤Ï1
+m	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ş²³¤Ï1
+m	java:S117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ş²³¤Ï1
+m	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ş²³¤Ï1
+s	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢·½¿ùÿÿÿÿ8ş²³¤Ï1
+s	java:S117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·ùüÿÿÿÿ8ş²³¤Ï1
+s	java:S117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ã–Šùÿÿÿÿ8ş²³¤Ï1
+m	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ş²³¤Ï1
+m	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ş²³¤Ï1
+s	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ş²³¤Ï1
+n	java:S117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”åóş8ş²³¤Ï1
+s	java:S117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åØÓ¶şÿÿÿÿ8ş²³¤Ï1
+n	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒä±ÿ8ş²³¤Ï1
+n	java:S117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ãíÿ8ş²³¤Ï1
+n	java:S117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğàé“8ş²³¤Ï1
+n	java:S117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ºªı8ş²³¤Ï1
+s	java:S117ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ŠàÛùÿÿÿÿ8ş²³¤Ï1
+s	java:S117ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îß¼úÿÿÿÿ8ş²³¤Ï1
+n	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÑ³É8ş²³¤Ï1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãî²¯8ş²³¤Ï1
+n	java:S117‚"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡©“Š8ş²³¤Ï1
+s	java:S117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âµÚÍÿÿÿÿÿ8ş²³¤Ï1
+n	java:S117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ½Ü”8ş²³¤Ï1
+n	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íê¼ù8ş²³¤Ï1
+n	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âÆèò8ş²³¤Ï1
+n	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şŞÂÔ8ş²³¤Ï1
+s	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½™–²úÿÿÿÿ8ş²³¤Ï1
+m	java:S117‰"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïîæ_8ş²³¤Ï1
+s	java:S117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÛ©üÿÿÿÿ8ş²³¤Ï1
+n	java:S117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(èşŸ«8ş²³¤Ï1
+n	java:S117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔéË¹8ş²³¤Ï1
+s	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°ßÊ×ûÿÿÿÿ8ş²³¤Ï1
+s	java:S117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀÕ¼ıøÿÿÿÿ8ş²³¤Ï1
+s	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿©º¤ÿÿÿÿÿ8ş²³¤Ï1
+s	java:S117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌìµÑûÿÿÿÿ8ş²³¤Ï1
+s	java:S117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï£©Ğúÿÿÿÿ8ş²³¤Ï1
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ëùÿ8ş²³¤Ï1
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø·…üıÿÿÿÿ8ş²³¤Ï1
+n	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”èÿ8ş²³¤Ï1
+n	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÏ¹í8ş²³¤Ï1
+n	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”„Ë¬8ş²³¤Ï1
+s	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á¥›§şÿÿÿÿ8ş²³¤Ï1
+n	java:S117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÊõÒ8ş²³¤Ï1
+s	java:S117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É†‘Íşÿÿÿÿ8ş²³¤Ï1
+n	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œíúŠ8ş²³¤Ï1
+n	java:S117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¶Òİ8ş²³¤Ï1
+s	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôîÇìùÿÿÿÿ8ş²³¤Ï1
+s	java:S117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à­êâûÿÿÿÿ8ş²³¤Ï1
+s	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç”œúıÿÿÿÿ8ş²³¤Ï1
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Â«ûÿÿÿÿÿ8ÿ²³¤Ï1
+n	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ç¿±8ÿ²³¤Ï1
+s	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ª¶¡ÿÿÿÿÿ8ÿ²³¤Ï1
+s	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×üïûùÿÿÿÿ8ÿ²³¤Ï1
+n	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š‡±à8ÿ²³¤Ï1
+m	java:S117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ÿ²³¤Ï1
+m	java:S117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ÿ²³¤Ï1
+m	java:S117š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ÿ²³¤Ï1
+m	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ÿ²³¤Ï1
+m	java:S117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ÿ²³¤Ï1
+m	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ÿ²³¤Ï1
+m	java:S117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ×‡f8ÿ²³¤Ï1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùùÄF8ÿ²³¤Ï1
+s	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ÿ²³¤Ï1
+s	java:S117Ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢±ÒÚûÿÿÿÿ8ÿ²³¤Ï1
+s	java:S117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Ä®åûÿÿÿÿ8ÿ²³¤Ï1
+s	java:S117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞÎÙ¨ÿÿÿÿÿ8ÿ²³¤Ï1
+s	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÜÖïıÿÿÿÿ8ÿ²³¤Ï1
+n	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‘Ä8ÿ²³¤Ï1
+m
+java:S1301|"KReplace this "switch" statement by "if" statements to increase readability.(Ò…šşşÿÿÿÿ8€³³¤Ï1
 i
-java:S3776¤"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(õ™²¬
-W
-java:S1854Ã"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-W	java:S125£"<This block of commented-out lines of code should be removed.(›ÿíæùÿÿÿÿ
-P
-java:S1481¸"9Remove this unused "string_literal8_tree" local variable.(äô¶é
-J
-java:S1481¹".Remove this unused "WS10_tree" local variable.(àîìüÿÿÿÿ
-T
-java:S1481º"8Remove this unused "char_literal11_tree" local variable.(æÔú×øÿÿÿÿ
-O
-java:S1481»"8Remove this unused "char_literal13_tree" local variable.(úÒÛ
-J
-java:S1481¼".Remove this unused "WS14_tree" local variable.(ˆ¸¬şüÿÿÿÿ
-P
-java:S1481½":Remove this unused "string_literal15_tree" local variable.(À°ƒ;
-J
-java:S1481¾".Remove this unused "WS17_tree" local variable.(ÃÇÚôıÿÿÿÿ
-R
-java:S1119Ô";Refactor the code to remove this label and the need for it.(á”úá
-R
-java:S1119û";Refactor the code to remove this label and the need for it.(ÖİÆ”
-W
-java:S1119Ÿ";Refactor the code to remove this label and the need for it.(«øÇşÿÿÿÿ
-H
-java:S1481Ã"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108æ")Either remove or fill this block of code.(˜£­
-8
-java:S1116ï"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854¢"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125ò"<This block of commented-out lines of code should be removed.(ËŒåı
-=	java:S131ˆ""Add a default case to this switch.(üÆÇ·şÿÿÿÿ
-H
-java:S1481¢"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108Ç")Either remove or fill this block of code.(˜£­
-8
-java:S1116Ğ"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854“"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125Ó"<This block of commented-out lines of code should be removed.(±øúµ
-P
-java:S1481Ş"4Remove this unused "Variable19_tree" local variable.(Õ‘“°ûÿÿÿÿ
-T
-java:S1481ß"8Remove this unused "char_literal20_tree" local variable.(Ïá„üÿÿÿÿ
-J
-java:S1481à"4Remove this unused "Variable21_tree" local variable.(«çÜ
-R
-java:S1119ì";Refactor the code to remove this label and the need for it.(½çü’
-H
-java:S1481“"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108²")Either remove or fill this block of code.(˜£­
-8
-java:S1116»"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854ş"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125¾"<This block of commented-out lines of code should be removed.(ŠëŸ™
-P
-java:S1481É"4Remove this unused "Variable22_tree" local variable.(ğñ¸«üÿÿÿÿ
-O
-java:S1481Ê"8Remove this unused "char_literal23_tree" local variable.(ïãÑ
-K
-java:S1481Ë"4Remove this unused "Variable24_tree" local variable.(ğï€
-R
-java:S1119×";Refactor the code to remove this label and the need for it.(…ş•–
-H
-java:S1481ş"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108¥")Either remove or fill this block of code.(˜£­
-8
-java:S1116®"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854ñ"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-W	java:S125±"<This block of commented-out lines of code should be removed.(ö£¿¦ÿÿÿÿÿ
-K
-java:S1481¼"4Remove this unused "Variable25_tree" local variable.(è¬²ÿ
-T
-java:S1481½"8Remove this unused "char_literal26_tree" local variable.(ÿ…¡¼ÿÿÿÿÿ
-P
-java:S1481¾"4Remove this unused "Variable27_tree" local variable.(×²Áíüÿÿÿÿ
-W
-java:S1119Ê";Refactor the code to remove this label and the need for it.(¾İ»‡ùÿÿÿÿ
-H
-java:S1481ñ"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108")Either remove or fill this block of code.(˜£­
-8
-java:S1116™"Remove this empty statement.(ôŸìúÿÿÿÿ
-W
-java:S1854á"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125œ"<This block of commented-out lines of code should be removed.(°šÈ©
-O
-java:S1481©"8Remove this unused "char_literal29_tree" local variable.(ê¶«è
-R
-java:S1119·";Refactor the code to remove this label and the need for it.(£Öì«
-H
-java:S1481á"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108€")Either remove or fill this block of code.(˜£­
-8
-java:S1116‰"Remove this empty statement.(ôŸìúÿÿÿÿ
-i
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(â‚­Ğ
-W
-java:S1854Œ	"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125Œ"<This block of commented-out lines of code should be removed.(úùêÓ
-J
-java:S1481›".Remove this unused "WS31_tree" local variable.(°õ€Àıÿÿÿÿ
-O
-java:S1481œ"8Remove this unused "char_literal33_tree" local variable.(†ç•
-E
-java:S1481".Remove this unused "WS35_tree" local variable.(ûö¦Ù
-R
-java:S1119¦";Refactor the code to remove this label and the need for it.(æÌ˜Ä
-W
-java:S1119Ç";Refactor the code to remove this label and the need for it.(î¿ îşÿÿÿÿ
-R
-java:S1119è";Refactor the code to remove this label and the need for it.(¤œ¹›
-H
-java:S1481Œ	"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108³	")Either remove or fill this block of code.(˜£­
-8
-java:S1116¼	"Remove this empty statement.(ôŸìúÿÿÿÿ
+java:S1301Ö"KReplace this "switch" statement by "if" statements to increase readability.(ˆóø8€³³¤Ï1
 n
-java:S3776À	"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(Ö¸Øúÿÿÿÿ
-U
-java:S1854
-"9Remove this useless assignment to local variable "alt18".(ç•©âşÿÿÿÿ
-W
-java:S1854¤"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-W
-java:S1854Û"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-U
-java:S1854ª"9Remove this useless assignment to local variable "alt16".(è”ÂÙùÿÿÿÿ
-W
-java:S1854»"ARemove this useless assignment to local variable "stream_retval".(æ×‡f
-R	java:S125¿	"<This block of commented-out lines of code should be removed.(ğßİº
-V
-java:S1481‚
-":Remove this unused "string_literal46_tree" local variable.(¥†û»şÿÿÿÿ
-V
-java:S1481ƒ
-":Remove this unused "string_literal48_tree" local variable.(ôñÂŞùÿÿÿÿ
-Q
-java:S1481„
-":Remove this unused "string_literal50_tree" local variable.(à’§¡
-Q
-java:S1481…
-":Remove this unused "string_literal51_tree" local variable.(°ƒ‹Ã
-Q
-java:S1481†
-":Remove this unused "string_literal53_tree" local variable.(ˆıÜî
-V
-java:S1481‡
-":Remove this unused "string_literal55_tree" local variable.(»Æ†½ıÿÿÿÿ
-Q
-java:S1481’
-":Remove this unused "string_literal72_tree" local variable.(Â´¶ß
-=	java:S131Å
-""Add a default case to this switch.(Å¦úÿÿÿÿ
-H
-java:S1481¤"2Remove this unused "stream_retval" local variable.(æ×‡f
-H
-java:S1481Û"2Remove this unused "stream_retval" local variable.(æ×‡f
-=
-java:S1219ú"&Remove this misleading "loop14" label.(çé‚ 
-=
-java:S1219İ"&Remove this misleading "loop17" label.(—™ç´
-R
-java:S1119ú";Refactor the code to remove this label and the need for it.(çé‚ 
-7	java:S131¬""Add a default case to this switch.(²…¨f
-=
-java:S1219±"&Remove this misleading "loop15" label.(íªï¹
-R
-java:S1119±";Refactor the code to remove this label and the need for it.(íªï¹
-R
-java:S1119İ";Refactor the code to remove this label and the need for it.(—™ç´
-H
-java:S1481»"2Remove this unused "stream_retval" local variable.(æ×‡f
->	java:S108Ş")Either remove or fill this block of code.(˜£­
-8
-java:S1116ç"Remove this empty statement.(ôŸìúÿÿÿÿ
+java:S1301Ş"KReplace this "switch" statement by "if" statements to increase readability.(³Ş£úÿÿÿÿ8€³³¤Ï1
+n
+java:S1301…"KReplace this "switch" statement by "if" statements to increase readability.(‹€’ªşÿÿÿÿ8€³³¤Ï1
+n
+java:S1301©"KReplace this "switch" statement by "if" statements to increase readability.(¸Ó×úÿÿÿÿ8€³³¤Ï1
+n
+java:S1301ÿ"KReplace this "switch" statement by "if" statements to increase readability.(üÆÇ·şÿÿÿÿ8€³³¤Ï1
+n
+java:S1301í"KReplace this "switch" statement by "if" statements to increase readability.(Â±øŸøÿÿÿÿ8€³³¤Ï1
+i
+java:S1301Ø"KReplace this "switch" statement by "if" statements to increase readability.(¡ºŒÈ8€³³¤Ï1
+i
+java:S1301Ë"KReplace this "switch" statement by "if" statements to increase readability.(²«Èü8€³³¤Ï1
+h
+java:S1301À"KReplace this "switch" statement by "if" statements to increase readability.(Ğëq8€³³¤Ï1
+h
+java:S1301·"KReplace this "switch" statement by "if" statements to increase readability.(šÚé8€³³¤Ï1
+n
+java:S1301Ø"KReplace this "switch" statement by "if" statements to increase readability.(¾Ùùùÿÿÿÿ8€³³¤Ï1
+i
+java:S1301ù"KReplace this "switch" statement by "if" statements to increase readability.(ÆıÄõ8€³³¤Ï1
+i
+java:S1301‹"KReplace this "switch" statement by "if" statements to increase readability.(—ç´„8€³³¤Ï1
+h
+java:S1301³"KReplace this "switch" statement by "if" statements to increase readability.(²…¨f8€³³¤Ï1
+i
+java:S1301Â"KReplace this "switch" statement by "if" statements to increase readability.(¤î¾¼8€³³¤Ï1
+i
+java:S1301î"KReplace this "switch" statement by "if" statements to increase readability.(ˆÕå8€³³¤Ï1
+n
+java:S1301î"KReplace this "switch" statement by "if" statements to increase readability.(¢å¤Ëûÿÿÿÿ8³³¤Ï1
+n
+java:S1301·"KReplace this "switch" statement by "if" statements to increase readability.(¦ÕÅ¬ıÿÿÿÿ8³³¤Ï1
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(§‘š8ƒ³³¤Ï1
+n	java:S101V"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(òÜ‘§ÿÿÿÿÿ8ƒ³³¤Ï1
+i	java:S101¡"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(èâÎ/8ƒ³³¤Ï1
+j	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³Óšİ8ƒ³³¤Ï1
+o	java:S101ã"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ªêáùÿÿÿÿ8„³³¤Ï1
+j	java:S101Ä"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¾›ëá8„³³¤Ï1
+j	java:S101¯"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ŒË•º8„³³¤Ï1
+o	java:S101¢"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ÿ­¿Æùÿÿÿÿ8„³³¤Ï1
+o	java:S101•"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÖÒ‚€üÿÿÿÿ8„³³¤Ï1
+o	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(•ÑúÖøÿÿÿÿ8„³³¤Ï1
+j	java:S101À	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¤ˆöí8„³³¤Ï1
+j	java:S101ë"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ôü„±8„³³¤Ï1
+i	java:S101Æ"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ßÚu8„³³¤Ï1
+o	java:S101—"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ãëŒƒùÿÿÿÿ8„³³¤Ï1
+O
+java:S1199l"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Š³³¤Ï1
 P
-java:S1854£"9Remove this useless assignment to local variable "alt19".(Å°•Î
-W	java:S125ê"<This block of commented-out lines of code should be removed.(ÀöÚşúÿÿÿÿ
-8	java:S131¥""Add a default case to this switch.(º½ÛŠ
->	java:S108Ú")Either remove or fill this block of code.(˜£­
-8
-java:S1116ã"Remove this empty statement.(ôŸìúÿÿÿÿ
-W	java:S125æ"<This block of commented-out lines of code should be removed.(Ñ×›¦ûÿÿÿÿ
-=	java:S131ˆ""Add a default case to this switch.(¢å¤Ëûÿÿÿÿ
->	java:S108«")Either remove or fill this block of code.(˜£­
-8
-java:S1116´"Remove this empty statement.(ôŸìúÿÿÿÿ
-R	java:S125·"<This block of commented-out lines of code should be removed.(í£¦Ô
-=	java:S131Ñ""Add a default case to this switch.(¦ÕÅ¬ıÿÿÿÿ
->	java:S108ö")Either remove or fill this block of code.(˜£­
-ã
-java:S6541À	"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 375 to 64, Complexity from 26 to 14, Nesting Level from 5 to 2, Number of Variables from 88 to 6.(Ö¸Øúÿÿÿÿ
+java:S1199Á"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8‹³³¤Ï1
+P
+java:S1199ú"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8³³¤Ï1
+P
+java:S1199ü"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8³³¤Ï1
+P
+java:S1199É"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8³³¤Ï1
+P
+java:S1199Ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8³³¤Ï1
+P
+java:S1199÷"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8‘³³¤Ï1
+P
+java:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8’³³¤Ï1
+P
+java:S1199Ÿ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8”³³¤Ï1
+P
+java:S1199Ş"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199É"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199ù"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199û"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199¼"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199ì"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199î"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199®"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199ä"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199«"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199—	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199™	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199¯"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199±"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199è"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199Æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199È"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199î"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199ğ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199 "-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199Î"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199Ğ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199ş"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199€"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199Ş"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+P
+java:S1199­"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8•³³¤Ï1
+`
+java:S2583à"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583š"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583õ"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583è"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583™"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583ö"CChange this condition so that it does not always evaluate to "true"(æ×‡f8ä½³¤Ï1
+`
+java:S2583Ê"CChange this condition so that it does not always evaluate to "true"(æ×‡f8å½³¤Ï1
+`
+java:S2583Š"CChange this condition so that it does not always evaluate to "true"(æ×‡f8å½³¤Ï1
+`
+java:S2583ú"CChange this condition so that it does not always evaluate to "true"(æ×‡f8å½³¤Ï1
+`
+java:S2583ê"CChange this condition so that it does not always evaluate to "true"(æ×‡f8å½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(åŞ­Î8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ä°µ¼şÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(İ£Èøÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÅùÄúÿÿÿÿ8é½³¤Ï1
+u	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(…‚Üv8é½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ù•óØ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(­‚½éÿÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¦•‹©øÿÿÿÿ8é½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ĞÍÏ 8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‘–¾šÿÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‡º´«ÿÿÿÿÿ8é½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ã´¯§8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿êø¸úÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ï¸§ùÿÿÿÿ8é½³¤Ï1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ôû°³üÿÿÿÿ8é½³¤Ï1
+u	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’ü%8é½³¤Ï1
+u	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ğ‘÷p8é½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æã™Î8é½³¤Ï1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¹üéš8é½³¤Ï1
+u	java:S115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ôáp8é½³¤Ï1
+v	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¸À8é½³¤Ï1
+v	java:S115""ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ã‹Ü™8é½³¤Ï1
+v	java:S115#"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“Ğ8é½³¤Ï1
+v	java:S115$"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‡ò¯ù8é½³¤Ï1
+{	java:S115%"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(œ€¶™ÿÿÿÿÿ8ê½³¤Ï1
+{	java:S115&"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÕÔüÿÿÿÿ8ê½³¤Ï1
+{	java:S115'"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰æéšúÿÿÿÿ8ê½³¤Ï1
+v	java:S115("ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(†ëìµ8ê½³¤Ï1
+v	java:S115)"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( ‰„8ê½³¤Ï1
+v	java:S115*"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Â³ÿ8ê½³¤Ï1
+{	java:S115+"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(æâáëûÿÿÿÿ8ê½³¤Ï1
+v	java:S115,"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ú¸¥Â8ê½³¤Ï1
+v	java:S115-"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‹ Ò‰8ê½³¤Ï1
+v	java:S115."ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(÷Ä±8ê½³¤Ï1
+{	java:S115/"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ñ¼ıÿÿÿÿ8ê½³¤Ï1
+{	java:S1150"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ğˆ±ïøÿÿÿÿ8ê½³¤Ï1
+u	java:S1151"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(àÁ­(8ê½³¤Ï1
+{	java:S1152"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Æòëüÿÿÿÿ8ê½³¤Ï1
+v	java:S1153"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ØÿÕß8ê½³¤Ï1
+v	java:S1154"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(„·÷8ê½³¤Ï1
+v	java:S1155"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(××¬å8ê½³¤Ï1
+v	java:S1156"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯ÌŞ„8ê½³¤Ï1
+{	java:S1157"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Â™ñıÿÿÿÿ8ê½³¤Ï1
+v	java:S1158"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¯‡¯‰8ê½³¤Ï1
+v	java:S1159"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ºÚºÿ8ê½³¤Ï1
+{	java:S115:"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ò¨‡Úûÿÿÿÿ8ê½³¤Ï1
+v	java:S115;"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÒËø¬8ê½³¤Ï1
+{	java:S115<"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(°³şúÿÿÿÿ8ê½³¤Ï1
+v	java:S115ç"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ş›¥N8ê½³¤Ï1
+|	java:S115é"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(®ÔÙ«şÿÿÿÿ8ê½³¤Ï1
+|	java:S115ë"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÑÕ¦úÿÿÿÿ8ê½³¤Ï1
+|	java:S115í"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(™äò¹ùÿÿÿÿ8ê½³¤Ï1
+w	java:S115ï"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ØøÃ8ê½³¤Ï1
+w	java:S115ñ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ğãŞ–8ê½³¤Ï1
+w	java:S115›"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ñ‚æ8ê½³¤Ï1
+|	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(±“é¾ûÿÿÿÿ8ë½³¤Ï1
+|	java:S115Ÿ"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(öäúƒıÿÿÿÿ8ë½³¤Ï1
+|	java:S115¡"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§Û’Ñÿÿÿÿÿ8ë½³¤Ï1
+|	java:S115£"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(°Áÿ¸ùÿÿÿÿ8ë½³¤Ï1
+|	java:S115¥"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(µ¯ø¡ûÿÿÿÿ8ë½³¤Ï1
+¤
+java:S1845ê"€Rename method "input" to prevent any misunderstanding/clash with field "input" defined in superclass "org.antlr.runtime.Parser".(ŞÑ’úÿÿÿÿ8í½³¤Ï1
+?
+java:S2386	"Make this member "protected".(ôñËçüÿÿÿÿ8ò½³¤Ï1
+W
+java:S1161T":Add the "@Override" annotation above this method signature(ë…‚Ú8¾³¤Ï1
+\
+java:S1161U":Add the "@Override" annotation above this method signature(¶ÄŞşúÿÿÿÿ8¾³¤Ï1
+\
+java:S1161X":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8‘¾³¤Ï1
+>
+java:S1116Y"Remove this empty statement.(ôŸìúÿÿÿÿ8‘¾³¤Ï1
+]	java:S125\"<This block of commented-out lines of code should be removed.(ö‡Êñüÿÿÿÿ8’¾³¤Ï1
+F
+java:S1905m")Remove this unnecessary cast to "Object".(÷ªˆº8”¾³¤Ï1
+C	java:S131|""Add a default case to this switch.(Ò…šşşÿÿÿÿ8–¾³¤Ï1
+G
+java:S1905‘")Remove this unnecessary cast to "Object".(ÌÊâ8˜¾³¤Ï1
+G
+java:S1905˜")Remove this unnecessary cast to "Object".(›«8š¾³¤Ï1
+E	java:S108›")Either remove or fill this block of code.(˜£­8š¾³¤Ï1
+]
+java:S1161£":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8›¾³¤Ï1
+?
+java:S1116¤"Remove this empty statement.(ôŸìúÿÿÿÿ8œ¾³¤Ï1
+^
+java:S1854ö"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8¾³¤Ï1
+^	java:S125§"<This block of commented-out lines of code should be removed.(õçªÇÿÿÿÿÿ8¾³¤Ï1
+W
+java:S1481µ"9Remove this unused "string_literal3_tree" local variable.(‹Í•8Ÿ¾³¤Ï1
+O
+java:S1481¶"1Remove this unused "Symbol4_tree" local variable.(Œ†£µ8Ÿ¾³¤Ï1
+U
+java:S1481·"7Remove this unused "char_literal5_tree" local variable.(‰å8Ÿ¾³¤Ï1
+K
+java:S1481¸"-Remove this unused "WS6_tree" local variable.(€—ˆâ8Ÿ¾³¤Ï1
+Y
+java:S1119Ì";Refactor the code to remove this label and the need for it.(Ÿ¾Ô8¡¾³¤Ï1
+O
+java:S1481ö"2Remove this unused "stream_retval" local variable.(æ×‡f8¤¾³¤Ï1
+G
+java:S1905ø")Remove this unnecessary cast to "Object".(÷ªˆº8¦¾³¤Ï1
+F
+java:S1905ı")Remove this unnecessary cast to "Object".(ùùÄF8§¾³¤Ï1
+G
+java:S1905ş")Remove this unnecessary cast to "Object".(£ÀÚ¬8§¾³¤Ï1
+G
+java:S1905ş")Remove this unnecessary cast to "Object".(£ÀÚ¬8§¾³¤Ï1
+G
+java:S1905")Remove this unnecessary cast to "Object".(ÌÊâ8©¾³¤Ï1
+G
+java:S1905”")Remove this unnecessary cast to "Object".(›«8©¾³¤Ï1
+E	java:S108—")Either remove or fill this block of code.(˜£­8ª¾³¤Ï1
+]
+java:S1161Ÿ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8«¾³¤Ï1
+?
+java:S1116 "Remove this empty statement.(ôŸìúÿÿÿÿ8«¾³¤Ï1
+p
+java:S3776¤"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(õ™²¬8¬¾³¤Ï1
+^
+java:S1854Ã"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8°¾³¤Ï1
+^	java:S125£"<This block of commented-out lines of code should be removed.(·¼Üšıÿÿÿÿ8±¾³¤Ï1
+W
+java:S1481¸"9Remove this unused "string_literal8_tree" local variable.(äô¶é8±¾³¤Ï1
+Q
+java:S1481¹".Remove this unused "WS10_tree" local variable.(àîìüÿÿÿÿ8±¾³¤Ï1
+[
+java:S1481º"8Remove this unused "char_literal11_tree" local variable.(æÔú×øÿÿÿÿ8±¾³¤Ï1
+V
+java:S1481»"8Remove this unused "char_literal13_tree" local variable.(úÒÛ8²¾³¤Ï1
+Q
+java:S1481¼".Remove this unused "WS14_tree" local variable.(ˆ¸¬şüÿÿÿÿ8²¾³¤Ï1
+W
+java:S1481½":Remove this unused "string_literal15_tree" local variable.(À°ƒ;8²¾³¤Ï1
+Q
+java:S1481¾".Remove this unused "WS17_tree" local variable.(ÃÇÚôıÿÿÿÿ8²¾³¤Ï1
+Y
+java:S1119Ô";Refactor the code to remove this label and the need for it.(á”úá8´¾³¤Ï1
+Y
+java:S1119û";Refactor the code to remove this label and the need for it.(ÖİÆ”8µ¾³¤Ï1
+^
+java:S1119Ÿ";Refactor the code to remove this label and the need for it.(«øÇşÿÿÿÿ8¸¾³¤Ï1
+O
+java:S1481Ã"2Remove this unused "stream_retval" local variable.(æ×‡f8¹¾³¤Ï1
+G
+java:S1905Å")Remove this unnecessary cast to "Object".(÷ªˆº8º¾³¤Ï1
+G
+java:S1905Ó")Remove this unnecessary cast to "Object".(ÌÊâ8º¾³¤Ï1
+G
+java:S1905Ú")Remove this unnecessary cast to "Object".(›«8¼¾³¤Ï1
+E	java:S108İ")Either remove or fill this block of code.(˜£­8¼¾³¤Ï1
+]
+java:S1161å":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8½¾³¤Ï1
+?
+java:S1116æ"Remove this empty statement.(ôŸìúÿÿÿÿ8¾¾³¤Ï1
+^
+java:S1854™"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8¿¾³¤Ï1
+^	java:S125é"<This block of commented-out lines of code should be removed.(ıüöøûÿÿÿÿ8¿¾³¤Ï1
+D	java:S131ÿ""Add a default case to this switch.(üÆÇ·şÿÿÿÿ8Á¾³¤Ï1
+O
+java:S1481™"2Remove this unused "stream_retval" local variable.(æ×‡f8Ã¾³¤Ï1
+G
+java:S1905›")Remove this unnecessary cast to "Object".(÷ªˆº8Ã¾³¤Ï1
+F
+java:S1905 ")Remove this unnecessary cast to "Object".(ùùÄF8Ã¾³¤Ï1
+L
+java:S1905¡")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8Ä¾³¤Ï1
+L
+java:S1905¡")Remove this unnecessary cast to "Object".(¨½®Õúÿÿÿÿ8Ä¾³¤Ï1
+G
+java:S1905´")Remove this unnecessary cast to "Object".(ÌÊâ8Å¾³¤Ï1
+G
+java:S1905»")Remove this unnecessary cast to "Object".(›«8Æ¾³¤Ï1
+E	java:S108¾")Either remove or fill this block of code.(˜£­8Æ¾³¤Ï1
+]
+java:S1161Æ":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8È¾³¤Ï1
+?
+java:S1116Ç"Remove this empty statement.(ôŸìúÿÿÿÿ8É¾³¤Ï1
+^
+java:S1854Š"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8Ê¾³¤Ï1
+^	java:S125Ê"<This block of commented-out lines of code should be removed.(€¶Í»şÿÿÿÿ8Ë¾³¤Ï1
+W
+java:S1481Õ"4Remove this unused "Variable19_tree" local variable.(Õ‘“°ûÿÿÿÿ8Ë¾³¤Ï1
+[
+java:S1481Ö"8Remove this unused "char_literal20_tree" local variable.(Ïá„üÿÿÿÿ8Ë¾³¤Ï1
+Q
+java:S1481×"4Remove this unused "Variable21_tree" local variable.(«çÜ8Ë¾³¤Ï1
+Y
+java:S1119ã";Refactor the code to remove this label and the need for it.(½çü’8Ì¾³¤Ï1
+O
+java:S1481Š"2Remove this unused "stream_retval" local variable.(æ×‡f8Í¾³¤Ï1
+G
+java:S1905Œ")Remove this unnecessary cast to "Object".(÷ªˆº8Í¾³¤Ï1
+G
+java:S1905Ÿ")Remove this unnecessary cast to "Object".(ÌÊâ8Î¾³¤Ï1
+G
+java:S1905¦")Remove this unnecessary cast to "Object".(›«8Ï¾³¤Ï1
+E	java:S108©")Either remove or fill this block of code.(˜£­8Ğ¾³¤Ï1
+]
+java:S1161±":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8Ò¾³¤Ï1
+?
+java:S1116²"Remove this empty statement.(ôŸìúÿÿÿÿ8Ó¾³¤Ï1
+^
+java:S1854õ"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8Ô¾³¤Ï1
+^	java:S125µ"<This block of commented-out lines of code should be removed.(ôæÄÿÿÿÿÿ8Õ¾³¤Ï1
+W
+java:S1481À"4Remove this unused "Variable22_tree" local variable.(ğñ¸«üÿÿÿÿ8Õ¾³¤Ï1
+V
+java:S1481Á"8Remove this unused "char_literal23_tree" local variable.(ïãÑ8Ö¾³¤Ï1
+R
+java:S1481Â"4Remove this unused "Variable24_tree" local variable.(ğï€8Ö¾³¤Ï1
+Y
+java:S1119Î";Refactor the code to remove this label and the need for it.(…ş•–8×¾³¤Ï1
+O
+java:S1481õ"2Remove this unused "stream_retval" local variable.(æ×‡f8Ø¾³¤Ï1
+G
+java:S1905÷")Remove this unnecessary cast to "Object".(÷ªˆº8Ù¾³¤Ï1
+F
+java:S1905ü")Remove this unnecessary cast to "Object".(ùùÄF8Ù¾³¤Ï1
+L
+java:S1905ı")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8Ú¾³¤Ï1
+L
+java:S1905ı")Remove this unnecessary cast to "Object".(›şÂ…ùÿÿÿÿ8Û¾³¤Ï1
+G
+java:S1905’")Remove this unnecessary cast to "Object".(ÌÊâ8Ü¾³¤Ï1
+G
+java:S1905™")Remove this unnecessary cast to "Object".(›«8İ¾³¤Ï1
+E	java:S108œ")Either remove or fill this block of code.(˜£­8İ¾³¤Ï1
+]
+java:S1161¤":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8Ş¾³¤Ï1
+?
+java:S1116¥"Remove this empty statement.(ôŸìúÿÿÿÿ8Ş¾³¤Ï1
+^
+java:S1854è"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8ß¾³¤Ï1
+Y	java:S125¨"<This block of commented-out lines of code should be removed.(ÙÖ’Ù8à¾³¤Ï1
+R
+java:S1481³"4Remove this unused "Variable25_tree" local variable.(è¬²ÿ8á¾³¤Ï1
+[
+java:S1481´"8Remove this unused "char_literal26_tree" local variable.(ÿ…¡¼ÿÿÿÿÿ8á¾³¤Ï1
+W
+java:S1481µ"4Remove this unused "Variable27_tree" local variable.(×²Áíüÿÿÿÿ8á¾³¤Ï1
+^
+java:S1119Á";Refactor the code to remove this label and the need for it.(¾İ»‡ùÿÿÿÿ8â¾³¤Ï1
+O
+java:S1481è"2Remove this unused "stream_retval" local variable.(æ×‡f8ä¾³¤Ï1
+G
+java:S1905ê")Remove this unnecessary cast to "Object".(÷ªˆº8ä¾³¤Ï1
+F
+java:S1905ï")Remove this unnecessary cast to "Object".(ùùÄF8ä¾³¤Ï1
+L
+java:S1905ğ")Remove this unnecessary cast to "Object".(Ç›’Îşÿÿÿÿ8å¾³¤Ï1
+L
+java:S1905ğ")Remove this unnecessary cast to "Object".(Ç›’Îşÿÿÿÿ8æ¾³¤Ï1
+G
+java:S1905…")Remove this unnecessary cast to "Object".(ÌÊâ8é¾³¤Ï1
+G
+java:S1905Œ")Remove this unnecessary cast to "Object".(›«8é¾³¤Ï1
+E	java:S108")Either remove or fill this block of code.(˜£­8ê¾³¤Ï1
+]
+java:S1161—":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8ë¾³¤Ï1
+?
+java:S1116˜"Remove this empty statement.(ôŸìúÿÿÿÿ8ë¾³¤Ï1
+^
+java:S1854à"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8ï¾³¤Ï1
+^	java:S125›"<This block of commented-out lines of code should be removed.(ï–Ë×ÿÿÿÿÿ8ğ¾³¤Ï1
+V
+java:S1481¨"8Remove this unused "char_literal29_tree" local variable.(ê¶«è8ò¾³¤Ï1
+Y
+java:S1119¶";Refactor the code to remove this label and the need for it.(£Öì«8õ¾³¤Ï1
+O
+java:S1481à"2Remove this unused "stream_retval" local variable.(æ×‡f8÷¾³¤Ï1
+G
+java:S1905â")Remove this unnecessary cast to "Object".(÷ªˆº8ø¾³¤Ï1
+F
+java:S1905ç")Remove this unnecessary cast to "Object".(ùùÄF8ú¾³¤Ï1
+G
+java:S1905è")Remove this unnecessary cast to "Object".(õ•ƒ8ü¾³¤Ï1
+G
+java:S1905è")Remove this unnecessary cast to "Object".(õ•ƒ8ş¾³¤Ï1
+G
+java:S1905ı")Remove this unnecessary cast to "Object".(ÌÊâ8¿³¤Ï1
+G
+java:S1905„")Remove this unnecessary cast to "Object".(›«8„¿³¤Ï1
+E	java:S108‡")Either remove or fill this block of code.(˜£­8†¿³¤Ï1
+]
+java:S1161":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8‰¿³¤Ï1
+?
+java:S1116"Remove this empty statement.(ôŸìúÿÿÿÿ8‰¿³¤Ï1
+p
+java:S3776”"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(â‚­Ğ8‹¿³¤Ï1
+^
+java:S1854“	"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8¿³¤Ï1
+Y	java:S125“"<This block of commented-out lines of code should be removed.(Í©8’¿³¤Ï1
+Q
+java:S1481¢".Remove this unused "WS31_tree" local variable.(°õ€Àıÿÿÿÿ8”¿³¤Ï1
+V
+java:S1481£"8Remove this unused "char_literal33_tree" local variable.(†ç•8”¿³¤Ï1
+L
+java:S1481¤".Remove this unused "WS35_tree" local variable.(ûö¦Ù8•¿³¤Ï1
+Y
+java:S1119­";Refactor the code to remove this label and the need for it.(æÌ˜Ä8•¿³¤Ï1
+^
+java:S1119Î";Refactor the code to remove this label and the need for it.(î¿ îşÿÿÿÿ8™¿³¤Ï1
+Y
+java:S1119ï";Refactor the code to remove this label and the need for it.(¤œ¹›8›¿³¤Ï1
+O
+java:S1481“	"2Remove this unused "stream_retval" local variable.(æ×‡f8Ÿ¿³¤Ï1
+G
+java:S1905•	")Remove this unnecessary cast to "Object".(÷ªˆº8 ¿³¤Ï1
+F
+java:S1905š	")Remove this unnecessary cast to "Object".(ùùÄF8¢¿³¤Ï1
+G
+java:S1905›	")Remove this unnecessary cast to "Object".(Å±Ãæ8£¿³¤Ï1
+G
+java:S1905›	")Remove this unnecessary cast to "Object".(Å±Ãæ8£¿³¤Ï1
+G
+java:S1905°	")Remove this unnecessary cast to "Object".(ÌÊâ8¤¿³¤Ï1
+G
+java:S1905·	")Remove this unnecessary cast to "Object".(›«8©¿³¤Ï1
+E	java:S108º	")Either remove or fill this block of code.(˜£­8ª¿³¤Ï1
+]
+java:S1161Â	":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8®¿³¤Ï1
+?
+java:S1116Ã	"Remove this empty statement.(ôŸìúÿÿÿÿ8¯¿³¤Ï1
+u
+java:S3776Ç	"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(Ö¸Øúÿÿÿÿ8²¿³¤Ï1
+\
+java:S1854¥
+"9Remove this useless assignment to local variable "alt18".(ç•©âşÿÿÿÿ8¸¿³¤Ï1
+^
+java:S1854«"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8¹¿³¤Ï1
+^
+java:S1854â"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8º¿³¤Ï1
+\
+java:S1854±"9Remove this useless assignment to local variable "alt16".(è”ÂÙùÿÿÿÿ8»¿³¤Ï1
+^
+java:S1854Â"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8Ê¿³¤Ï1
+^	java:S125Æ	"<This block of commented-out lines of code should be removed.(ı¸Æìüÿÿÿÿ8Ë¿³¤Ï1
+]
+java:S1481‰
+":Remove this unused "string_literal46_tree" local variable.(¥†û»şÿÿÿÿ8Ì¿³¤Ï1
+]
+java:S1481Š
+":Remove this unused "string_literal48_tree" local variable.(ôñÂŞùÿÿÿÿ8Í¿³¤Ï1
+X
+java:S1481‹
+":Remove this unused "string_literal50_tree" local variable.(à’§¡8Í¿³¤Ï1
+X
+java:S1481Œ
+":Remove this unused "string_literal51_tree" local variable.(°ƒ‹Ã8Í¿³¤Ï1
+X
+java:S1481
+":Remove this unused "string_literal53_tree" local variable.(ˆıÜî8Í¿³¤Ï1
+]
+java:S1481
+":Remove this unused "string_literal55_tree" local variable.(»Æ†½ıÿÿÿÿ8Í¿³¤Ï1
+X
+java:S1481™
+":Remove this unused "string_literal72_tree" local variable.(Â´¶ß8Í¿³¤Ï1
+D	java:S131Ì
+""Add a default case to this switch.(Å¦úÿÿÿÿ8Ñ¿³¤Ï1
+G
+java:S1905Ğ
+")Remove this unnecessary cast to "Object".(÷ªˆº8Ñ¿³¤Ï1
+L
+java:S1905Ó
+")Remove this unnecessary cast to "Object".(íÎí„üÿÿÿÿ8Ò¿³¤Ï1
+G
+java:S1905×
+")Remove this unnecessary cast to "Object".(¼ø²ï8Ò¿³¤Ï1
+L
+java:S1905Û
+")Remove this unnecessary cast to "Object".(ßÑÎÄÿÿÿÿÿ8Ò¿³¤Ï1
+G
+java:S1905å
+")Remove this unnecessary cast to "Object".(½¿åŸ8Ó¿³¤Ï1
+L
+java:S1905ï
+")Remove this unnecessary cast to "Object".(¶»ç¬úÿÿÿÿ8Ô¿³¤Ï1
+L
+java:S1905ó
+")Remove this unnecessary cast to "Object".(Ù£ÁÉúÿÿÿÿ8Ô¿³¤Ï1
+L
+java:S1905ô
+")Remove this unnecessary cast to "Object".(éÍ¢½ıÿÿÿÿ8Ô¿³¤Ï1
+O
+java:S1481«"2Remove this unused "stream_retval" local variable.(æ×‡f8Ö¿³¤Ï1
+G
+java:S1905­")Remove this unnecessary cast to "Object".(÷ªˆº8×¿³¤Ï1
+F
+java:S1905²")Remove this unnecessary cast to "Object".(ùùÄF8Ø¿³¤Ï1
+L
+java:S1905³")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8Ù¿³¤Ï1
+L
+java:S1905³")Remove this unnecessary cast to "Object".(ğ¿Ôæÿÿÿÿÿ8Û¿³¤Ï1
+O
+java:S1481â"2Remove this unused "stream_retval" local variable.(æ×‡f8İ¿³¤Ï1
+G
+java:S1905ä")Remove this unnecessary cast to "Object".(÷ªˆº8İ¿³¤Ï1
+F
+java:S1905é")Remove this unnecessary cast to "Object".(ùùÄF8Ş¿³¤Ï1
+G
+java:S1905ê")Remove this unnecessary cast to "Object".(·ó¼‚8Ş¿³¤Ï1
+G
+java:S1905ê")Remove this unnecessary cast to "Object".(·ó¼‚8Ş¿³¤Ï1
+D
+java:S1219"&Remove this misleading "loop14" label.(çé‚ 8ß¿³¤Ï1
+D
+java:S1219ä"&Remove this misleading "loop17" label.(—™ç´8ß¿³¤Ï1
+G
+java:S1905ú")Remove this unnecessary cast to "Object".(÷ªˆº8ß¿³¤Ï1
+L
+java:S1905ı")Remove this unnecessary cast to "Object".(Ğô‹Éıÿÿÿÿ8ß¿³¤Ï1
+Y
+java:S1119";Refactor the code to remove this label and the need for it.(çé‚ 8ß¿³¤Ï1
+L
+java:S1905")Remove this unnecessary cast to "Object".(‘‡õ¯ùÿÿÿÿ8á¿³¤Ï1
+L
+java:S1905£")Remove this unnecessary cast to "Object".(Êßğúüÿÿÿÿ8â¿³¤Ï1
+G
+java:S1905­")Remove this unnecessary cast to "Object".(Œä“ğ8â¿³¤Ï1
+>	java:S131³""Add a default case to this switch.(²…¨f8ã¿³¤Ï1
+D
+java:S1219¸"&Remove this misleading "loop15" label.(íªï¹8ã¿³¤Ï1
+Y
+java:S1119¸";Refactor the code to remove this label and the need for it.(íªï¹8ã¿³¤Ï1
+L
+java:S1905Ç")Remove this unnecessary cast to "Object".(ÚÁ£¯ùÿÿÿÿ8ä¿³¤Ï1
+L
+java:S1905Ô")Remove this unnecessary cast to "Object".(¸²—øÿÿÿÿ8ä¿³¤Ï1
+Y
+java:S1119ä";Refactor the code to remove this label and the need for it.(—™ç´8ä¿³¤Ï1
+F
+java:S1905ó")Remove this unnecessary cast to "Object".(³ÍÎ	8å¿³¤Ï1
+F
+java:S1905€")Remove this unnecessary cast to "Object".(ã°Ñd8å¿³¤Ï1
+G
+java:S1905„")Remove this unnecessary cast to "Object".(¤ÿÉå8å¿³¤Ï1
+G
+java:S1905…")Remove this unnecessary cast to "Object".(„šó 8å¿³¤Ï1
+G
+java:S1905")Remove this unnecessary cast to "Object".(÷ªˆº8æ¿³¤Ï1
+L
+java:S1905 ")Remove this unnecessary cast to "Object".(Ê­Äııÿÿÿÿ8æ¿³¤Ï1
+O
+java:S1481Â"2Remove this unused "stream_retval" local variable.(æ×‡f8ç¿³¤Ï1
+G
+java:S1905Ä")Remove this unnecessary cast to "Object".(÷ªˆº8ç¿³¤Ï1
+F
+java:S1905É")Remove this unnecessary cast to "Object".(ùùÄF8è¿³¤Ï1
+G
+java:S1905Ê")Remove this unnecessary cast to "Object".(½° ó8è¿³¤Ï1
+G
+java:S1905Ê")Remove this unnecessary cast to "Object".(½° ó8è¿³¤Ï1
+G
+java:S1905Û")Remove this unnecessary cast to "Object".(ÌÊâ8è¿³¤Ï1
+G
+java:S1905â")Remove this unnecessary cast to "Object".(›«8è¿³¤Ï1
+E	java:S108å")Either remove or fill this block of code.(˜£­8é¿³¤Ï1
+]
+java:S1161í":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8é¿³¤Ï1
+?
+java:S1116î"Remove this empty statement.(ôŸìúÿÿÿÿ8ê¿³¤Ï1
+W
+java:S1854±"9Remove this useless assignment to local variable "alt19".(Å°•Î8í¿³¤Ï1
+^
+java:S1854ê"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8í¿³¤Ï1
+^
+java:S1854š"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8í¿³¤Ï1
+^
+java:S1854Ê"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8í¿³¤Ï1
+^
+java:S1854ú"ARemove this useless assignment to local variable "stream_retval".(æ×‡f8í¿³¤Ï1
+Y	java:S125ñ"<This block of commented-out lines of code should be removed.(­šï¡8î¿³¤Ï1
+[
+java:S1481˜"8Remove this unused "char_literal78_tree" local variable.(°ßÊ×ûÿÿÿÿ8ï¿³¤Ï1
+]
+java:S1481™":Remove this unused "string_literal79_tree" local variable.(ÀÕ¼ıøÿÿÿÿ8ï¿³¤Ï1
+[
+java:S1481š"8Remove this unused "char_literal81_tree" local variable.(¿©º¤ÿÿÿÿÿ8ï¿³¤Ï1
+[
+java:S1481›"8Remove this unused "char_literal82_tree" local variable.(ÌìµÑûÿÿÿÿ8ï¿³¤Ï1
+]
+java:S1481œ":Remove this unused "string_literal83_tree" local variable.(Ï£©Ğúÿÿÿÿ8ï¿³¤Ï1
+V
+java:S1481"8Remove this unused "char_literal85_tree" local variable.(¶ëùÿ8ï¿³¤Ï1
+[
+java:S1481"8Remove this unused "char_literal86_tree" local variable.(ø·…üıÿÿÿÿ8ï¿³¤Ï1
+X
+java:S1481Ÿ":Remove this unused "string_literal87_tree" local variable.(”èÿ8ï¿³¤Ï1
+V
+java:S1481 "8Remove this unused "char_literal89_tree" local variable.(ÅÏ¹í8ï¿³¤Ï1
+V
+java:S1481¡"8Remove this unused "char_literal90_tree" local variable.(”„Ë¬8ï¿³¤Ï1
+]
+java:S1481¢":Remove this unused "string_literal91_tree" local variable.(Á¥›§şÿÿÿÿ8ğ¿³¤Ï1
+V
+java:S1481£"8Remove this unused "char_literal93_tree" local variable.(şÊõÒ8ğ¿³¤Ï1
+?	java:S131³""Add a default case to this switch.(º½ÛŠ8ò¿³¤Ï1
+G
+java:S1905·")Remove this unnecessary cast to "Object".(÷ªˆº8ò¿³¤Ï1
+L
+java:S1905º")Remove this unnecessary cast to "Object".(´Ş†Äıÿÿÿÿ8ò¿³¤Ï1
+G
+java:S1905¾")Remove this unnecessary cast to "Object".(–µ†8ò¿³¤Ï1
+G
+java:S1905È")Remove this unnecessary cast to "Object".(ÇóÜ­8ó¿³¤Ï1
+O
+java:S1481ê"2Remove this unused "stream_retval" local variable.(æ×‡f8ó¿³¤Ï1
+G
+java:S1905ì")Remove this unnecessary cast to "Object".(÷ªˆº8ó¿³¤Ï1
+F
+java:S1905ñ")Remove this unnecessary cast to "Object".(ùùÄF8ó¿³¤Ï1
+L
+java:S1905ò")Remove this unnecessary cast to "Object".(—Õûúÿÿÿÿ8ó¿³¤Ï1
+L
+java:S1905ò")Remove this unnecessary cast to "Object".(—Õûúÿÿÿÿ8ô¿³¤Ï1
+O
+java:S1481š"2Remove this unused "stream_retval" local variable.(æ×‡f8õ¿³¤Ï1
+G
+java:S1905œ")Remove this unnecessary cast to "Object".(÷ªˆº8õ¿³¤Ï1
+F
+java:S1905¡")Remove this unnecessary cast to "Object".(ùùÄF8õ¿³¤Ï1
+G
+java:S1905¢")Remove this unnecessary cast to "Object".(¯Ø­Ó8õ¿³¤Ï1
+G
+java:S1905¢")Remove this unnecessary cast to "Object".(¯Ø­Ó8õ¿³¤Ï1
+O
+java:S1481Ê"2Remove this unused "stream_retval" local variable.(æ×‡f8÷¿³¤Ï1
+G
+java:S1905Ì")Remove this unnecessary cast to "Object".(÷ªˆº8÷¿³¤Ï1
+F
+java:S1905Ñ")Remove this unnecessary cast to "Object".(ùùÄF8÷¿³¤Ï1
+G
+java:S1905Ò")Remove this unnecessary cast to "Object".(Ó‡Ñ8÷¿³¤Ï1
+G
+java:S1905Ò")Remove this unnecessary cast to "Object".(Ó‡Ñ8÷¿³¤Ï1
+O
+java:S1481ú"2Remove this unused "stream_retval" local variable.(æ×‡f8ø¿³¤Ï1
+G
+java:S1905ü")Remove this unnecessary cast to "Object".(÷ªˆº8ø¿³¤Ï1
+F
+java:S1905")Remove this unnecessary cast to "Object".(ùùÄF8ø¿³¤Ï1
+G
+java:S1905‚")Remove this unnecessary cast to "Object".(ƒì‰³8ù¿³¤Ï1
+G
+java:S1905‚")Remove this unnecessary cast to "Object".(ƒì‰³8ù¿³¤Ï1
+G
+java:S1905‘")Remove this unnecessary cast to "Object".(÷ªˆº8ù¿³¤Ï1
+G
+java:S1905”")Remove this unnecessary cast to "Object".(Ú›Íÿ8ù¿³¤Ï1
+G
+java:S1905")Remove this unnecessary cast to "Object".(÷ªˆº8ù¿³¤Ï1
+G
+java:S1905 ")Remove this unnecessary cast to "Object".(ıªÔÂ8ù¿³¤Ï1
+G
+java:S1905©")Remove this unnecessary cast to "Object".(÷ªˆº8ú¿³¤Ï1
+G
+java:S1905¬")Remove this unnecessary cast to "Object".(š‚Ú8ú¿³¤Ï1
+G
+java:S1905¶")Remove this unnecessary cast to "Object".(ÌÊâ8ú¿³¤Ï1
+G
+java:S1905½")Remove this unnecessary cast to "Object".(›«8ú¿³¤Ï1
+E	java:S108À")Either remove or fill this block of code.(˜£­8ú¿³¤Ï1
+]
+java:S1161È":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8û¿³¤Ï1
+?
+java:S1116É"Remove this empty statement.(ôŸìúÿÿÿÿ8‘À³¤Ï1
+^	java:S125Ì"<This block of commented-out lines of code should be removed.(¯Åæ„ùÿÿÿÿ8“À³¤Ï1
+G
+java:S1905ß")Remove this unnecessary cast to "Object".(÷ªˆº8”À³¤Ï1
+D	java:S131î""Add a default case to this switch.(¢å¤Ëûÿÿÿÿ8•À³¤Ï1
+L
+java:S1905ó")Remove this unnecessary cast to "Object".(€ù¢µüÿÿÿÿ8•À³¤Ï1
+G
+java:S1905‡")Remove this unnecessary cast to "Object".(ÌÊâ8–À³¤Ï1
+G
+java:S1905")Remove this unnecessary cast to "Object".(›«8—À³¤Ï1
+E	java:S108‘")Either remove or fill this block of code.(˜£­8™À³¤Ï1
+]
+java:S1161™":Add the "@Override" annotation above this method signature(Ç‹Òùÿÿÿÿ8šÀ³¤Ï1
+?
+java:S1116š"Remove this empty statement.(ôŸìúÿÿÿÿ8›À³¤Ï1
+^	java:S125"<This block of commented-out lines of code should be removed.(ªÛØ—ùÿÿÿÿ8œÀ³¤Ï1
+G
+java:S1905®")Remove this unnecessary cast to "Object".(÷ªˆº8À³¤Ï1
+D	java:S131·""Add a default case to this switch.(¦ÕÅ¬ıÿÿÿÿ8 À³¤Ï1
+G
+java:S1905Ò")Remove this unnecessary cast to "Object".(ÌÊâ8¡À³¤Ï1
+G
+java:S1905Ù")Remove this unnecessary cast to "Object".(›«8£À³¤Ï1
+E	java:S108Ü")Either remove or fill this block of code.(˜£­8¤À³¤Ï1
+X
+java:S1161—":Add the "@Override" annotation above this method signature(Îüş8¥À³¤Ï1
+X
+java:S1161Ñ":Add the "@Override" annotation above this method signature(Îüş8¨À³¤Ï1
+ê
+java:S6541Ç	"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 375 to 64, Complexity from 26 to 14, Nesting Level from 5 to 2, Number of Variables from 88 to 6.(Ö¸Øúÿÿÿÿ8¯À³¤Ï1
