@@ -5,14 +5,16 @@ import org.antlr.runtime.tree.Tree;
 import java.util.HashSet;
 import java.util.Set;
 
-public class VisitorSemantic {
+public class VisitorTable {
 
-    private Table rootTable;
-    private Table currentTable;
+    private Table rootTable; //the root table
+    private Table currentTable; //the current table
+    private int leftSum; //the number of values on the left side of an affect
+    private int rightSum; //the number of values on the right side of an affect
 
     private boolean correctSemantic;
 
-    public VisitorSemantic(){
+    public VisitorTable(){
         this.rootTable=null;
         this.currentTable=null;
         this.correctSemantic = true;
@@ -145,44 +147,71 @@ public class VisitorSemantic {
 
     public void treatingAffection(Tree t){
         //Le nœud Affectation possède deux enfants : Node_Left, Node_Right
-        //Node Left est le nom de la variable, Node_Right, sa valeur
+        //Node Left est le nom de la ou des variables, Node_Right, sa/les valeurs
 
-        //Vérification du bon nombre
-        int n_left = t.getChild(0).getChildCount();
-        int n_right = t.getChild(1).getChildCount();
+        //init des nombres de valeurs à droite et à gauche (SECURITE)
+        leftSum = 0; //=t.getChild(0).getChildCount();
+        rightSum = 0; //t.getChild(1).getChildCount() pas bon car un appel de fonction est 1 enfant mais peut fournir plusieurs valeurs
 
-        if(n_left!=n_right){
+        //On regarde à gauche
+        visit(t.getChild(0));
+
+        //On regarde à droite
+        visit(t.getChild(1));
+
+
+        //Vérification du bon nombre de valeurs de chaque côté
+        if(leftSum!=rightSum){
             this.correctSemantic = false;
             System.out.println("ARRET DU PARCOURS - MAUVAISE MULTIPLICITE D'AFFECTATION");
             return; //fin du parcours de l'AST car erreur dans le code while
         }
-
-        //Left
-        for(int i = 0; i<n_left; i++){
-            //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
-           currentTable.addVar(t.getChild(0).getChild(i).toStringTree());
-        }
-
-        //Right
-        for(int i = 0; i<n_right; i++){
-            //L'enfant peut-être soit un (Node_Cons/Head/Tail), soit une variable pré-définie, soit un (Node_Call)
-
-        }
-
-
     }
 
-    public void treatingLeft(Tree t){
-        //Node Left n'a TOUJOURS qu'UN enfant.
-        t.getChild(0);
-    }
-
-    public void treatingRight(Tree t){
-        if (t.getChild(0).toStringTree().substring(0,5).equals("Node_")){
-            visit(t.getChild(0));
+    public void treatingLeft(Tree t){//compte le nombre de valeurs retournées à gauche
+        //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
+        leftSum = t.getChildCount();
+        for(int i = 0; i<t.getChildCount(); i++){
+            this.currentTable.addVar(t.getChild(i).toStringTree());//ajoute chaque var à gauche à la table des symboles courante
+            //voir comment on gère si y'a deux fois le même identifiant de variable@TODO
         }
     }
 
+
+    public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
+        for(int i = 0; i<t.getChildCount(); i++){
+            //cas CALL et HEAD, TAIL etc...
+            if(t.getChild(i).toStringTree().substring(0,5).equals("Node_")){
+                visit(t);
+            }
+            else{ //cas IDENTIFIANT de variable
+                //=> parcours de la table et des tables parent pour trouver la variable/identifiant
+            }
+
+
+            //cas LIST ??? @TODO
+        }
+    }
+
+    //Appels de fonctions
+
+    public void treatingCall(Tree t){
+        //Child 0 is order
+        //Child 1 is value
+        visit(t.getChild(1));
+    }
+
+    private void treatingTail(Tree t) {
+        //The child is the one that you are getting the tail of
+    }
+
+    private void treatingHead(Tree t) {
+        //The child is the one that you are getting the head of
+    }
+
+    private void treatingExprList(Tree t) {
+        //The child is the one that you are getting the tail of
+    }
 
     //Structures de contrôle
 
@@ -243,25 +272,5 @@ public class VisitorSemantic {
             //Les enfants de t sont les élements de la liste
             t.getChild(i);
         }
-    }
-
-    //Appels de fonctions
-
-    public void treatingCall(Tree t){
-        //Child 0 is order
-        //Child 1 is value
-        visit(t.getChild(1));
-    }
-
-    private void treatingTail(Tree t) {
-        //The child is the one that you are getting the tail of
-    }
-
-    private void treatingHead(Tree t) {
-        //The child is the one that you are getting the head of
-    }
-
-    private void treatingExprList(Tree t) {
-        //The child is the one that you are getting the tail of
     }
 }

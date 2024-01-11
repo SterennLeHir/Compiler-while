@@ -21,7 +21,7 @@ public class Main {
             Tree t = (Tree) prog.getTree();
             //t C'est la racine
             System.out.println(t.toStringTree()); //Affichage de l'AST
-            VisitorSemantic v = new VisitorSemantic();
+            VisitorTable v = new VisitorTable();
             v.visit(t);
 
         } catch (RecognitionException e) {
