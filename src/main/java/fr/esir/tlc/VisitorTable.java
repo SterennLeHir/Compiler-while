@@ -11,12 +11,16 @@ public class VisitorTable {
     private Table currentTable; //the current table
     private int leftSum; //the number of values on the left side of an affect
     private int rightSum; //the number of values on the right side of an affect
+    private int N_params; //the number of params that needs the current method
 
     private boolean correctSemantic;
 
     public VisitorTable(){
         this.rootTable=null;
         this.currentTable=null;
+        this.leftSum = 0;
+        this.rightSum = 0;
+        this.N_params = 0;
         this.correctSemantic = true;
     }
 
@@ -94,6 +98,10 @@ public class VisitorTable {
                 treatingCall(t);
                 break;
             }
+            case "Node_Params": {
+                treatingParams(t);
+                break;
+            }
             case "nil":{
                 System.out.println("C'est la racine !"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
                 treatingRoot(t);
@@ -150,57 +158,89 @@ public class VisitorTable {
         //Node Left est le nom de la ou des variables, Node_Right, sa/les valeurs
 
         //init des nombres de valeurs à droite et à gauche (SECURITE)
-        leftSum = 0; //=t.getChild(0).getChildCount();
-        rightSum = 0; //t.getChild(1).getChildCount() pas bon car un appel de fonction est 1 enfant mais peut fournir plusieurs valeurs
+        this.leftSum = 0; //=t.getChild(0).getChildCount();
+        this.rightSum = 0; //t.getChild(1).getChildCount() pas bon car un appel de fonction est 1 enfant mais peut fournir plusieurs valeurs
+
+
+        //On regarde à droite (d'abord à droite pour éviter les A = A)
+        visit(t.getChild(1));
 
         //On regarde à gauche
         visit(t.getChild(0));
 
-        //On regarde à droite
-        visit(t.getChild(1));
-
-
         //Vérification du bon nombre de valeurs de chaque côté
-        if(leftSum!=rightSum){
+        if(this.leftSum!=this.rightSum){
             this.correctSemantic = false;
             System.out.println("ARRET DU PARCOURS - MAUVAISE MULTIPLICITE D'AFFECTATION");
             return; //fin du parcours de l'AST car erreur dans le code while
         }
     }
 
+    public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
+        for(int i = 0; i<t.getChildCount(); i++){
+            //case CALL
+            if("Node_Call".equals(t.getChild(i).toStringTree())){
+                visit(t.getChild(i));
+            }
+            //case HEAD TAIL
+            else if("Node_".equals(t.getChild(i).toStringTree().substring(0,5))){
+                visit(t.getChild(i));
+                this.rightSum += 1;//je le mets ici parce que cons hd et tail ça peut s'enchainer ex hd(hd(hd(nil))) = nil et c 1
+            }
+            else{ //case IDENTIFIANT de variable
+                this.currentTable.findVariable(t.getChild(i).toStringTree());//=> parcours de la table et des tables parent pour trouver la variable/identifiant
+                this.rightSum += 1;
+            }
+
+            //cas LIST ??? @TODO
+        }
+    }
+
     public void treatingLeft(Tree t){//compte le nombre de valeurs retournées à gauche
         //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
-        leftSum = t.getChildCount();
+        this.leftSum = t.getChildCount();
         for(int i = 0; i<t.getChildCount(); i++){
             this.currentTable.addVar(t.getChild(i).toStringTree());//ajoute chaque var à gauche à la table des symboles courante
             //voir comment on gère si y'a deux fois le même identifiant de variable@TODO
         }
     }
 
-
-    public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
-        for(int i = 0; i<t.getChildCount(); i++){
-            //cas CALL et HEAD, TAIL etc...
-            if(t.getChild(i).toStringTree().substring(0,5).equals("Node_")){
-                visit(t);
-            }
-            else{ //cas IDENTIFIANT de variable
-                //=> parcours de la table et des tables parent pour trouver la variable/identifiant
-            }
-
-
-            //cas LIST ??? @TODO
-        }
-    }
-
     //Appels de fonctions
 
     public void treatingCall(Tree t){
-        //Child 0 is order
-        //Child 1 is value
+        //Child 0 is name
+        //Child 1 is Node_Params
+        String name = t.getChild(0).toStringTree();
+        //On vérifie que la fonction existe bien (dans notre implémentation elle n'existe que si elle est déclarée avant + pas d'appels recursifs @TODO)
+        boolean functionFound = false;
+        for(Table child : this.rootTable.getChildren()){
+            if(name.equals(child.getName())){ //pas d'appel recursif ?? (pas encore fait) @TODO
+                functionFound = true;
+                this.N_params = child.getN_inputs(); //le nombre de param que prend la fonction appelée
+                this.rightSum += child.getN_outputs(); //on ajoute le nombre d'outputs de la fonction
+            }
+        }
+
+        if(!functionFound){
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
+            return;
+        }
+
         visit(t.getChild(1));
     }
 
+    private void treatingParams(Tree t) {
+        //on vérifie qu'on a le bon nombre de paramètres (on consière que les paramètres ne sont que des variables @TODO)
+        boolean goodNumberOfParams = this.N_params == t.getChildCount();
+        if(!goodNumberOfParams){
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
+            return; // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
+        }
+    }
+
+    //je skip eux pour le moment @TODO
     private void treatingTail(Tree t) {
         //The child is the one that you are getting the tail of
     }
@@ -216,7 +256,7 @@ public class VisitorTable {
     //Structures de contrôle
 
     public void treatingIf(Tree t){
-        Table table = new Table("if1");
+        Table table = new Table("if1"); //faire un système de nom auto-généré et incrémenté pour chaque structure de contrôle anonyme @TODO
         currentTable.addChild(table);
         Table oldTable = currentTable; //pour le else
         //Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
@@ -267,7 +307,7 @@ public class VisitorTable {
         }
     }
 
-    public void treatingList(Tree t){
+    public void treatingList(Tree t){ //pas envie @TODO
         for (int i = 0 ; i < t.getChildCount() ; i++){
             //Les enfants de t sont les élements de la liste
             t.getChild(i);

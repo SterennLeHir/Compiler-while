@@ -93,8 +93,14 @@ public class Table {
      * @param variable : a variable to find in the table
      * @return true if present, false if not
      */
-    public boolean foundVariable (String variable){
-        return this.vars.contains(variable);
+    public boolean findVariable (String variable){
+        if(this.parent!=null){//tant qu'on a pas tout remonté
+            return this.vars.contains(variable)||parent.findVariable(variable);//on regarde si la variable est dans cette table ou celle du parent
+        }
+        else
+        {
+            return false; //ici on est dan la racine, il n'y a pas de variables
+        }
     }
 
     public void addParams(Set<String> s){
@@ -107,7 +113,7 @@ public class Table {
      * @param variable The variable to add to the table
      */
     public void addVar(String variable){
-        if (!foundVariable(variable)) this.vars.add(variable);
+        if (!this.vars.contains(variable)) this.vars.add(variable);
     }
 
     public int getN_inputs() {
