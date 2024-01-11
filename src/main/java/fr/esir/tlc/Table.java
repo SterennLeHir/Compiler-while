@@ -93,9 +93,9 @@ public class Table {
      * @param variable : a variable to find in the table
      * @return true if present, false if not
      */
-    public boolean findVariable (String variable){
+    public boolean findVarOrParam(String variable){
         if(this.parent!=null){//tant qu'on a pas tout remonté
-            return this.vars.contains(variable)||parent.findVariable(variable);//on regarde si la variable est dans cette table ou celle du parent
+            return (this.vars.contains(variable)||this.params.contains(variable))||parent.findVarOrParam(variable);//on regarde si la variable est dans cette table ou celle du parent
         }
         else
         {

@@ -3,7 +3,7 @@ read Op1, Op2
 % 
 Result := Op1;
 if Op2 then
-Result := (cons nil Result)
+Result := (cons nil nil)
 else
  Result := (cons nil nil)
 fi

@@ -5,7 +5,7 @@ import org.antlr.runtime.tree.Tree;
 import java.util.HashSet;
 import java.util.Set;
 
-public class VisitorTable {
+public class VisitorSemantic {
 
     private Table rootTable; //the root table
     private Table currentTable; //the current table
@@ -15,7 +15,7 @@ public class VisitorTable {
 
     private boolean correctSemantic;
 
-    public VisitorTable(){
+    public VisitorSemantic(){
         this.rootTable=null;
         this.currentTable=null;
         this.leftSum = 0;
@@ -27,6 +27,7 @@ public class VisitorTable {
     public void visit(Tree t){
         switch (t.toString()){
             case "Node_Function": {
+                System.out.println("Je visite une fonction !");
                 treatingFunction(t);
                 break;
             }
@@ -103,7 +104,7 @@ public class VisitorTable {
                 break;
             }
             case "nil":{
-                System.out.println("C'est la racine !"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
+                System.out.println("Je rentre dans la racine !"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
                 treatingRoot(t);
                 break;
             }
@@ -124,19 +125,19 @@ public class VisitorTable {
     //Concernant les fonctions
 
     public void treatingFunction(Tree t){
-        Table table = new Table(t.getChild(0).toStringTree()); //On crée la table de la fonction(The first Child is always the name of the function)
+        Table table = new Table(t.getChild(0).toString()); //On crée la table de la fonction(The first Child is always the name of the function)
         this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
-        System.out.println(table);
         for (int i = 1;i<t.getChildCount();i++){
             this.currentTable = table;//On place notre table comme table courante
             visit(t.getChild(i));
         }
+        System.out.println(table);
     }
 
     public void treatingInput(Tree t){ //Ajoute les paramètres et le nombre de paramètres à la table
         Set<String> set = new HashSet<>();
         for (int i =0;i<t.getChildCount();i++){
-            set.add(t.getChild(i).toStringTree());
+            set.add(t.getChild(i).toString());
         }
         this.currentTable.addParams(set);
     }
@@ -179,17 +180,22 @@ public class VisitorTable {
     public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
         for(int i = 0; i<t.getChildCount(); i++){
             //case CALL
-            if("Node_Call".equals(t.getChild(i).toStringTree())){
+            if("Node_Call".equals(t.getChild(i).toString())){
                 visit(t.getChild(i));
             }
             //case HEAD TAIL
-            else if("Node_".equals(t.getChild(i).toStringTree().substring(0,5))){
+            else if(t.getChild(i).toString().startsWith("Node_")){
                 visit(t.getChild(i));
                 this.rightSum += 1;//je le mets ici parce que cons hd et tail ça peut s'enchainer ex hd(hd(hd(nil))) = nil et c 1
             }
             else{ //case IDENTIFIANT de variable
-                this.currentTable.findVariable(t.getChild(i).toStringTree());//=> parcours de la table et des tables parent pour trouver la variable/identifiant
+                System.out.println(t.getChild(i).toString());
                 this.rightSum += 1;
+                if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
+                    this.correctSemantic = false;
+                    System.out.println("ARRET DU PARCOURS - APPEL A UNE VARIABLE NON DECLAREE");
+                    return;
+                }
             }
 
             //cas LIST ??? @TODO
@@ -200,7 +206,7 @@ public class VisitorTable {
         //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
         this.leftSum = t.getChildCount();
         for(int i = 0; i<t.getChildCount(); i++){
-            this.currentTable.addVar(t.getChild(i).toStringTree());//ajoute chaque var à gauche à la table des symboles courante
+            this.currentTable.addVar(t.getChild(i).toString());//ajoute chaque var à gauche à la table des symboles courante
             //voir comment on gère si y'a deux fois le même identifiant de variable@TODO
         }
     }
@@ -210,7 +216,7 @@ public class VisitorTable {
     public void treatingCall(Tree t){
         //Child 0 is name
         //Child 1 is Node_Params
-        String name = t.getChild(0).toStringTree();
+        String name = t.getChild(0).toString();
         //On vérifie que la fonction existe bien (dans notre implémentation elle n'existe que si elle est déclarée avant + pas d'appels recursifs @TODO)
         boolean functionFound = false;
         for(Table child : this.rootTable.getChildren()){
@@ -238,6 +244,8 @@ public class VisitorTable {
             System.out.println("ARRET DU PARCOURS - MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
             return; // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
         }
+
+        //on verifie que les params existent @TODO
     }
 
     //je skip eux pour le moment @TODO
