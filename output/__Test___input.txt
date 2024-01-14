@@ -2,7 +2,7 @@ function add :
 read Op1, Op2
 %
 if Op2 then
-Result := (add Op1 Op2)
+Result := (cons nil nil)
 else
  Result := (cons nil nil)
 fi
@@ -17,7 +17,7 @@ for Op2 do
  Result := (tl Result)
 od;
 foreach Element in Op2 do
-Result := (cons Result Element)
+Result := Op2
 od
 %
 write Result

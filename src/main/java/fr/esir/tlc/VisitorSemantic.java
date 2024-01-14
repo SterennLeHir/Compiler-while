@@ -14,6 +14,7 @@ public class VisitorSemantic {
     private int N_params; //the number of params that needs the current method
 
     private boolean correctSemantic;
+    private int id; //sert à donner des noms aux tables sans fonction ex : if1, if2, else3
 
     public VisitorSemantic(){
         this.rootTable=null;
@@ -25,91 +26,95 @@ public class VisitorSemantic {
     }
 
     public void visit(Tree t){
-        switch (t.toString()){
-            case "Node_Function": {
-                System.out.println("Je visite une fonction !");
-                treatingFunction(t);
-                break;
-            }
-            case "Node_Input": {
-                treatingInput(t);
-                break;
-            }
-            case "Node_Bloc": {
-                treatingBloc(t);
-                break;
-            }
-            case "Node_Output": {
-                treatingOutput(t);
-                break;
-            }
-            case "Node_Affectation": {
-                treatingAffection(t);
-                break;
-            }
-            case "Node_Left": {
-                treatingLeft(t);
-                break;
-            }
-            case "Node_Right": {
-                treatingRight(t);
-                break;
-            }
-            case "Node_If": {
-                treatingIf(t);
-                break;
-            }
-            case "Node_Else": {
-                treatingElse(t);
-                break;
-            }
-            case "Node_Cons": {
-                treatingCons(t);
-                break;
-            }
-            case "Node_For": {
-                treatingFor(t);
-                break;
-            }
-            case "Node_ForEach": {
-                treatingForEach(t);
-                break;
-            }
-            case "Node_While": {
-                treatingWhile(t);
-                break;
-            }
-            case "Node_Head": {
-                treatingHead(t);
-                break;
-            }
-            case "Node_Tail": {
-                treatingTail(t);
-                break;
-            }
-            case "Node_ExprList": {
-                treatingExprList(t);
-                break;
-            }
-            case "Node_List": {
-                treatingList(t);
-                break;
-            }
-            case "Node_Call": {
-                treatingCall(t);
-                break;
-            }
-            case "Node_Params": {
-                treatingParams(t);
-                break;
-            }
-            case "nil":{
-                System.out.println("Je rentre dans la racine !"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
-                treatingRoot(t);
-                break;
+        if(correctSemantic){//On ne continue de visiter que si jusque là, la sémantique est correcte
+            switch (t.toString()){
+                case "Node_Function": {
+                    //System.out.println("VISITE FONCTION");
+                    treatingFunction(t);
+                    break;
+                }
+                case "Node_Input": {
+                    //System.out.println("VISITE INPUT");
+                    treatingInput(t);
+                    break;
+                }
+                case "Node_Bloc": {
+                    //System.out.println("VISITE BLOC");
+                    treatingBloc(t);
+                    break;
+                }
+                case "Node_Output": {
+                    //System.out.println("VISITE OUTPUT");
+                    treatingOutput(t);
+                    break;
+                }
+                case "Node_Affectation": {
+                    treatingAffection(t);
+                    break;
+                }
+                case "Node_Left": {
+                    treatingLeft(t);
+                    break;
+                }
+                case "Node_Right": {
+                    treatingRight(t);
+                    break;
+                }
+                case "Node_If": {
+                    treatingIf(t);
+                    break;
+                }
+                case "Node_Else": {
+                    treatingElse(t);
+                    break;
+                }
+                case "Node_Cons": {
+                    treatingCons(t);
+                    break;
+                }
+                case "Node_For": {
+                    treatingFor(t);
+                    break;
+                }
+                case "Node_ForEach": {
+                    treatingForEach(t);
+                    break;
+                }
+                case "Node_While": {
+                    treatingWhile(t);
+                    break;
+                }
+                case "Node_Head": {
+                    treatingHead(t);
+                    break;
+                }
+                case "Node_Tail": {
+                    treatingTail(t);
+                    break;
+                }
+                case "Node_ExprList": {
+                    treatingExprList(t);
+                    break;
+                }
+                case "Node_List": {
+                    treatingList(t);
+                    break;
+                }
+                case "Node_Call": {
+                    treatingCall(t);
+                    break;
+                }
+                case "Node_Params": {
+                    treatingParams(t);
+                    break;
+                }
+                case "nil":{
+                    System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
+                    treatingRoot(t);
+                    break;
+                }
             }
         }
-
     }
 
 
@@ -120,6 +125,7 @@ public class VisitorSemantic {
             visit(t.getChild(i));
         }
         System.out.println("PARCOURS TERMINÉ");
+        System.out.println("\nTABLE DES SYMBOLES : \n" + this.rootTable.toStringAll(0));
     }
 
     //Concernant les fonctions
@@ -129,13 +135,10 @@ public class VisitorSemantic {
         this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
 
         //Très important : visiter d'abord les paramètres d'entrée et de sorties pour le cas d'une fonction récursive
-        //On visite les outputs d'abord == dernier noeud fils de la func
         this.currentTable = table;
-        visit(t.getChild(t.getChildCount()-1));
-        for (int i = 1;i<t.getChildCount()-1;i++){
-            this.currentTable = table;//On place notre table comme table courante
-            visit(t.getChild(i));
-        }
+        visit(t.getChild(1)); //VISITE LES INPUTS
+        visit(t.getChild(3));//VISITE LES OUTPUTS
+        visit(t.getChild(2));//VISITE LE BLOC
         System.out.println(table);
     }
 
@@ -152,7 +155,9 @@ public class VisitorSemantic {
     }
 
     public void treatingBloc(Tree t){
+        Table table = this.currentTable;
         for (int i = 0; i < t.getChildCount();i++){
+            this.currentTable = table;
             visit(t.getChild(i));
         }
     }
@@ -177,7 +182,7 @@ public class VisitorSemantic {
         //Vérification du bon nombre de valeurs de chaque côté
         if(this.leftSum!=this.rightSum){
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - MAUVAISE MULTIPLICITE D'AFFECTATION");
+            System.out.println("ARRET DU PARCOURS - MAUVAIS NOMBRE DE VALEURS DANS L'AFFECTATION");
             return; //fin du parcours de l'AST car erreur dans le code while
         }
     }
@@ -194,7 +199,7 @@ public class VisitorSemantic {
                 this.rightSum += 1;//je le mets ici parce que cons hd et tail ça peut s'enchainer ex hd(hd(hd(nil))) = nil et c 1
             }
             else{ //case IDENTIFIANT de variable
-                System.out.println(t.getChild(i).toString());
+                //System.out.println(t.getChild(i).toString());
                 this.rightSum += 1;
                 if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
                     this.correctSemantic = false;
@@ -269,7 +274,7 @@ public class VisitorSemantic {
     //Structures de contrôle
 
     public void treatingIf(Tree t){
-        Table table = new Table("if1"); //faire un système de nom auto-généré et incrémenté pour chaque structure de contrôle anonyme @TODO
+        Table table = new Table("if"+id++); //faire un système de nom auto-généré et incrémenté pour chaque structure de contrôle anonyme @TODO
         currentTable.addChild(table);
         Table oldTable = currentTable; //pour le else
         //Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
@@ -283,30 +288,59 @@ public class VisitorSemantic {
     }
 
     public void treatingElse(Tree t){
-        Table table = new Table("else1");
+        Table table = new Table("else"+id++);
         currentTable.addChild(table);
         currentTable = table;
         visit(t.getChild(0)); //Toujours un enfant : Node_Block
     }
 
     public void treatingFor(Tree t){
-        Table table = new Table("for1");
+        Table table = new Table("for"+id++);
         currentTable.addChild(table);
         currentTable= table;
+
+        //VERIFIER QUE LA VAR DE BOUCLE EXISTE
+        if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOR NON DECLAREE");
+            return;
+        }
+
+        this.currentTable.addVar(t.getChild(0).toString());
         visit(t.getChild(1)); //Toujours un Node_Bloc
     }
 
     public void treatingForEach(Tree t){
-        Table table = new Table("foreach1");
+        Table table = new Table("foreach"+id++);
         currentTable.addChild(table);
         currentTable= table;
-        visit(t.getChild(1)); //Toujours un Node_Bloc
+
+        //VERIFIER QUE LA VAR DE BOUCLE EXISTE
+        if(!this.currentTable.getParent().findVarOrParam(t.getChild(1).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOREACH NON DECLAREE");
+            return;
+        }
+
+        this.currentTable.addVar(t.getChild(0).toString());
+        this.currentTable.addVar(t.getChild(1).toString());
+        visit(t.getChild(2)); //Toujours un Node_Bloc
     }
 
     public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
-        Table table = new Table("while1");
+        Table table = new Table("while"+id++);
         currentTable.addChild(table);
         currentTable= table;
+
+        //VERIFIER QUE LA VAR DE BOUCLE EXISTE
+        if(!this.currentTable.getParent().findVarOrParam(t.getChild(1).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
+            this.correctSemantic = false;
+            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE WHILE NON DECLAREE");
+            return;
+        }
+
+        this.currentTable.addVar(t.getChild(0).toString());
+
         visit(t.getChild(1)); //Toujours un Node_Bloc
     }
 

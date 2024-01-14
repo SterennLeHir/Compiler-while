@@ -84,9 +84,27 @@ public class Table {
      * It follows the format : "name_of_table : table.toString()"
      * @return The toString version of the table
      */
-    public String toString (){
+    public String toString(){
         return this.name+" ("+ n_inputs +","+ n_outputs +") : "+ vars.toString();
     }
+
+    /**
+     * This function returns the toString version of the table and its children
+     * It follows the format : "name_of_table : table.toString()"
+     * @return The toString version of the table
+     */
+    public String toStringAll(int depth){
+        StringBuilder all = new StringBuilder(this.toString());
+        for(Table child:this.getChildren()){
+            all.append("\n");
+            for(int i = 0; i<depth+1; i++){
+                all.append("    ");
+            }
+            all.append(child.toStringAll(depth+1));
+        }
+        return all.toString();
+    }
+
 
     /**
      * This function returns true if the key is present in the set.
@@ -104,7 +122,7 @@ public class Table {
     }
 
     public void addParams(Set<String> s){
-        vars.addAll(s);
+        vars.addAll(s); //On considère que les params font parti des variables locales à la table
         this.n_inputs = s.size();
     }
 

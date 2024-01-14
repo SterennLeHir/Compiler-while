@@ -17,10 +17,13 @@ public class Main {
         //Traitement principal
         try {
             whileParser.program_return prog = g.program(); //AST de notre programme d'entrée
-            System.out.println("AST\n-------------------------------------------------------\n");
+            System.out.println("AST\n-------------------------------------------------------");
             Tree t = (Tree) prog.getTree();
             //t C'est la racine
             System.out.println(t.toStringTree()); //Affichage de l'AST
+
+            System.out.println("\nANALYSE SEMANTIQUE\n-------------------------------------------------------");
+
             VisitorSemantic v = new VisitorSemantic();
             v.visit(t);
 
