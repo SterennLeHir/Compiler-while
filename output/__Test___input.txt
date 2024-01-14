@@ -18,6 +18,9 @@ for Op2 do
 od;
 foreach Element in Op2 do
 Result := Op2
+od;
+while Op2 do
+Result := Op2
 od
 %
 write Result

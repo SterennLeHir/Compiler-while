@@ -333,7 +333,7 @@ public class VisitorSemantic {
         currentTable= table;
 
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
-        if(!this.currentTable.getParent().findVarOrParam(t.getChild(1).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
+        if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
             this.correctSemantic = false;
             System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE WHILE NON DECLAREE");
             return;
