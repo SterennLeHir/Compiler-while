@@ -127,7 +127,12 @@ public class VisitorSemantic {
     public void treatingFunction(Tree t){
         Table table = new Table(t.getChild(0).toString()); //On crée la table de la fonction(The first Child is always the name of the function)
         this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
-        for (int i = 1;i<t.getChildCount();i++){
+
+        //Très important : visiter d'abord les paramètres d'entrée et de sorties pour le cas d'une fonction récursive
+        //On visite les outputs d'abord == dernier noeud fils de la func
+        this.currentTable = table;
+        visit(t.getChild(t.getChildCount()-1));
+        for (int i = 1;i<t.getChildCount()-1;i++){
             this.currentTable = table;//On place notre table comme table courante
             visit(t.getChild(i));
         }
