@@ -4,10 +4,10 @@ read Op1, Op2
 if Op2 then
 Result := (cons nil nil)
 else
- Result := (cons nil nil)
+ Res := (cons nil nil)
 fi
 % 
-write Result
+write Result, Res
 
 function sub :
 read Op1, Op2

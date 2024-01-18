@@ -27,6 +27,13 @@ public class Main {
             VisitorSemantic v = new VisitorSemantic();
             v.visit(t);
 
+            System.out.println("\nCODE 3 ADDRESSES\n-------------------------------------------------------");
+
+            //VisitorTAC v2 = new VisitorTAC();
+            //v2.visit(t);
+
+            System.out.println("\nTRADUCTION\n-------------------------------------------------------");
+
         } catch (RecognitionException e) {
             e.printStackTrace();
         }

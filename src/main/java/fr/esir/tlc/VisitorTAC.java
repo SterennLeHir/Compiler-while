@@ -5,155 +5,126 @@ import org.antlr.runtime.tree.Tree;
 import java.util.HashSet;
 import java.util.Set;
 
-public class VisitorSemantic {
+public class VisitorTAC {
 
-    private Table rootTable; //the root table
-    private Table currentTable; //the current table
-    private int leftSum; //the number of values on the left side of an affect
-    private int rightSum; //the number of values on the right side of an affect
-    private int N_params; //the number of params that needs the current method
+    private String tac;
+    private int id; //sert à donner des labels aux blocs : if1, if2, else3
+    private int regId;//donne le numéro du registre
 
-    private boolean correctSemantic;
-    private int id; //sert à donner des noms aux tables sans fonction ex : if1, if2, else3
-
-    public VisitorSemantic(){
-        this.rootTable=null;
-        this.currentTable=null;
-        this.leftSum = 0;
-        this.rightSum = 0;
-        this.N_params = 0;
-        this.correctSemantic = true;
+    public VisitorTAC(){
+        this.tac = "";
         this.id = 0;
+        this.regId = 0;
     }
-
+/*
     public void visit(Tree t){
-        if(correctSemantic){//On ne continue de visiter que si jusque là, la sémantique est correcte
-            switch (t.toString()){
-                case "Node_Function": {
-                    //System.out.println("VISITE FONCTION");
-                    treatingFunction(t);
-                    break;
-                }
-                case "Node_Input": {
-                    //System.out.println("VISITE INPUT");
-                    treatingInput(t);
-                    break;
-                }
-                case "Node_Bloc": {
-                    //System.out.println("VISITE BLOC");
-                    treatingBloc(t);
-                    break;
-                }
-                case "Node_Output": {
-                    //System.out.println("VISITE OUTPUT");
-                    treatingOutput(t);
-                    break;
-                }
-                case "Node_Affectation": {
-                    treatingAffection(t);
-                    break;
-                }
-                case "Node_Left": {
-                    treatingLeft(t);
-                    break;
-                }
-                case "Node_Right": {
-                    treatingRight(t);
-                    break;
-                }
-                case "Node_If": {
-                    treatingIf(t);
-                    break;
-                }
-                case "Node_Else": {
-                    treatingElse(t);
-                    break;
-                }
-                case "Node_Cons": {
-                    treatingCons(t);
-                    break;
-                }
-                case "Node_For": {
-                    treatingFor(t);
-                    break;
-                }
-                case "Node_ForEach": {
-                    treatingForEach(t);
-                    break;
-                }
-                case "Node_While": {
-                    treatingWhile(t);
-                    break;
-                }
-                case "Node_Head": {
-                    treatingHead(t);
-                    break;
-                }
-                case "Node_Tail": {
-                    treatingTail(t);
-                    break;
-                }
-                case "Node_ExprList": {
-                    treatingExprList(t);
-                    break;
-                }
-                case "Node_List": {
-                    treatingList(t);
-                    break;
-                }
-                case "Node_Call": {
-                    treatingCall(t);
-                    break;
-                }
-                case "Node_Params": {
-                    treatingParams(t);
-                    break;
-                }
-                case "nil":{
-                    System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
-                    treatingRoot(t);
-                    break;
-                }
+        switch (t.toString()){
+            case "Node_Function": {
+                //System.out.println("VISITE FONCTION");
+                treatingFunction(t);
+                break;
+            }
+            case "Node_Input": {
+                //System.out.println("VISITE INPUT");
+                treatingInput(t);
+                break;
+            }
+            case "Node_Bloc": {
+                //System.out.println("VISITE BLOC");
+                treatingBloc(t);
+                break;
+            }
+            case "Node_Output": {
+                //System.out.println("VISITE OUTPUT");
+                treatingOutput(t);
+                break;
+            }
+            case "Node_Affectation": {
+                treatingAffection(t);
+                break;
+            }
+            case "Node_Left": {
+                treatingLeft(t);
+                break;
+            }
+            case "Node_Right": {
+                treatingRight(t);
+                break;
+            }
+            case "Node_If": {
+                treatingIf(t);
+                break;
+            }
+            case "Node_Else": {
+                treatingElse(t);
+                break;
+            }
+            case "Node_Cons": {
+                treatingCons(t);
+                break;
+            }
+            case "Node_For": {
+                treatingFor(t);
+                break;
+            }
+            case "Node_ForEach": {
+                treatingForEach(t);
+                break;
+            }
+            case "Node_While": {
+                treatingWhile(t);
+                break;
+            }
+            case "Node_Head": {
+                treatingHead(t);
+                break;
+            }
+            case "Node_Tail": {
+                treatingTail(t);
+                break;
+            }
+            case "Node_ExprList": {
+                treatingExprList(t);
+                break;
+            }
+            case "Node_List": {
+                treatingList(t);
+                break;
+            }
+            case "Node_Call": {
+                treatingCall(t);
+                break;
+            }
+            case "Node_Params": {
+                treatingParams(t);
+                break;
+            }
+            case "nil":{
+                System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
+                treatingRoot(t);
+                break;
             }
         }
     }
 
 
+
     public void treatingRoot(Tree t){
-        this.rootTable = new Table("_ROOT_");
         for (int i = 0 ; i < t.getChildCount();i++){
-            this.currentTable = this.rootTable; //très important
             visit(t.getChild(i));
         }
-        System.out.println("PARCOURS TERMINÉ");
-        System.out.println("\nTABLE DES SYMBOLES : \n" + this.rootTable.toStringAll(0));
     }
 
     //Concernant les fonctions
 
     public void treatingFunction(Tree t){
-        Table table = new Table(t.getChild(0).toString()); //On crée la table de la fonction(The first Child is always the name of the function)
-        this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
-
-        //Très important : visiter d'abord les paramètres d'entrée et de sorties pour le cas d'une fonction récursive
-        this.currentTable = table;
+        this.tac += t.getChild(0)+":"; //on donne le nom en label
         visit(t.getChild(1)); //VISITE LES INPUTS
         visit(t.getChild(3));//VISITE LES OUTPUTS
         visit(t.getChild(2));//VISITE LE BLOC
-        this.currentTable = table;
-        //VERIF QUE L'OUTPUT EST DECLAREE QQ PART DS LA FUNC
-        for(int i = 0; i<this.currentTable.getN_outputs(); i++){
-            if(!this.currentTable.findOutput(t.getChild(3).getChild(i).toString())){
-                this.correctSemantic = false;
-                System.out.println("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
-                return;
-            }
-        }
-        System.out.println(table);
     }
 
     public void treatingInput(Tree t){ //Ajoute les paramètres et le nombre de paramètres à la table
-        Set<String> set = new HashSet<>();
         for (int i =0;i<t.getChildCount();i++){
             set.add(t.getChild(i).toString());
         }
@@ -370,4 +341,6 @@ public class VisitorSemantic {
             t.getChild(i);
         }
     }
+
+ */
 }

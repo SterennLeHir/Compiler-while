@@ -121,6 +121,16 @@ public class Table {
         }
     }
 
+    public boolean findOutput(String variable){
+        boolean bool = this.vars.contains(variable)||this.params.contains(variable);
+        if(!this.children.isEmpty()){//tant qu'on a pas tout descendu
+            for(Table child : this.getChildren()){
+                bool = bool||child.findOutput(variable);//on regarde si la variable est dans cette table ou celle dees enfants
+            }
+        }
+        return bool;
+    }
+
     public void addParams(Set<String> s){
         vars.addAll(s); //On considère que les params font parti des variables locales à la table
         this.n_inputs = s.size();
