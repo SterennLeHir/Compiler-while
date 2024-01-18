@@ -132,6 +132,15 @@ public class VisitorSemantic {
     //Concernant les fonctions
 
     public void treatingFunction(Tree t){
+        //Verif que le nom de la fonction est pas déjà pris par une autre fonction
+        for(Table func: this.rootTable.getChildren()){ //PAS OPTI DU TOUT, faire un hashset avec les nom plutot
+            if(t.getChild(0).toString().equals(func.getName())){
+                this.correctSemantic = false;
+                System.out.println("ARRET DU PARCOURS - NOM DE FONCTION DEJA EXISTANT");
+                return;
+            }
+        }
+
         Table table = new Table(t.getChild(0).toString()); //On crée la table de la fonction(The first Child is always the name of the function)
         this.currentTable.addChild(table); //On ajoute comme enfant de la table courante notre table
 
