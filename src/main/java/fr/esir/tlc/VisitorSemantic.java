@@ -143,11 +143,18 @@ public class VisitorSemantic {
         this.currentTable = table;
         //VERIF QUE L'OUTPUT EST DECLAREE QQ PART DS LA FUNC
         for(int i = 0; i<this.currentTable.getN_outputs(); i++){
+            if(!this.currentTable.findVarOrParam(t.getChild(3).getChild(i).toString())){
+                this.correctSemantic = false;
+                System.out.println("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
+                return;
+            }
+            /*
             if(!this.currentTable.findOutput(t.getChild(3).getChild(i).toString())){
                 this.correctSemantic = false;
                 System.out.println("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
                 return;
             }
+            */
         }
         System.out.println(table);
     }

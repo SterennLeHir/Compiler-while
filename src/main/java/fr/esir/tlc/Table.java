@@ -120,7 +120,7 @@ public class Table {
             return false; //ici on est dan la racine, il n'y a pas de variables
         }
     }
-
+    /*
     public boolean findOutput(String variable){
         boolean bool = this.vars.contains(variable)||this.params.contains(variable);
         if(!this.children.isEmpty()){//tant qu'on a pas tout descendu
@@ -130,6 +130,9 @@ public class Table {
         }
         return bool;
     }
+
+
+     */
 
     public void addParams(Set<String> s){
         vars.addAll(s); //On considère que les params font parti des variables locales à la table

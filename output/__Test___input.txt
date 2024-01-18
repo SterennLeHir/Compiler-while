@@ -1,13 +1,14 @@
 function add :
 read Op1, Op2
 %
+Result := (cons nil nil);
 if Op2 then
 Result := (cons nil nil)
 else
- Res := (cons nil nil)
+ Result := (cons nil nil)
 fi
 % 
-write Result, Res
+write Result
 
 function sub :
 read Op1, Op2
