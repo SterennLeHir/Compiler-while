@@ -6,6 +6,7 @@ options{
 } 
 tokens
 {
+Node_Program;
 Node_Bloc;
 Node_Exprlist;
 Node_Output;
@@ -48,7 +49,7 @@ WS  :   ( ' '
 
 //Rules
 program 
-	:	function program? ;
+	:	function+ -> ^(Node_Program function+);
 function	
 	:	'function' Symbol ':' WS* definition  -> ^(Node_Function  Symbol  definition) ; 
 
@@ -75,17 +76,17 @@ command
 		| vars ':=' exprs -> ^(Node_Affectation vars exprs) 
 		;  
 exprBase     
-	 :	'(' Symbol lExpr ')'
+	 :	'(' Symbol lExpr? ')'
 		| '(' 'hd' exprBase ')' ->  ^(Node_Head exprBase)
 		| '(' 'tl' exprBase ')' -> ^(Node_Tail exprBase)
-		| '(' 'cons' lExpr ')' -> ^(Node_Cons lExpr)
-		| '(' 'list' lExpr ')' -> ^(Node_List lExpr)
+		| '(' 'cons' lExpr? ')' -> ^(Node_Cons lExpr?)
+		| '(' 'list' lExpr? ')' -> ^(Node_List lExpr?)
 		| 'nil' 
 		| Variable
 		| Symbol;
 expression
 	:	exprBase ('=?' exprBase)? ;
 lExpr	
-	:	(exprBase lExpr)?; // à vérifier avec le prof si ça englobe tout
+	:	exprBase+; 
 
 	

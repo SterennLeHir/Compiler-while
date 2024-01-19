@@ -2,7 +2,7 @@ function main :
 read Op1
 %
 Result := nil;
-if Op1 then Result := (cons) else Result := (cons) fi
+if (not Op1) then Result := (cons) else Result := (cons) fi
 %
 write Result
 
