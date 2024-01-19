@@ -1,5 +1,7 @@
 package fr.esir.tlc;
 
+import fr.esir.tlc.resources.whileLexer;
+import fr.esir.tlc.resources.whileParser;
 import fr.esir.tlc.semantic.VisitorSemantic;
 import fr.esir.tlc.threeAdressesCode.Generator;
 import org.antlr.runtime.ANTLRFileStream;

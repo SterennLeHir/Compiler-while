@@ -1,10 +1,7 @@
 // $ANTLR 3.5.1 C:\\Users\\slh35\\Downloads\\while.g 2024-01-19 22:33:37
-package fr.esir.tlc;
+package fr.esir.tlc.resources;
 
 import org.antlr.runtime.*;
-import java.util.Stack;
-import java.util.List;
-import java.util.ArrayList;
 
 import org.antlr.runtime.tree.*;
 
