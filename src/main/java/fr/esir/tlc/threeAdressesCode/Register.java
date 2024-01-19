@@ -2,9 +2,13 @@ package fr.esir.tlc.threeAdressesCode;
 
 public class Register {
     public static int registerCount = 0;
-    public String name;
+    private String name;
+
     public Register() {
-        name = "t" +  registerCount; // produce t0 then t1...
+        name = "R" +  registerCount; // produce t0 then t1...
         registerCount++;
+    }
+    public String getName(){
+        return this.name;
     }
 }

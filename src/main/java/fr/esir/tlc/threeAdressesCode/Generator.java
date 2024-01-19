@@ -1,6 +1,7 @@
 package fr.esir.tlc.threeAdressesCode;
 
 import fr.esir.tlc.Table;
+import fr.esir.tlc.exceptions.UndeclaredVariableException;
 import org.antlr.runtime.tree.Tree;
 
 import java.util.ArrayList;
@@ -9,9 +10,11 @@ import java.util.List;
 public class Generator {
     private List<Instruction> instructions;
     private int id; //sert à donner des labels aux blocs : if1, if2, else3
-    private int regId;//donne le numéro du registre
+    private int regId; //donne le numéro du registre
     private Tree t;
     private Table symbolTable;
+
+    private List<String> listeRegistres;
 
     public Generator(Tree node, Table table) {
         this.instructions = new ArrayList<>() ;
@@ -19,11 +22,18 @@ public class Generator {
         this.regId = 0;
         this.t = node;
         this.symbolTable = table;
+        this.listeRegistres = new ArrayList<String>();
     }
 
     public List<Instruction> generateCode() {
         visit(this.t);
         return this.instructions;
+    }
+
+    public void afficheInstructions(){ //Affiche en console le résultat écrit de notre code 3 adresses
+        for(Instruction i : this.instructions){
+            System.out.println(i);
+        }
     }
 
     private void visit(Tree t){
@@ -127,13 +137,21 @@ public class Generator {
         //Concernant les fonctions
 
         public void treatingFunction(Tree t){
+            //FUNC BEGIN
+            String name = this.t.getChild(0).toString();
+            this.instructions.add(new FuncBegin(name));
+
             visit(t.getChild(1)); //VISITE LES INPUTS
             visit(t.getChild(2));//VISITE LE BLOC
             visit(t.getChild(3));//VISITE LES OUTPUTS
+            
+            //FUNC END
+            this.instructions.add(new FuncEnd());
         }
 
         public void treatingInput(Tree t){ //Ajoute les paramètres et le nombre de paramètres à la table
             for (int i =0;i<t.getChildCount();i++){
+
             }
         }
 
@@ -152,13 +170,15 @@ public class Generator {
             //Le nœud Affectation possède deux enfants : Node_Left, Node_Right
             //Node Left est le nom de la ou des variables, Node_Right, sa/les valeurs
 
+            //Init des registres
+            this.listeRegistres = new ArrayList<String>();
+
             //On regarde à droite
             visit(t.getChild(1));
 
             //On regarde à gauche
             visit(t.getChild(0));
 
-            //Vérification du bon nombre de valeurs de chaque côté
         }
 
         public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
@@ -167,12 +187,14 @@ public class Generator {
                 if("Node_Call".equals(t.getChild(i).toString())){
                     visit(t.getChild(i));
                 }
-                //case HEAD TAIL
+                //case HEAD TAIL CONS
                 else if(t.getChild(i).toString().startsWith("Node_")){
                     visit(t.getChild(i));
                 }
                 else{ //case IDENTIFIANT de variable
-                    //System.out.println(t.getChild(i).toString());
+                    Register r = new Register();
+                    this.listeRegistres.add(r.getName());
+                    this.instructions.add(new Affectation(r.getName(), t.getChild(i).toString()));
                 }
 
                 //cas LIST ??? @TODO
@@ -182,6 +204,7 @@ public class Generator {
         public void treatingLeft(Tree t){//compte le nombre de valeurs retournées à gauche
             //Si l'identifiant apparaît plusieurs fois, il n'est ajouté qu'une fois
             for(int i = 0; i<t.getChildCount(); i++){
+                this.instructions.add(new Affectation(t.getChild(i).toString(), this.listeRegistres.get(i)));
             }
         }
 
@@ -190,30 +213,43 @@ public class Generator {
         public void treatingCall(Tree t){
             //Child 0 is name
             //Child 1 is Node_Params
+            visit(t.getChild(1)); //VISTER LES PARAMS
+
             String name = t.getChild(0).toString();
-            //On vérifie que la fonction existe bien (dans notre implémentation elle n'existe que si elle est déclarée avant + pas d'appels recursifs @TODO)
-            boolean functionFound = false;
-
-            if(!functionFound){
-                System.out.println("ARRET DU PARCOURS - APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
-                return;
-            }
-
-            visit(t.getChild(1));
+            int num = t.getChild(1).getChildCount();
+            this.instructions.add(new Affectation(new Register().getName(), "call "+name+num));
+            //this.instructions.add(new Call(name, t.getChild(1).getChildCount()));
         }
 
         private void treatingParams(Tree t) {
-            //on vérifie qu'on a le bon nombre de paramètres (on consière que les paramètres ne sont que des variables @TODO
-            //on verifie que les params existent @TODO
+            for (int i = 0; i<t.getChildCount(); i++){
+                Register r = new Register();
+                this.instructions.add(new Affectation(r.getName(), t.getChild(i).toString()));
+                this.instructions.add(new Param(r.getName()));
+            }
         }
 
         //je skip eux pour le moment @TODO
-        private void treatingTail(Tree t) {
+        private void treatingTail(Tree t){
             //The child is the one that you are getting the tail of
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
+            this.instructions.add(new Param(r.getName()));
+
+            Register r2 = new Register();
+            this.listeRegistres.add(r2.getName());
+            this.instructions.add(new Affectation(r2.getName(), "call tl 1"));
         }
 
-        private void treatingHead(Tree t) {
+        private void treatingHead(Tree t){
             //The child is the one that you are getting the head of
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
+            this.instructions.add(new Param(r.getName()));
+
+            Register r2 = new Register();
+            this.listeRegistres.add(r2.getName());
+            this.instructions.add(new Affectation(r2.getName(), "call hd 1"));
         }
 
         private void treatingExprList(Tree t) {
@@ -222,14 +258,30 @@ public class Generator {
 
         //Structures de contrôle
 
-        public void treatingIf(Tree t){
+        public void treatingIf(Tree t){//Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
+            //INSTRUCTIONS CONDITION DU IF
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
 
-            //Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
+            String ifLabel = "if"+id++;
+            String elseLabel = "else"+id++;
+
+            // if OP goto ELSELABEL
+            this.instructions.add(new IfzGoto(r.getName(), elseLabel));
+
+            //CORPS DU IF
             visit(t.getChild(1));
+
+            // goto ENDLABEL
+            this.instructions.add(new Goto(ifLabel));
+            //ELSELABEL
+            this.instructions.add(new Label(elseLabel));
 
             if(t.getChildCount()>=2){ //On s'assure de l'existence de l'instruction Else
                 visit(t.getChild(2));
             }
+            //ENDLABEL
+            this.instructions.add(new Label(ifLabel));
         }
 
         public void treatingElse(Tree t) {
@@ -237,18 +289,86 @@ public class Generator {
         }
 
         public void treatingFor(Tree t){
+            //LABEL DE LOOP
+            String forLabel = "for"+id++;
+            String ifLabel = "if"+id++;
+            this.instructions.add(new Label(forLabel));
 
+            //CONDITION DE LOOP
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
+            this.instructions.add(new IfzGoto(r.getName(), ifLabel));
+
+            //CORPS DU LOOP
             visit(t.getChild(1)); //Toujours un Node_Bloc
+
+            //DECREASE TAILLE ARBRE ??????????
+            //appel de head
+            Register r2 = new Register();
+            this.instructions.add(new Affectation(r2.getName(), t.getChild(0).toString()));
+            this.instructions.add(new Param(r2.getName()));
+
+            Register r3 = new Register();
+            this.instructions.add(new Affectation(r3.getName(), "call hd 1"));
+
+            this.instructions.add(new Affectation(t.getChild(0).toString(), r3.getName()));
+
+            //GOTO START OF LOOP
+            this.instructions.add(new Goto(forLabel));
+
+            //SORTIE DU LOOP
+            this.instructions.add(new Label(ifLabel));
         }
 
         public void treatingForEach(Tree t){
+            //LABEL DE LOOP
+            String forLabel = "for"+id++;
+            String ifLabel = "if"+id++;
+            this.instructions.add(new Label(forLabel));
 
+            //CONDITION DE LOOP
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(1).toString()));
+            this.instructions.add(new IfzGoto(r.getName(), ifLabel));
+
+            //CORPS DU LOOP
             visit(t.getChild(2)); //Toujours un Node_Bloc
+
+            //DECREASE TAILLE ARBRE ??????????
+            //appel de head
+            Register r2 = new Register();
+            this.instructions.add(new Affectation(r2.getName(), t.getChild(1).toString()));
+            this.instructions.add(new Param(r2.getName()));
+
+            Register r3 = new Register();
+            this.instructions.add(new Affectation(r3.getName(), "call hd 1"));
+
+            this.instructions.add(new Affectation(t.getChild(1).toString(), r3.getName()));
+
+            //GOTO START OF LOOP
+            this.instructions.add(new Goto(forLabel));
+
+            //SORTIE DU LOOP
+            this.instructions.add(new Label(ifLabel));
         }
 
         public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
+            //LABEL DE WHILE
+            String forLabel = "while"+id++;
+            String ifLabel = "if"+id++;
+            this.instructions.add(new Label(forLabel));
 
+            //CONDITION DE LOOP
+            Register r = new Register();
+            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
+            this.instructions.add(new IfzGoto(r.getName(), ifLabel));
+
+            //CORPS DU LOOP
             visit(t.getChild(1)); //Toujours un Node_Bloc
+            this.instructions.add(new Goto(forLabel));
+
+            //SORTIE DU LOOP
+            this.instructions.add(new Label(ifLabel));
         }
 
         //Constructeurs
@@ -257,6 +377,14 @@ public class Generator {
             for (int i = 0 ; i < t.getChildCount() ; i ++){
                 if (t.getChild(i).toStringTree().startsWith("Node_")){
                     visit(t.getChild(i));
+                }else {
+                    Register r = new Register();
+                    this.instructions.add(new Affectation(r.getName(), t.getChild(1).toString()));
+                    this.instructions.add(new Param(r.getName()));
+
+                    Register r2 = new Register();
+                    this.listeRegistres.add(r2.getName());
+                    this.instructions.add(new Affectation(r2.getName(), "call cons 2"));
                 }
             }
         }

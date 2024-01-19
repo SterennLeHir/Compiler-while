@@ -1,5 +1,6 @@
 package fr.esir.tlc;
 
+import fr.esir.tlc.threeAdressesCode.Generator;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -47,8 +48,9 @@ public class Main {
 
             System.out.println("\nCODE 3 ADDRESSES\n-------------------------------------------------------");
 
-            //Generator v2 = new Generator(t, v.getRootTable());
-            //v2.visit(t);
+            Generator gen = new Generator(t, v.getRootTable());
+            gen.generateCode();
+            gen.afficheInstructions();
 
             System.out.println("\nTRADUCTION\n-------------------------------------------------------");
 
