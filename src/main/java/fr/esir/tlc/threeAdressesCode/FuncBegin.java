@@ -1,7 +1,7 @@
 package fr.esir.tlc.threeAdressesCode;
 
 public class FuncBegin extends Instruction{
-    private String name;
+    private final String name;
 
     public FuncBegin(String name) {
         this.name = name;

@@ -138,7 +138,7 @@ public class Generator {
 
         public void treatingFunction(Tree t){
             //FUNC BEGIN
-            String name = this.t.getChild(0).toString();
+            String name = t.getChild(0).toString();
             this.instructions.add(new FuncBegin(name));
 
             visit(t.getChild(1)); //VISITE LES INPUTS
@@ -218,7 +218,6 @@ public class Generator {
             String name = t.getChild(0).toString();
             int num = t.getChild(1).getChildCount();
             this.instructions.add(new Affectation(new Register().getName(), "call "+name+num));
-            //this.instructions.add(new Call(name, t.getChild(1).getChildCount()));
         }
 
         private void treatingParams(Tree t) {
@@ -379,12 +378,13 @@ public class Generator {
                     visit(t.getChild(i));
                 }else {
                     Register r = new Register();
-                    this.instructions.add(new Affectation(r.getName(), t.getChild(1).toString()));
+                    this.instructions.add(new Affectation(r.getName(), t.getChild(i).toString()));
                     this.instructions.add(new Param(r.getName()));
-
+                }
+                if(t.getChildCount()-1==i){
                     Register r2 = new Register();
                     this.listeRegistres.add(r2.getName());
-                    this.instructions.add(new Affectation(r2.getName(), "call cons 2"));
+                    this.instructions.add(new Affectation(r2.getName(), "call cons " + t.getChildCount()));
                 }
             }
         }

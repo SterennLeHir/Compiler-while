@@ -12,7 +12,7 @@ public class Affectation extends Instruction {
 
     @Override
     public String toString() {
-       return variableLeft + "=" + variableRight;
+       return variableLeft + " = " + variableRight;
     }
 
 }
