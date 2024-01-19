@@ -1,0 +1,82 @@
+//Program = Function
+//Program = Function Program
+//Ca veut juste dire que le programme correspond à une ou plusieurs fonctions.
+
+//Ça fonctionne
+//Une fonction
+function test : read % nop % write Test
+
+//Plusieurs fonctions enchaînées (test et test2)
+function test : read % nop % write Test function test2 : read % nop % write Test2
+
+//----------------------------------------------------------------------
+
+//Function = 'function' Symbol : Definition
+
+//Ca fonctionne
+//La fonction la plus simple podssible
+function test : read % nop % write Test
+
+//Ca fonctionne pas
+//Il manque le nom de la fonction
+function : read % nop % write Test
+
+//Il y a une typo
+fonction test : read % nop % write Test
+
+//Il y a deux fonctions
+function function test : read % nop % write Test
+
+//Le nom de la focniton correspond à un symbole, et non une variable
+function Test : read % nop % write Test
+
+//----------------------------------------------------------------------
+
+//Definition = 'read' Input '%' Commands '% write' Output
+//Faire sans read, sans Output, sans write Output, sans commands
+
+//Ça fonctionne
+//Fonction la plus simple possible
+read % nop % write Sortie
+
+//Fonction à plusieurs commandes
+read % nop nop nop nop nop % write Sortie
+
+//Fonction à Input
+read A % nop % write Sortie
+
+//Fonction à plusieurs Inputs
+read A,B,C,D % nop % write Sortie
+
+//Fonction à plusieurs Outputs
+read % nop % write Sortie,Sortie2,Sortie3
+
+
+//Ça fonctionne pas
+//Il manque le 'read'
+% nop % write Sortie
+
+//Il manque le write
+read % nop % Sortie
+
+//Il manque les %
+read nop write Sortie
+
+//Il manque la variable de Sortie
+read % nop % write 
+
+//Il manque les commandes
+read % % write Sortie
+
+//La variable de sortie est un symbole et pas une variable
+read % nop % write sortie
+
+
+
+
+
+
+
+
+
+

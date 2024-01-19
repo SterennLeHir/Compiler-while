@@ -1,0 +1,25 @@
+//ExprBase : fonction hd
+
+//Crée un arbre avec A et B comme fils gauche et droit
+T := (cons A B)
+
+//Crée un symbole symb
+S := symb
+
+//Crée un arbre	vide
+n := (cons)
+
+//Renvoie A
+(hd T)
+
+//Renvoie nil si S est un symbole
+(hd S)
+
+//Renvoie nil si n est un arbre vide
+(hd n)
+
+//Ne marche pas, parenthèses au mauvais endroit
+hd(T)
+
+//Ne marche pas, trop de paramètres
+(hd T A)

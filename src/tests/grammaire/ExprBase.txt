@@ -1,0 +1,17 @@
+//ExprBase⟶ 'nil' | Variable | Symbol 
+//ExprBase⟶ '(' Symbol LExpr ')' 
+//LExpr⟶ExprBase LExpr | 𝜀
+
+//Fonctionne ?
+nil
+ahahahha
+AHAHAHAH
+Ahh!
+(aaa)
+(aaa aaa)
+(a (cons))
+
+//Fonctionne pas ?
+2B
+(a
+(a cons)
