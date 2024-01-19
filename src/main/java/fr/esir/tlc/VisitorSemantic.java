@@ -1,5 +1,6 @@
 package fr.esir.tlc;
 
+import fr.esir.tlc.exceptions.*;
 import org.antlr.runtime.tree.Tree;
 
 import java.util.HashSet;
@@ -26,7 +27,7 @@ public class VisitorSemantic {
         this.id = 0;
     }
 
-    public void visit(Tree t){
+    public void visit(Tree t) throws Exception {
         if(correctSemantic){//On ne continue de visiter que si jusque là, la sémantique est correcte
             switch (t.toString()){
                 case "Node_Function": {
@@ -119,7 +120,7 @@ public class VisitorSemantic {
     }
 
 
-    public void treatingRoot(Tree t){
+    public void treatingRoot(Tree t) throws Exception {
         this.rootTable = new Table("_ROOT_");
         for (int i = 0 ; i < t.getChildCount();i++){
             this.currentTable = this.rootTable; //très important
@@ -131,13 +132,12 @@ public class VisitorSemantic {
 
     //Concernant les fonctions
 
-    public void treatingFunction(Tree t){
+    public void treatingFunction(Tree t) throws Exception{
         //Verif que le nom de la fonction est pas déjà pris par une autre fonction
         for(Table func: this.rootTable.getChildren()){ //PAS OPTI DU TOUT, faire un hashset avec les nom plutot
             if(t.getChild(0).toString().equals(func.getName())){
                 this.correctSemantic = false;
-                System.out.println("ARRET DU PARCOURS - NOM DE FONCTION DEJA EXISTANT");
-                return;
+                throw new DuplicateFunctionException("ARRET DU PARCOURS - NOM DE FONCTION DEJA EXISTANT");
             }
         }
 
@@ -154,8 +154,7 @@ public class VisitorSemantic {
         for(int i = 0; i<this.currentTable.getN_outputs(); i++){
             if(!this.currentTable.findVarOrParam(t.getChild(3).getChild(i).toString())){
                 this.correctSemantic = false;
-                System.out.println("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
-                return;
+                throw new UndeclaredOutputException("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
             }
             /*
             if(!this.currentTable.findOutput(t.getChild(3).getChild(i).toString())){
@@ -174,13 +173,15 @@ public class VisitorSemantic {
             set.add(t.getChild(i).toString());
         }
         this.currentTable.addParams(set);
+        //Est-ce qu'on développe un truc qui prend en compte le fait qu'il faut pas avoir plusieurs paramètres du même nom ?
     }
 
     public void treatingOutput(Tree t){
         this.currentTable.setN_outputs(t.getChildCount());
+        //Est-ce qu'on développe un truc qui prend en compte le fait qu'il faut pas avoir plusieurs outputs du même nom ?
     }
 
-    public void treatingBloc(Tree t){
+    public void treatingBloc(Tree t) throws Exception {
         Table table = this.currentTable;
         for (int i = 0; i < t.getChildCount();i++){
             this.currentTable = table;
@@ -190,7 +191,7 @@ public class VisitorSemantic {
 
     //Affectations
 
-    public void treatingAffection(Tree t){
+    public void treatingAffection(Tree t) throws Exception {
         //Le nœud Affectation possède deux enfants : Node_Left, Node_Right
         //Node Left est le nom de la ou des variables, Node_Right, sa/les valeurs
 
@@ -208,12 +209,12 @@ public class VisitorSemantic {
         //Vérification du bon nombre de valeurs de chaque côté
         if(this.leftSum!=this.rightSum){
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - MAUVAIS NOMBRE DE VALEURS DANS L'AFFECTATION");
-            return; //fin du parcours de l'AST car erreur dans le code while
+            throw new IncorrectAssignementException("ARRET DU PARCOURS - MAUVAIS NOMBRE DE VALEURS DANS L'AFFECTATION");
+            //fin du parcours de l'AST car erreur dans le code while
         }
     }
 
-    public void treatingRight(Tree t){//compte le nombre de valeurs retournées à droite
+    public void treatingRight(Tree t) throws Exception {//compte le nombre de valeurs retournées à droite
         for(int i = 0; i<t.getChildCount(); i++){
             //case CALL
             if("Node_Call".equals(t.getChild(i).toString())){
@@ -229,8 +230,7 @@ public class VisitorSemantic {
                 this.rightSum += 1;
                 if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
                     this.correctSemantic = false;
-                    System.out.println("ARRET DU PARCOURS - APPEL A UNE VARIABLE NON DECLAREE");
-                    return;
+                    throw new UndeclaredVariableException("ARRET DU PARCOURS - APPEL A UNE VARIABLE NON DECLAREE");
                 }
             }
 
@@ -249,7 +249,7 @@ public class VisitorSemantic {
 
     //Appels de fonctions
 
-    public void treatingCall(Tree t){
+    public void treatingCall(Tree t) throws Exception {
         //Child 0 is name
         //Child 1 is Node_Params
         String name = t.getChild(0).toString();
@@ -265,20 +265,19 @@ public class VisitorSemantic {
 
         if(!functionFound){
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
-            return;
+            throw new UndeclaredFunctionException("ARRET DU PARCOURS - APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
         }
 
         visit(t.getChild(1));
     }
 
-    private void treatingParams(Tree t) {
+    private void treatingParams(Tree t) throws Exception {
         //on vérifie qu'on a le bon nombre de paramètres (on consière que les paramètres ne sont que des variables @TODO)
         boolean goodNumberOfParams = this.N_params == t.getChildCount();
         if(!goodNumberOfParams){
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
-            return; // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
+            throw new IncorrectAssignementException("ARRET DU PARCOURS - MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
+            // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
         }
 
         //on verifie que les params existent @TODO
@@ -299,7 +298,7 @@ public class VisitorSemantic {
 
     //Structures de contrôle
 
-    public void treatingIf(Tree t){
+    public void treatingIf(Tree t) throws Exception {
         Table table = new Table("if"+id++); //faire un système de nom auto-généré et incrémenté pour chaque structure de contrôle anonyme @TODO
         currentTable.addChild(table);
         Table oldTable = currentTable; //pour le else
@@ -313,14 +312,14 @@ public class VisitorSemantic {
         }
     }
 
-    public void treatingElse(Tree t){
+    public void treatingElse(Tree t) throws Exception {
         Table table = new Table("else"+id++);
         currentTable.addChild(table);
         currentTable = table;
         visit(t.getChild(0)); //Toujours un enfant : Node_Block
     }
 
-    public void treatingFor(Tree t){
+    public void treatingFor(Tree t) throws Exception {
         Table table = new Table("for"+id++);
         currentTable.addChild(table);
         currentTable= table;
@@ -328,15 +327,14 @@ public class VisitorSemantic {
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOR NON DECLAREE");
-            return;
+            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOR NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
         visit(t.getChild(1)); //Toujours un Node_Bloc
     }
 
-    public void treatingForEach(Tree t){
+    public void treatingForEach(Tree t) throws Exception {
         Table table = new Table("foreach"+id++);
         currentTable.addChild(table);
         currentTable= table;
@@ -344,8 +342,7 @@ public class VisitorSemantic {
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(1).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOREACH NON DECLAREE");
-            return;
+            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOREACH NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
@@ -353,7 +350,7 @@ public class VisitorSemantic {
         visit(t.getChild(2)); //Toujours un Node_Bloc
     }
 
-    public void treatingWhile(Tree t) { //Two childrens : Op, Node_Bloc
+    public void treatingWhile(Tree t) throws Exception { //Two childrens : Op, Node_Bloc
         Table table = new Table("while"+id++);
         currentTable.addChild(table);
         currentTable= table;
@@ -361,8 +358,7 @@ public class VisitorSemantic {
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
             this.correctSemantic = false;
-            System.out.println("ARRET DU PARCOURS - VARIABLE DE BOUCLE WHILE NON DECLAREE");
-            return;
+            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE WHILE NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
@@ -372,7 +368,7 @@ public class VisitorSemantic {
 
     //Constructeurs
 
-    public void treatingCons(Tree t){
+    public void treatingCons(Tree t) throws Exception {
         for (int i = 0 ; i < t.getChildCount() ; i ++){
             if (t.getChild(i).toStringTree().startsWith("Node_")){
                 visit(t.getChild(i));
