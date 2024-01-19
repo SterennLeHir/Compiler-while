@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         //Initialisation du Lexer et Parser
-        whileLexer lex = new whileLexer(new ANTLRFileStream("C:\\Users\\aleco\\IdeaProjects\\Compiler-while\\output\\__Test___input.txt", "UTF8"));
+        whileLexer lex = new whileLexer(new ANTLRFileStream("C:\\Users\\hywel\\OneDrive\\Documents\\GitHub\\compiler-while\\output\\__Test___input.txt", "UTF8"));
         CommonTokenStream tokens = new CommonTokenStream(lex);
         whileParser g = new whileParser(tokens, null);
 
