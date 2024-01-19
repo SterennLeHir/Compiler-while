@@ -217,7 +217,10 @@ public class Generator {
 
             String name = t.getChild(0).toString();
             int num = t.getChild(1).getChildCount();
-            this.instructions.add(new Affectation(new Register().getName(), "call "+name+num));
+
+            Register r = new Register();
+            this.listeRegistres.add(r.getName());
+            this.instructions.add(new Affectation(r.getName(), "call "+name+" "+num));
         }
 
         private void treatingParams(Tree t) {
@@ -374,7 +377,7 @@ public class Generator {
 
         public void treatingCons(Tree t){
             for (int i = 0 ; i < t.getChildCount() ; i ++){
-                if (t.getChild(i).toStringTree().startsWith("Node_")){
+                if (t.getChild(i).toString().startsWith("Node_")){
                     visit(t.getChild(i));
                 }else {
                     Register r = new Register();

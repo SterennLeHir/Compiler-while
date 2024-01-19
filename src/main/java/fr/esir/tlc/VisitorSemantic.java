@@ -17,8 +17,8 @@ public class VisitorSemantic {
     private int id; //sert à donner des noms aux tables sans fonction ex : if1, if2, else3
 
     public VisitorSemantic(){
-        this.rootTable=null;
-        this.currentTable=null;
+        this.rootTable=new Table("_ROOT_");//AST PAS PAREIL QUAND 1 fonction comparé à n fonctions => pas de racine avec 1 seule func
+        this.currentTable=this.rootTable;
         this.leftSum = 0;
         this.rightSum = 0;
         this.N_params = 0;
@@ -126,6 +126,18 @@ public class VisitorSemantic {
             this.currentTable = this.rootTable; //très important
             visit(t.getChild(i));
         }
+
+        //VERIFICATION QU'IL Y A UNE FONCTION MAIN
+        boolean main = false;
+        for(Table func: this.rootTable.getChildren()){ //PAS OPTI DU TOUT, faire un hashset avec les nom plutot
+            if("main".equals(func.getName())){
+                main = true;
+            }
+        }
+        if(!main){
+            throw new Exception("PAS DE FONCTION MAIN");
+        }
+
         System.out.println("PARCOURS TERMINÉ");
         System.out.println("\nTABLE DES SYMBOLES : \n" + this.rootTable.toStringAll(0));
     }
@@ -222,12 +234,15 @@ public class VisitorSemantic {
                 visit(t.getChild(i));
                 this.rightSum += 1;//je le mets ici parce que cons hd et tail ça peut s'enchainer ex hd(hd(hd(nil))) = nil et c 1
             }
-            else{ //case IDENTIFIANT de variable
+            else if(Character.isUpperCase(t.getChild(i).toString().charAt(0))){ //case IDENTIFIANT de variable
                 //System.out.println(t.getChild(i).toString());
                 this.rightSum += 1;
                 if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
                     throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS AFFECTATION");
                 }
+            }
+            else{
+                this.rightSum += 1;
             }
 
             //cas LIST ??? @TODO
@@ -274,7 +289,13 @@ public class VisitorSemantic {
             // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
         }
 
-        //on verifie que les params existent @TODO
+        for(int i = 0; i <t.getChildCount(); i++){
+            if(Character.isUpperCase(t.getChild(i).toString().charAt(0))){ //CAS APPEL DE VARIABLE
+                if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
+                    throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS FONCTION");
+                }
+            }
+        }
     }
 
     //je skip eux pour le moment @TODO

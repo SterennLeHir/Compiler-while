@@ -1,13 +1,20 @@
 function add :
 read Op1, Op2
 %
-Result := (cons nil nil)
-% 
+ Result := Op1 ;
+for Op2 do
+ Result := (cons nil Result)
+od
+%
 write Result
 
-function sub :
+function main :
 read Op1, Op2
 %
- Result := Op1
+ Result := Op1 ;
+for Op2 do
+ Result := (cons nil Result)
+od
 %
 write Result
+
