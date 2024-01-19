@@ -14,7 +14,6 @@ public class VisitorSemantic {
     private int rightSum; //the number of values on the right side of an affect
     private int N_params; //the number of params that needs the current method
 
-    private boolean correctSemantic;
     private int id; //sert à donner des noms aux tables sans fonction ex : if1, if2, else3
 
     public VisitorSemantic(){
@@ -23,13 +22,15 @@ public class VisitorSemantic {
         this.leftSum = 0;
         this.rightSum = 0;
         this.N_params = 0;
-        this.correctSemantic = true;
         this.id = 0;
     }
 
+    public Table getRootTable() {
+        return rootTable;
+    }
+
     public void visit(Tree t) throws Exception {
-        if(correctSemantic){//On ne continue de visiter que si jusque-là, la sémantique est correcte
-            switch (t.toString()){
+        switch (t.toString()){
                 case "Node_Function": {
                     //System.out.println("VISITE FONCTION");
                     treatingFunction(t);
@@ -116,7 +117,6 @@ public class VisitorSemantic {
                     break;
                 }
             }
-        }
     }
 
 
@@ -136,8 +136,7 @@ public class VisitorSemantic {
         //Verif que le nom de la fonction est pas déjà pris par une autre fonction
         for(Table func: this.rootTable.getChildren()){ //PAS OPTI DU TOUT, faire un hashset avec les nom plutot
             if(t.getChild(0).toString().equals(func.getName())){
-                this.correctSemantic = false;
-                throw new DuplicateFunctionException("ARRET DU PARCOURS - NOM DE FONCTION DEJA EXISTANT");
+                throw new DuplicateFunctionException("NOM DE FONCTION DEJA EXISTANT");
             }
         }
 
@@ -153,8 +152,7 @@ public class VisitorSemantic {
         //VERIF QUE L'OUTPUT EST DECLAREE QQ PART DS LA FUNC
         for(int i = 0; i<this.currentTable.getN_outputs(); i++){
             if(!this.currentTable.findVarOrParam(t.getChild(3).getChild(i).toString())){
-                this.correctSemantic = false;
-                throw new UndeclaredOutputException("ARRET DU PARCOURS - OUTPUT NON DECLAREE");
+                throw new UndeclaredOutputException("OUTPUT NON DECLAREE(S) DANS FONCTION");
             }
             /*
             if(!this.currentTable.findOutput(t.getChild(3).getChild(i).toString())){
@@ -208,8 +206,7 @@ public class VisitorSemantic {
 
         //Vérification du bon nombre de valeurs de chaque côté
         if(this.leftSum!=this.rightSum){
-            this.correctSemantic = false;
-            throw new IncorrectAssignementException("ARRET DU PARCOURS - MAUVAIS NOMBRE DE VALEURS DANS L'AFFECTATION");
+            throw new IncorrectAssignementException("MAUVAIS NOMBRE DE VALEURS DANS L'AFFECTATION");
             //fin du parcours de l'AST car erreur dans le code while
         }
     }
@@ -229,8 +226,7 @@ public class VisitorSemantic {
                 //System.out.println(t.getChild(i).toString());
                 this.rightSum += 1;
                 if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
-                    this.correctSemantic = false;
-                    throw new UndeclaredVariableException("ARRET DU PARCOURS - APPEL A UNE VARIABLE NON DECLAREE");
+                    throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS AFFECTATION");
                 }
             }
 
@@ -264,8 +260,7 @@ public class VisitorSemantic {
         }
 
         if(!functionFound){
-            this.correctSemantic = false;
-            throw new UndeclaredFunctionException("ARRET DU PARCOURS - APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
+            throw new UndeclaredFunctionException("APPEL DE FONCTION INEXISTANTE (DOIT ETRE DECLAREE AVANT)");
         }
 
         visit(t.getChild(1));
@@ -275,8 +270,7 @@ public class VisitorSemantic {
         //on vérifie qu'on a le bon nombre de paramètres (on consière que les paramètres ne sont que des variables @TODO)
         boolean goodNumberOfParams = this.N_params == t.getChildCount();
         if(!goodNumberOfParams){
-            this.correctSemantic = false;
-            throw new IncorrectAssignementException("ARRET DU PARCOURS - MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
+            throw new IncorrectAssignementException("MAUVAIS NOMBRE DE PARAMS DANS UN APPEL DE FONCTION");
             // les return arrêtent pas du tout le parcours en fait, il faut faire un boolean running qui gere le switch case du visitor @TODO
         }
 
@@ -284,12 +278,18 @@ public class VisitorSemantic {
     }
 
     //je skip eux pour le moment @TODO
-    private void treatingTail(Tree t) {
+    private void treatingTail(Tree t) throws Exception{
         //The child is the one that you are getting the tail of
+        if(!this.currentTable.findVarOrParam(t.getChild(0).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
+            throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS TAIL");
+        }
     }
 
-    private void treatingHead(Tree t) {
+    private void treatingHead(Tree t) throws Exception{
         //The child is the one that you are getting the head of
+        if(!this.currentTable.findVarOrParam(t.getChild(0).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
+            throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS HEAD");
+        }
     }
 
     private void treatingExprList(Tree t) {
@@ -326,8 +326,7 @@ public class VisitorSemantic {
 
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
-            this.correctSemantic = false;
-            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOR NON DECLAREE");
+            throw new UndeclaredVariableException("VARIABLE DE BOUCLE FOR NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
@@ -341,8 +340,7 @@ public class VisitorSemantic {
 
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(1).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
-            this.correctSemantic = false;
-            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE FOREACH NON DECLAREE");
+            throw new UndeclaredVariableException("VARIABLE DE BOUCLE FOREACH NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
@@ -357,8 +355,7 @@ public class VisitorSemantic {
 
         //VERIFIER QUE LA VAR DE BOUCLE EXISTE
         if(!this.currentTable.getParent().findVarOrParam(t.getChild(0).toString())){//=> parcours des tables parentes pour trouver la variable/identifiant
-            this.correctSemantic = false;
-            throw new UndeclaredVariableException("ARRET DU PARCOURS - VARIABLE DE BOUCLE WHILE NON DECLAREE");
+            throw new UndeclaredVariableException("VARIABLE DE BOUCLE WHILE NON DECLAREE");
         }
 
         this.currentTable.addVar(t.getChild(0).toString());
@@ -370,9 +367,14 @@ public class VisitorSemantic {
 
     public void treatingCons(Tree t) throws Exception {
         for (int i = 0 ; i < t.getChildCount() ; i ++){
-            if (t.getChild(i).toStringTree().startsWith("Node_")){
+            if (t.getChild(i).toString().startsWith("Node_")){//CAS CONS HD TL | PAS CALL
                 visit(t.getChild(i));
             }
+            else if(Character.isUpperCase(t.getChild(i).toString().charAt(0))){ //CAS APPEL DE VARIABLE
+                if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
+                    throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS CONS");
+                }
+            }//PAS D'APPEL DE FONCTION POSSIBLE DANS UN CONS DANS NOTRE IMPLEM
         }
     }
 

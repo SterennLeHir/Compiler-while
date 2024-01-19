@@ -17,6 +17,7 @@ public class VisitorTAC {
         this.regId = 0;
     }
 
+    /*
     public void visit(Tree t){
         switch (t.toString()){
             case "Node_Function": {
@@ -341,4 +342,5 @@ public class VisitorTAC {
             t.getChild(i);
         }
     }
+    */
 }
