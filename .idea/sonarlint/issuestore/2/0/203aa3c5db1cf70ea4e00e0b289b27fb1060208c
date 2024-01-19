@@ -1,8 +1,10 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(Ã€ƒœùÿÿÿÿ8İƒØ¤Ï1
-G	java:S106"+Replace this use of System.out by a logger.(ÑŞÈ‰8İƒØ¤Ï1
-L	java:S106"+Replace this use of System.out by a logger.(èçéğüÿÿÿÿ8İƒØ¤Ï1
-G	java:S106"+Replace this use of System.out by a logger.(ÑŞÈ‰8àƒØ¤Ï1
-L	java:S106 "+Replace this use of System.out by a logger.(¬ÖÙ‹øÿÿÿÿ8àƒØ¤Ï1
-Y
-java:S1128"7Remove this unused import 'javax.sound.midi.Soundbank'.(µÊøÿÿÿÿ8àƒØ¤Ï1
+G	java:S106"+Replace this use of System.err by a logger.(Ã Áå8©”ÕŒÒ1
+G	java:S106"+Replace this use of System.err by a logger.(ÑÒÁÿ8®”ÕŒÒ1
+G	java:S106&"+Replace this use of System.out by a logger.(²² 8ßöÑ1
+G	java:S106)"+Replace this use of System.out by a logger.(Ä½ìÌ8ßöÑ1
+G	java:S106+"+Replace this use of System.out by a logger.(ü¸…Ò8È”ÕŒÒ1
+G	java:S1060"+Replace this use of System.out by a logger.(Çö»…8§ÆâŒÒ1
+L	java:S1065"+Replace this use of System.out by a logger.(“š§ıÿÿÿÿ8òãŒÒ1
+]	java:S1252"<This block of commented-out lines of code should be removed.(ßû–Šøÿÿÿÿ8ßöÑ1
+L	java:S106:"+Replace this use of System.out by a logger.(…Ä¬àûÿÿÿÿ8ƒØìŒÒ1
