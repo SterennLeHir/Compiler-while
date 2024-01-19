@@ -60,3 +60,5 @@ e
 5output/testExceptions/testUndeclaredWhileVariable.txt,2\9\29f488f89923e5820be9fe95655bc520c409385c
 I
 output/__Test___input.txt,2\1\2153f8bee885081f4c77d4051ab846ba4aebbd7d
+P
+ output/testExceptions/test.while,a\5\a5b3bc6f2733e6b407c8c56b27daa7ecebd676d2
