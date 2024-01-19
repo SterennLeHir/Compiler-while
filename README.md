@@ -71,6 +71,6 @@ Dans le dossier test, nous avons un script d'un code source en while (`test.whil
 
 Nous n'avons pas terminé le compilateur. Pour découvrir le projet voici les étapes à réaliser : 
 1. Cloner le projet : ([github.com/SterennLeHir/Compiler-while](https://github.com/SterennLeHir/Compiler-while.git))
-2. Lancer le main
+2. Lancer le main avec un script while en argument. 
 
 Vous pourrez voir différentes étapes en console avec la génération du code 3 adresses. 
