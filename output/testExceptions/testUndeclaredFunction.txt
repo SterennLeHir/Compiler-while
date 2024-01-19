@@ -23,10 +23,8 @@ read Op1, Op2
  od;
  while Op2 do
 
- Result := Op2
+ Result := (sub2 Result)
 
  od
-
- Result := (sub2 Result)
 %
 write Result
