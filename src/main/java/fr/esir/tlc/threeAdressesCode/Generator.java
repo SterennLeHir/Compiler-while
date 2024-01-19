@@ -1,7 +1,6 @@
 package fr.esir.tlc.threeAdressesCode;
 
-import fr.esir.tlc.Table;
-import fr.esir.tlc.exceptions.UndeclaredVariableException;
+import fr.esir.tlc.semantic.Table;
 import org.antlr.runtime.tree.Tree;
 
 import java.util.ArrayList;

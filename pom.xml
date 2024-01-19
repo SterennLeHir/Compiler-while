@@ -17,9 +17,8 @@
     <dependencies>
         <dependency>
             <groupId>org.antlr</groupId>
-            <artifactId>antlr4-maven-plugin</artifactId>
-            <version>4.3</version>
-            <type>maven-plugin</type>
+            <artifactId>antlr3-maven-plugin</artifactId>
+            <version>3.5.3</version>
         </dependency>
     </dependencies>
 </project>

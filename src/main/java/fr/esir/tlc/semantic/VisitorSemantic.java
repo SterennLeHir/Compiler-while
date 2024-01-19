@@ -1,6 +1,6 @@
-package fr.esir.tlc;
+package fr.esir.tlc.semantic;
 
-import fr.esir.tlc.exceptions.*;
+import fr.esir.tlc.semantic.exceptions.*;
 import org.antlr.runtime.tree.Tree;
 
 import java.util.HashSet;

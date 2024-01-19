@@ -1,4 +1,4 @@
-package fr.esir.tlc;
+package fr.esir.tlc.semantic;
 
 import java.util.ArrayList;
 import java.util.HashSet;

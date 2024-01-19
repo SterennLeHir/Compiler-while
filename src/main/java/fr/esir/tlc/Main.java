@@ -1,5 +1,6 @@
 package fr.esir.tlc;
 
+import fr.esir.tlc.semantic.VisitorSemantic;
 import fr.esir.tlc.threeAdressesCode.Generator;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;

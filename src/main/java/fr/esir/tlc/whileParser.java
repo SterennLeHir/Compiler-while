@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Users\\slh35\\Downloads\\while.g 2024-01-19 22:56:37
+// $ANTLR 3.5.1 C:\\Users\\slh35\\Downloads\\while.g 2024-01-19 22:33:37
 package fr.esir.tlc;
 
 import org.antlr.runtime.*;
@@ -1235,7 +1235,7 @@ public class whileParser extends Parser {
 
 
 	// $ANTLR start "command"
-	// C:\\Users\\slh35\\Downloads\\while.g:73:1: command : ( 'foreach' Variable 'in' expression 'do' commands 'od' -> ^( Node_ForEach expression commands ) | 'for' expression 'do' commands 'od' -> ^( Node_For expression commands ) | 'while' expression 'do' commands 'od' -> ^( Node_While expression commands ) | 'if' expression 'then' commands ( 'else' commands )? 'fi' -> ^( Node_If expression commands ( ^( Node_Else commands ) )? ) | 'nop' | vars ':=' exprs -> ^( Node_Affectation vars exprs ) );
+	// C:\\Users\\slh35\\Downloads\\while.g:73:1: command : ( 'foreach' Variable 'in' expression 'do' commands 'od' -> ^( Node_ForEach Variable expression commands ) | 'for' expression 'do' commands 'od' -> ^( Node_For expression commands ) | 'while' expression 'do' commands 'od' -> ^( Node_While expression commands ) | 'if' expression 'then' commands ( 'else' commands )? 'fi' -> ^( Node_If expression commands ( ^( Node_Else commands ) )? ) | 'nop' | vars ':=' exprs -> ^( Node_Affectation vars exprs ) );
 	public final whileParser.command_return command() throws RecognitionException {
 		whileParser.command_return retval = new whileParser.command_return();
 		retval.start = input.LT(1);
@@ -1306,7 +1306,7 @@ public class whileParser extends Parser {
 		RewriteRuleSubtreeStream stream_commands=new RewriteRuleSubtreeStream(adaptor,"rule commands");
 
 		try {
-			// C:\\Users\\slh35\\Downloads\\while.g:74:2: ( 'foreach' Variable 'in' expression 'do' commands 'od' -> ^( Node_ForEach expression commands ) | 'for' expression 'do' commands 'od' -> ^( Node_For expression commands ) | 'while' expression 'do' commands 'od' -> ^( Node_While expression commands ) | 'if' expression 'then' commands ( 'else' commands )? 'fi' -> ^( Node_If expression commands ( ^( Node_Else commands ) )? ) | 'nop' | vars ':=' exprs -> ^( Node_Affectation vars exprs ) )
+			// C:\\Users\\slh35\\Downloads\\while.g:74:2: ( 'foreach' Variable 'in' expression 'do' commands 'od' -> ^( Node_ForEach Variable expression commands ) | 'for' expression 'do' commands 'od' -> ^( Node_For expression commands ) | 'while' expression 'do' commands 'od' -> ^( Node_While expression commands ) | 'if' expression 'then' commands ( 'else' commands )? 'fi' -> ^( Node_If expression commands ( ^( Node_Else commands ) )? ) | 'nop' | vars ':=' exprs -> ^( Node_Affectation vars exprs ) )
 			int alt15=6;
 			switch ( input.LA(1) ) {
 			case 43:
@@ -1374,7 +1374,7 @@ public class whileParser extends Parser {
 					stream_51.add(string_literal41);
 
 					// AST REWRITE
-					// elements: commands, expression
+					// elements: Variable, expression, commands
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -1384,12 +1384,13 @@ public class whileParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (Object)adaptor.nil();
-					// 74:58: -> ^( Node_ForEach expression commands )
+					// 74:58: -> ^( Node_ForEach Variable expression commands )
 					{
-						// C:\\Users\\slh35\\Downloads\\while.g:74:61: ^( Node_ForEach expression commands )
+						// C:\\Users\\slh35\\Downloads\\while.g:74:61: ^( Node_ForEach Variable expression commands )
 						{
 						Object root_1 = (Object)adaptor.nil();
 						root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(Node_ForEach, "Node_ForEach"), root_1);
+						adaptor.addChild(root_1, stream_Variable.nextNode());
 						adaptor.addChild(root_1, stream_expression.nextTree());
 						adaptor.addChild(root_1, stream_commands.nextTree());
 						adaptor.addChild(root_0, root_1);
@@ -1405,27 +1406,27 @@ public class whileParser extends Parser {
 				case 2 :
 					// C:\\Users\\slh35\\Downloads\\while.g:75:5: 'for' expression 'do' commands 'od'
 					{
-					string_literal42=(Token)match(input,42,FOLLOW_42_in_command540);  
+					string_literal42=(Token)match(input,42,FOLLOW_42_in_command542);  
 					stream_42.add(string_literal42);
 
-					pushFollow(FOLLOW_expression_in_command542);
+					pushFollow(FOLLOW_expression_in_command544);
 					expression43=expression();
 					state._fsp--;
 
 					stream_expression.add(expression43.getTree());
-					string_literal44=(Token)match(input,39,FOLLOW_39_in_command544);  
+					string_literal44=(Token)match(input,39,FOLLOW_39_in_command546);  
 					stream_39.add(string_literal44);
 
-					pushFollow(FOLLOW_commands_in_command546);
+					pushFollow(FOLLOW_commands_in_command548);
 					commands45=commands();
 					state._fsp--;
 
 					stream_commands.add(commands45.getTree());
-					string_literal46=(Token)match(input,51,FOLLOW_51_in_command548);  
+					string_literal46=(Token)match(input,51,FOLLOW_51_in_command550);  
 					stream_51.add(string_literal46);
 
 					// AST REWRITE
-					// elements: commands, expression
+					// elements: expression, commands
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -1456,27 +1457,27 @@ public class whileParser extends Parser {
 				case 3 :
 					// C:\\Users\\slh35\\Downloads\\while.g:76:5: 'while' expression 'do' commands 'od'
 					{
-					string_literal47=(Token)match(input,55,FOLLOW_55_in_command564);  
+					string_literal47=(Token)match(input,55,FOLLOW_55_in_command566);  
 					stream_55.add(string_literal47);
 
-					pushFollow(FOLLOW_expression_in_command566);
+					pushFollow(FOLLOW_expression_in_command568);
 					expression48=expression();
 					state._fsp--;
 
 					stream_expression.add(expression48.getTree());
-					string_literal49=(Token)match(input,39,FOLLOW_39_in_command568);  
+					string_literal49=(Token)match(input,39,FOLLOW_39_in_command570);  
 					stream_39.add(string_literal49);
 
-					pushFollow(FOLLOW_commands_in_command570);
+					pushFollow(FOLLOW_commands_in_command572);
 					commands50=commands();
 					state._fsp--;
 
 					stream_commands.add(commands50.getTree());
-					string_literal51=(Token)match(input,51,FOLLOW_51_in_command572);  
+					string_literal51=(Token)match(input,51,FOLLOW_51_in_command574);  
 					stream_51.add(string_literal51);
 
 					// AST REWRITE
-					// elements: expression, commands
+					// elements: commands, expression
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -1507,18 +1508,18 @@ public class whileParser extends Parser {
 				case 4 :
 					// C:\\Users\\slh35\\Downloads\\while.g:77:5: 'if' expression 'then' commands ( 'else' commands )? 'fi'
 					{
-					string_literal52=(Token)match(input,46,FOLLOW_46_in_command588);  
+					string_literal52=(Token)match(input,46,FOLLOW_46_in_command590);  
 					stream_46.add(string_literal52);
 
-					pushFollow(FOLLOW_expression_in_command590);
+					pushFollow(FOLLOW_expression_in_command592);
 					expression53=expression();
 					state._fsp--;
 
 					stream_expression.add(expression53.getTree());
-					string_literal54=(Token)match(input,53,FOLLOW_53_in_command592);  
+					string_literal54=(Token)match(input,53,FOLLOW_53_in_command594);  
 					stream_53.add(string_literal54);
 
-					pushFollow(FOLLOW_commands_in_command595);
+					pushFollow(FOLLOW_commands_in_command597);
 					commands55=commands();
 					state._fsp--;
 
@@ -1533,10 +1534,10 @@ public class whileParser extends Parser {
 						case 1 :
 							// C:\\Users\\slh35\\Downloads\\while.g:77:39: 'else' commands
 							{
-							string_literal56=(Token)match(input,40,FOLLOW_40_in_command598);  
+							string_literal56=(Token)match(input,40,FOLLOW_40_in_command600);  
 							stream_40.add(string_literal56);
 
-							pushFollow(FOLLOW_commands_in_command600);
+							pushFollow(FOLLOW_commands_in_command602);
 							commands57=commands();
 							state._fsp--;
 
@@ -1546,7 +1547,7 @@ public class whileParser extends Parser {
 
 					}
 
-					string_literal58=(Token)match(input,41,FOLLOW_41_in_command604);  
+					string_literal58=(Token)match(input,41,FOLLOW_41_in_command606);  
 					stream_41.add(string_literal58);
 
 					// AST REWRITE
@@ -1597,7 +1598,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					string_literal59=(Token)match(input,50,FOLLOW_50_in_command627); 
+					string_literal59=(Token)match(input,50,FOLLOW_50_in_command629); 
 					string_literal59_tree = (Object)adaptor.create(string_literal59);
 					adaptor.addChild(root_0, string_literal59_tree);
 
@@ -1606,15 +1607,15 @@ public class whileParser extends Parser {
 				case 6 :
 					// C:\\Users\\slh35\\Downloads\\while.g:79:5: vars ':=' exprs
 					{
-					pushFollow(FOLLOW_vars_in_command633);
+					pushFollow(FOLLOW_vars_in_command635);
 					vars60=vars();
 					state._fsp--;
 
 					stream_vars.add(vars60.getTree());
-					string_literal61=(Token)match(input,35,FOLLOW_35_in_command635);  
+					string_literal61=(Token)match(input,35,FOLLOW_35_in_command637);  
 					stream_35.add(string_literal61);
 
-					pushFollow(FOLLOW_exprs_in_command637);
+					pushFollow(FOLLOW_exprs_in_command639);
 					exprs62=exprs();
 					state._fsp--;
 
@@ -1805,10 +1806,10 @@ public class whileParser extends Parser {
 				case 1 :
 					// C:\\Users\\slh35\\Downloads\\while.g:82:5: '(' Symbol ( lExpr )? ')'
 					{
-					char_literal63=(Token)match(input,31,FOLLOW_31_in_exprBase667);  
+					char_literal63=(Token)match(input,31,FOLLOW_31_in_exprBase669);  
 					stream_31.add(char_literal63);
 
-					Symbol64=(Token)match(input,Symbol,FOLLOW_Symbol_in_exprBase669);  
+					Symbol64=(Token)match(input,Symbol,FOLLOW_Symbol_in_exprBase671);  
 					stream_Symbol.add(Symbol64);
 
 					// C:\\Users\\slh35\\Downloads\\while.g:82:16: ( lExpr )?
@@ -1821,7 +1822,7 @@ public class whileParser extends Parser {
 						case 1 :
 							// C:\\Users\\slh35\\Downloads\\while.g:82:16: lExpr
 							{
-							pushFollow(FOLLOW_lExpr_in_exprBase671);
+							pushFollow(FOLLOW_lExpr_in_exprBase673);
 							lExpr65=lExpr();
 							state._fsp--;
 
@@ -1831,7 +1832,7 @@ public class whileParser extends Parser {
 
 					}
 
-					char_literal66=(Token)match(input,32,FOLLOW_32_in_exprBase674);  
+					char_literal66=(Token)match(input,32,FOLLOW_32_in_exprBase676);  
 					stream_32.add(char_literal66);
 
 					// AST REWRITE
@@ -1878,18 +1879,18 @@ public class whileParser extends Parser {
 				case 2 :
 					// C:\\Users\\slh35\\Downloads\\while.g:83:5: '(' 'hd' exprBase ')'
 					{
-					char_literal67=(Token)match(input,31,FOLLOW_31_in_exprBase695);  
+					char_literal67=(Token)match(input,31,FOLLOW_31_in_exprBase697);  
 					stream_31.add(char_literal67);
 
-					string_literal68=(Token)match(input,45,FOLLOW_45_in_exprBase697);  
+					string_literal68=(Token)match(input,45,FOLLOW_45_in_exprBase699);  
 					stream_45.add(string_literal68);
 
-					pushFollow(FOLLOW_exprBase_in_exprBase699);
+					pushFollow(FOLLOW_exprBase_in_exprBase701);
 					exprBase69=exprBase();
 					state._fsp--;
 
 					stream_exprBase.add(exprBase69.getTree());
-					char_literal70=(Token)match(input,32,FOLLOW_32_in_exprBase701);  
+					char_literal70=(Token)match(input,32,FOLLOW_32_in_exprBase703);  
 					stream_32.add(char_literal70);
 
 					// AST REWRITE
@@ -1923,18 +1924,18 @@ public class whileParser extends Parser {
 				case 3 :
 					// C:\\Users\\slh35\\Downloads\\while.g:84:5: '(' 'tl' exprBase ')'
 					{
-					char_literal71=(Token)match(input,31,FOLLOW_31_in_exprBase716);  
+					char_literal71=(Token)match(input,31,FOLLOW_31_in_exprBase718);  
 					stream_31.add(char_literal71);
 
-					string_literal72=(Token)match(input,54,FOLLOW_54_in_exprBase718);  
+					string_literal72=(Token)match(input,54,FOLLOW_54_in_exprBase720);  
 					stream_54.add(string_literal72);
 
-					pushFollow(FOLLOW_exprBase_in_exprBase720);
+					pushFollow(FOLLOW_exprBase_in_exprBase722);
 					exprBase73=exprBase();
 					state._fsp--;
 
 					stream_exprBase.add(exprBase73.getTree());
-					char_literal74=(Token)match(input,32,FOLLOW_32_in_exprBase722);  
+					char_literal74=(Token)match(input,32,FOLLOW_32_in_exprBase724);  
 					stream_32.add(char_literal74);
 
 					// AST REWRITE
@@ -1968,10 +1969,10 @@ public class whileParser extends Parser {
 				case 4 :
 					// C:\\Users\\slh35\\Downloads\\while.g:85:5: '(' 'cons' ( lExpr )? ')'
 					{
-					char_literal75=(Token)match(input,31,FOLLOW_31_in_exprBase736);  
+					char_literal75=(Token)match(input,31,FOLLOW_31_in_exprBase738);  
 					stream_31.add(char_literal75);
 
-					string_literal76=(Token)match(input,38,FOLLOW_38_in_exprBase738);  
+					string_literal76=(Token)match(input,38,FOLLOW_38_in_exprBase740);  
 					stream_38.add(string_literal76);
 
 					// C:\\Users\\slh35\\Downloads\\while.g:85:16: ( lExpr )?
@@ -1984,7 +1985,7 @@ public class whileParser extends Parser {
 						case 1 :
 							// C:\\Users\\slh35\\Downloads\\while.g:85:16: lExpr
 							{
-							pushFollow(FOLLOW_lExpr_in_exprBase740);
+							pushFollow(FOLLOW_lExpr_in_exprBase742);
 							lExpr77=lExpr();
 							state._fsp--;
 
@@ -1994,7 +1995,7 @@ public class whileParser extends Parser {
 
 					}
 
-					char_literal78=(Token)match(input,32,FOLLOW_32_in_exprBase743);  
+					char_literal78=(Token)match(input,32,FOLLOW_32_in_exprBase745);  
 					stream_32.add(char_literal78);
 
 					// AST REWRITE
@@ -2033,10 +2034,10 @@ public class whileParser extends Parser {
 				case 5 :
 					// C:\\Users\\slh35\\Downloads\\while.g:86:5: '(' 'list' ( lExpr )? ')'
 					{
-					char_literal79=(Token)match(input,31,FOLLOW_31_in_exprBase758);  
+					char_literal79=(Token)match(input,31,FOLLOW_31_in_exprBase760);  
 					stream_31.add(char_literal79);
 
-					string_literal80=(Token)match(input,48,FOLLOW_48_in_exprBase760);  
+					string_literal80=(Token)match(input,48,FOLLOW_48_in_exprBase762);  
 					stream_48.add(string_literal80);
 
 					// C:\\Users\\slh35\\Downloads\\while.g:86:16: ( lExpr )?
@@ -2049,7 +2050,7 @@ public class whileParser extends Parser {
 						case 1 :
 							// C:\\Users\\slh35\\Downloads\\while.g:86:16: lExpr
 							{
-							pushFollow(FOLLOW_lExpr_in_exprBase762);
+							pushFollow(FOLLOW_lExpr_in_exprBase764);
 							lExpr81=lExpr();
 							state._fsp--;
 
@@ -2059,7 +2060,7 @@ public class whileParser extends Parser {
 
 					}
 
-					char_literal82=(Token)match(input,32,FOLLOW_32_in_exprBase765);  
+					char_literal82=(Token)match(input,32,FOLLOW_32_in_exprBase767);  
 					stream_32.add(char_literal82);
 
 					// AST REWRITE
@@ -2101,7 +2102,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					string_literal83=(Token)match(input,49,FOLLOW_49_in_exprBase780); 
+					string_literal83=(Token)match(input,49,FOLLOW_49_in_exprBase782); 
 					string_literal83_tree = (Object)adaptor.create(string_literal83);
 					adaptor.addChild(root_0, string_literal83_tree);
 
@@ -2113,7 +2114,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					Variable84=(Token)match(input,Variable,FOLLOW_Variable_in_exprBase787); 
+					Variable84=(Token)match(input,Variable,FOLLOW_Variable_in_exprBase789); 
 					Variable84_tree = (Object)adaptor.create(Variable84);
 					adaptor.addChild(root_0, Variable84_tree);
 
@@ -2125,7 +2126,7 @@ public class whileParser extends Parser {
 					root_0 = (Object)adaptor.nil();
 
 
-					Symbol85=(Token)match(input,Symbol,FOLLOW_Symbol_in_exprBase793); 
+					Symbol85=(Token)match(input,Symbol,FOLLOW_Symbol_in_exprBase795); 
 					Symbol85_tree = (Object)adaptor.create(Symbol85);
 					adaptor.addChild(root_0, Symbol85_tree);
 
@@ -2180,7 +2181,7 @@ public class whileParser extends Parser {
 			root_0 = (Object)adaptor.nil();
 
 
-			pushFollow(FOLLOW_exprBase_in_expression801);
+			pushFollow(FOLLOW_exprBase_in_expression803);
 			exprBase86=exprBase();
 			state._fsp--;
 
@@ -2196,11 +2197,11 @@ public class whileParser extends Parser {
 				case 1 :
 					// C:\\Users\\slh35\\Downloads\\while.g:91:14: '=?' exprBase
 					{
-					string_literal87=(Token)match(input,37,FOLLOW_37_in_expression804); 
+					string_literal87=(Token)match(input,37,FOLLOW_37_in_expression806); 
 					string_literal87_tree = (Object)adaptor.create(string_literal87);
 					adaptor.addChild(root_0, string_literal87_tree);
 
-					pushFollow(FOLLOW_exprBase_in_expression806);
+					pushFollow(FOLLOW_exprBase_in_expression808);
 					exprBase88=exprBase();
 					state._fsp--;
 
@@ -2271,7 +2272,7 @@ public class whileParser extends Parser {
 				case 1 :
 					// C:\\Users\\slh35\\Downloads\\while.g:93:4: exprBase
 					{
-					pushFollow(FOLLOW_exprBase_in_lExpr818);
+					pushFollow(FOLLOW_exprBase_in_lExpr820);
 					exprBase89=exprBase();
 					state._fsp--;
 
@@ -2353,52 +2354,52 @@ public class whileParser extends Parser {
 	public static final BitSet FOLLOW_39_in_command520 = new BitSet(new long[]{0x00844C0030000000L});
 	public static final BitSet FOLLOW_commands_in_command522 = new BitSet(new long[]{0x0008000000000000L});
 	public static final BitSet FOLLOW_51_in_command524 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_42_in_command540 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_expression_in_command542 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_command544 = new BitSet(new long[]{0x00844C0030000000L});
-	public static final BitSet FOLLOW_commands_in_command546 = new BitSet(new long[]{0x0008000000000000L});
-	public static final BitSet FOLLOW_51_in_command548 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_55_in_command564 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_expression_in_command566 = new BitSet(new long[]{0x0000008000000000L});
-	public static final BitSet FOLLOW_39_in_command568 = new BitSet(new long[]{0x00844C0030000000L});
-	public static final BitSet FOLLOW_commands_in_command570 = new BitSet(new long[]{0x0008000000000000L});
-	public static final BitSet FOLLOW_51_in_command572 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_46_in_command588 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_expression_in_command590 = new BitSet(new long[]{0x0020000000000000L});
-	public static final BitSet FOLLOW_53_in_command592 = new BitSet(new long[]{0x00844C0030000000L});
-	public static final BitSet FOLLOW_commands_in_command595 = new BitSet(new long[]{0x0000030000000000L});
-	public static final BitSet FOLLOW_40_in_command598 = new BitSet(new long[]{0x00844C0030000000L});
-	public static final BitSet FOLLOW_commands_in_command600 = new BitSet(new long[]{0x0000020000000000L});
-	public static final BitSet FOLLOW_41_in_command604 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_50_in_command627 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_vars_in_command633 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_35_in_command635 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_exprs_in_command637 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_exprBase667 = new BitSet(new long[]{0x0000000008000000L});
-	public static final BitSet FOLLOW_Symbol_in_exprBase669 = new BitSet(new long[]{0x0002000198000000L});
-	public static final BitSet FOLLOW_lExpr_in_exprBase671 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_exprBase674 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_exprBase695 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_45_in_exprBase697 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_exprBase_in_exprBase699 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_exprBase701 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_exprBase716 = new BitSet(new long[]{0x0040000000000000L});
-	public static final BitSet FOLLOW_54_in_exprBase718 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_exprBase_in_exprBase720 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_exprBase722 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_exprBase736 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_38_in_exprBase738 = new BitSet(new long[]{0x0002000198000000L});
-	public static final BitSet FOLLOW_lExpr_in_exprBase740 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_exprBase743 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_31_in_exprBase758 = new BitSet(new long[]{0x0001000000000000L});
-	public static final BitSet FOLLOW_48_in_exprBase760 = new BitSet(new long[]{0x0002000198000000L});
-	public static final BitSet FOLLOW_lExpr_in_exprBase762 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_exprBase765 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_49_in_exprBase780 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Variable_in_exprBase787 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Symbol_in_exprBase793 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprBase_in_expression801 = new BitSet(new long[]{0x0000002000000002L});
-	public static final BitSet FOLLOW_37_in_expression804 = new BitSet(new long[]{0x0002000098000000L});
-	public static final BitSet FOLLOW_exprBase_in_expression806 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_exprBase_in_lExpr818 = new BitSet(new long[]{0x0002000098000002L});
+	public static final BitSet FOLLOW_42_in_command542 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_expression_in_command544 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_command546 = new BitSet(new long[]{0x00844C0030000000L});
+	public static final BitSet FOLLOW_commands_in_command548 = new BitSet(new long[]{0x0008000000000000L});
+	public static final BitSet FOLLOW_51_in_command550 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_55_in_command566 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_expression_in_command568 = new BitSet(new long[]{0x0000008000000000L});
+	public static final BitSet FOLLOW_39_in_command570 = new BitSet(new long[]{0x00844C0030000000L});
+	public static final BitSet FOLLOW_commands_in_command572 = new BitSet(new long[]{0x0008000000000000L});
+	public static final BitSet FOLLOW_51_in_command574 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_46_in_command590 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_expression_in_command592 = new BitSet(new long[]{0x0020000000000000L});
+	public static final BitSet FOLLOW_53_in_command594 = new BitSet(new long[]{0x00844C0030000000L});
+	public static final BitSet FOLLOW_commands_in_command597 = new BitSet(new long[]{0x0000030000000000L});
+	public static final BitSet FOLLOW_40_in_command600 = new BitSet(new long[]{0x00844C0030000000L});
+	public static final BitSet FOLLOW_commands_in_command602 = new BitSet(new long[]{0x0000020000000000L});
+	public static final BitSet FOLLOW_41_in_command606 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_50_in_command629 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_vars_in_command635 = new BitSet(new long[]{0x0000000800000000L});
+	public static final BitSet FOLLOW_35_in_command637 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_exprs_in_command639 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_31_in_exprBase669 = new BitSet(new long[]{0x0000000008000000L});
+	public static final BitSet FOLLOW_Symbol_in_exprBase671 = new BitSet(new long[]{0x0002000198000000L});
+	public static final BitSet FOLLOW_lExpr_in_exprBase673 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_exprBase676 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_31_in_exprBase697 = new BitSet(new long[]{0x0000200000000000L});
+	public static final BitSet FOLLOW_45_in_exprBase699 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_exprBase_in_exprBase701 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_exprBase703 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_31_in_exprBase718 = new BitSet(new long[]{0x0040000000000000L});
+	public static final BitSet FOLLOW_54_in_exprBase720 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_exprBase_in_exprBase722 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_exprBase724 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_31_in_exprBase738 = new BitSet(new long[]{0x0000004000000000L});
+	public static final BitSet FOLLOW_38_in_exprBase740 = new BitSet(new long[]{0x0002000198000000L});
+	public static final BitSet FOLLOW_lExpr_in_exprBase742 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_exprBase745 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_31_in_exprBase760 = new BitSet(new long[]{0x0001000000000000L});
+	public static final BitSet FOLLOW_48_in_exprBase762 = new BitSet(new long[]{0x0002000198000000L});
+	public static final BitSet FOLLOW_lExpr_in_exprBase764 = new BitSet(new long[]{0x0000000100000000L});
+	public static final BitSet FOLLOW_32_in_exprBase767 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_49_in_exprBase782 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Variable_in_exprBase789 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Symbol_in_exprBase795 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_exprBase_in_expression803 = new BitSet(new long[]{0x0000002000000002L});
+	public static final BitSet FOLLOW_37_in_expression806 = new BitSet(new long[]{0x0002000098000000L});
+	public static final BitSet FOLLOW_exprBase_in_expression808 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_exprBase_in_lExpr820 = new BitSet(new long[]{0x0002000098000002L});
 }

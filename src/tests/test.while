@@ -1,12 +1,34 @@
+function not :
+read Op1
+%
+Result := nil;
+if Op1 then Result := (false) else Result := (true) fi
+%
+write Result
+
+function and :
+read Op1, Op2
+%
+Result := nil;
+if (not Op1) then
+ Result := (false)
+else
+ if (not Op2) then
+ Result := (false)
+ else
+ Result := (true)
+ fi
+fi
+%
+write Result
+
 function add :
 read Op1, Op2
 %
-Result := (cons nil nil);
-if Op2 then
-Result := (cons nil nil)
-else
- Result := (cons nil nil)
-fi
+ Result := Op1 ;
+for Op2 do
+ Result := ( cons nil Result )
+od
 %
 write Result
 
@@ -14,14 +36,25 @@ function sub :
 read Op1, Op2
 %
  Result := Op1;
-for Op2 do
- Result := (tl Result)
-od;
 foreach Element in Op2 do
-Result := Op2
-od;
-while Op2 do
-Result := Op2
+ Result := (tl Result)
 od
+%
+write Result
+
+function mul :
+read Op1, Op2
+%
+Result := nil;
+for Op1 do
+ Result := (add Result Op2)
+od
+%
+write Result
+
+function main :
+read Op1
+%
+Result := nil
 %
 write Result
