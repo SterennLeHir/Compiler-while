@@ -1,0 +1,6 @@
+//Symbole = Min (Maj|Min|Dec)*(‘!’|’?’) ?
+//Variable = Maj (Maj|Min|Dec)*(‘!’|’?’) ? 
+
+ahahahah
+Ahahahah
+01ahahah

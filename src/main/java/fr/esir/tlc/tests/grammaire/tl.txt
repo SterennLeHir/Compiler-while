@@ -1,0 +1,25 @@
+//ExprBase : tl (tail)
+
+//Crée un arbre avec A et B comme fils gauche et droit
+T := (cons A B)
+
+//Crée un symbole aaaa
+S := aaaa
+
+//Crée un arbre vide
+n := (cons)
+
+//Renvoie B
+tl(T)
+
+//Renvoie nil
+tl(S)
+
+//Renvoie nil
+tl(n)
+
+//Ne marche pas, parenthèses au mauvais endroit
+tl(T)
+
+//Ne marche pas : trop de paramètres
+(tl T A)

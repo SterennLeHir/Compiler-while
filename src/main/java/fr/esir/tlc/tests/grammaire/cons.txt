@@ -1,0 +1,27 @@
+//ExprBase : fonction cons
+
+//Crée un arbre vide
+A := (cons)
+
+//Construit l'arbre 1
+//Pas sûr que ça fonctionne lol
+B := (cons 1)
+
+//Construit un arbre binaire ayant 1 pour fils gauche et 2 pour fils droit.
+//Pas sûr que ça fonctionne lol, parce que c'est des chiffres, et pas des arbres.
+C := (cons 1 2)
+
+//Construit un arbre binaire ayant l'arbre A pour fils gauche et l'arbre B pour fils droit.
+D := (cons A B)
+
+//Construit un arbre binaire tel que (cons T1 T2 ... Tn) = (cons T1(cons T2 ... (cons Tn-1 Tn)...)
+E := (cons A B C D)
+
+//Ce n'est pas censé marcher, il manque la parenthèse de fin
+F := (cons A
+
+//Ce n'est pas censé marcher, il manque les deux parenthèses
+G := cons A
+
+//Ce n'est pas censé marcher, ils sont enchaînés sans parenthèses.
+H := (cons cons)

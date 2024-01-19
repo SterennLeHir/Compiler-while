@@ -1,0 +1,28 @@
+//ExprBase : fonction list
+
+//Crée une liste vide
+A := (list)
+
+//Ne marche pas, on ne peut pas créer de liste avec un paramètre chiffre.
+B := (list 1)
+
+//Crée une liste à un élément. <=> C := list(A nil)
+C := (list A)
+
+//Crée une liste avec deux éléments, A et B
+D := (list A B)
+
+//Crée une liste avec quatres éléments 
+E := (list A B C D)
+
+//Marche pas (j'espère)
+F := (list list)
+
+//Ça non plus
+G := (list A
+
+//M'enfin, faut faire des efforts d'écriture là !
+H := list A
+
+//C'est pas JAVA bordel !
+I := list(A B)
