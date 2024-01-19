@@ -17,8 +17,8 @@ public class VisitorSemantic {
     private int id; //sert à donner des noms aux tables sans fonction ex : if1, if2, else3
 
     public VisitorSemantic(){
-        this.rootTable=new Table("_ROOT_");//AST PAS PAREIL QUAND 1 fonction comparé à n fonctions => pas de racine avec 1 seule func
-        this.currentTable=this.rootTable;
+        this.rootTable=null;//new Table("_ROOT_");//AST PAS PAREIL QUAND 1 fonction comparé à n fonctions => pas de racine avec 1 seule func
+        this.currentTable=null;//this.rootTable;
         this.leftSum = 0;
         this.rightSum = 0;
         this.N_params = 0;
@@ -111,9 +111,13 @@ public class VisitorSemantic {
                     treatingParams(t);
                     break;
                 }
-                case "nil":{
-                    System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
+                case "Node_Program":{
+                    //System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
                     treatingRoot(t);
+                    break;
+                }
+                case "nil":{
+                    treatingRoot(t.getChild(0));
                     break;
                 }
             }
@@ -298,7 +302,6 @@ public class VisitorSemantic {
         }
     }
 
-    //je skip eux pour le moment @TODO
     private void treatingTail(Tree t) throws Exception{
         //The child is the one that you are getting the tail of
         if(!this.currentTable.findVarOrParam(t.getChild(0).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
@@ -327,7 +330,7 @@ public class VisitorSemantic {
         currentTable = table;
         visit(t.getChild(1));
 
-        if(t.getChildCount()>=2){ //On s'assure de l'existence de l'instruction Else
+        if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
             currentTable = oldTable;
             visit(t.getChild(2));
         }
@@ -381,7 +384,7 @@ public class VisitorSemantic {
 
         this.currentTable.addVar(t.getChild(0).toString());
 
-        visit(t.getChild(1)); //Toujours un Node_Bloc
+        visit(t.getChild(1)); // Toujours un Node_Bloc
     }
 
     //Constructeurs
@@ -395,7 +398,7 @@ public class VisitorSemantic {
                 if(!this.currentTable.findVarOrParam(t.getChild(i).toString())){//=> parcours de la table et des tables parentes pour trouver la variable/identifiant ou le param
                     throw new UndeclaredVariableException("APPEL A UNE VARIABLE NON DECLAREE DANS CONS");
                 }
-            }//PAS D'APPEL DE FONCTION POSSIBLE DANS UN CONS DANS NOTRE IMPLEM
+            } //PAS D'APPEL DE FONCTION POSSIBLE DANS UN CONS DANS NOTRE IMPLEMENTATION
         }
     }
 

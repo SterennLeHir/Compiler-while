@@ -46,14 +46,14 @@ public class Main {
             VisitorSemantic v = new VisitorSemantic();
             v.visit(t);
 
-            System.out.println("\nCODE 3 ADDRESSES\n-------------------------------------------------------");
+            System.out.println("\nCODE 3 ADRESSES\n-------------------------------------------------------");
 
             Generator gen = new Generator(t, v.getRootTable());
             gen.generateCode();
             gen.afficheInstructions();
 
             System.out.println("\nTRADUCTION\n-------------------------------------------------------");
-
+            System.out.println("Not implemented");
         } catch (RecognitionException e) {
             e.printStackTrace();
         }

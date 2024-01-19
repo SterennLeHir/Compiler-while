@@ -118,9 +118,13 @@ public class Generator {
                     treatingParams(t);
                     break;
                 }
-                case "nil":{
+                case "Node_Program":{
                     System.out.println("VISITE ROOT"); //Cas de la racine (défensif : vérifier qu'il a des enfants)
                     treatingRoot(t);
+                    break;
+                }
+                case "nil":{
+                    treatingRoot(t.getChild(0));
                     break;
                 }
         }
@@ -279,7 +283,7 @@ public class Generator {
             //ELSELABEL
             this.instructions.add(new Label(elseLabel));
 
-            if(t.getChildCount()>=2){ //On s'assure de l'existence de l'instruction Else
+            if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
                 visit(t.getChild(2));
             }
             //ENDLABEL
@@ -389,6 +393,11 @@ public class Generator {
                     this.listeRegistres.add(r2.getName());
                     this.instructions.add(new Affectation(r2.getName(), "call cons " + t.getChildCount()));
                 }
+            }
+            if(t.getChildCount() == 0){
+                Register r2 = new Register();
+                this.listeRegistres.add(r2.getName());
+                this.instructions.add(new Affectation(r2.getName(), "call cons " + t.getChildCount()));
             }
         }
 
