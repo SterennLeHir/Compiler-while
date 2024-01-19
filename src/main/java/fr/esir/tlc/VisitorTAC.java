@@ -16,7 +16,7 @@ public class VisitorTAC {
         this.id = 0;
         this.regId = 0;
     }
-/*
+
     public void visit(Tree t){
         switch (t.toString()){
             case "Node_Function": {
@@ -118,7 +118,7 @@ public class VisitorTAC {
     //Concernant les fonctions
 
     public void treatingFunction(Tree t){
-        this.tac += t.getChild(0)+":"; //on donne le nom en label
+        this.tac += t.getChild(0)+":\n"; //on donne le nom en label
         visit(t.getChild(1)); //VISITE LES INPUTS
         visit(t.getChild(3));//VISITE LES OUTPUTS
         visit(t.getChild(2));//VISITE LE BLOC
@@ -341,6 +341,4 @@ public class VisitorTAC {
             t.getChild(i);
         }
     }
-
- */
 }
