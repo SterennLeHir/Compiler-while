@@ -1,18 +1,18 @@
 package fr.esir.tlc;
 
-import org.antlr.runtime.tree.Tree;
+import fr.esir.tlc.threeAdressesCode.Instruction;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VisitorTAC {
 
-    private String tac;
+    private List<Instruction> instructions;
     private int id; //sert à donner des labels aux blocs : if1, if2, else3
     private int regId;//donne le numéro du registre
 
     public VisitorTAC(){
-        this.tac = "";
+        this.instructions = new ArrayList<>() ;
         this.id = 0;
         this.regId = 0;
     }

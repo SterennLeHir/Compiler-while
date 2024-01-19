@@ -47,7 +47,7 @@ public class Main {
 
             System.out.println("\nCODE 3 ADDRESSES\n-------------------------------------------------------");
 
-            //VisitorTAC v2 = new VisitorTAC();
+            //Generator v2 = new Generator(t, v.getRootTable());
             //v2.visit(t);
 
             System.out.println("\nTRADUCTION\n-------------------------------------------------------");

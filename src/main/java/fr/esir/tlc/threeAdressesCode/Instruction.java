@@ -1,7 +1,7 @@
-package fr.esir.tlc.ThreeAdressesCode;
+package fr.esir.tlc.threeAdressesCode;
 
 
-public abstract class Operation {
+public abstract class Instruction {
     /**
      * @return a string corresponding to the Operation
      */
