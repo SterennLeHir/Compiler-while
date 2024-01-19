@@ -265,29 +265,60 @@ public class Generator {
         //Structures de contrôle
 
         public void treatingIf(Tree t){//Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
-            //INSTRUCTIONS CONDITION DU IF
-            Register r = new Register();
-            this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
 
-            String ifLabel = "if"+id++;
-            String elseLabel = "else"+id++;
+            if("Node_Call".equals(t.getChild(0).toString())){
+                //INSTRUCTIONS CONDITION DU IF
+                Register r = new Register();
+                this.instructions.add(new Affectation(r.getName(), t.getChild(1).toString()));
+                this.instructions.add(new Param(r.getName()));
+                Register r2 = new Register();
+                this.instructions.add(new Affectation(r2.getName(), "call not 1"));
 
-            // if OP goto ELSELABEL
-            this.instructions.add(new IfzGoto(r.getName(), elseLabel));
+                String ifLabel = "if"+id++;
+                String elseLabel = "else"+id++;
 
-            //CORPS DU IF
-            visit(t.getChild(1));
+                // if OP goto ELSELABEL
+                this.instructions.add(new IfzGoto(r2.getName(), elseLabel));
 
-            // goto ENDLABEL
-            this.instructions.add(new Goto(ifLabel));
-            //ELSELABEL
-            this.instructions.add(new Label(elseLabel));
-
-            if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
+                //CORPS DU IF
                 visit(t.getChild(2));
+
+                // goto ENDLABEL
+                this.instructions.add(new Goto(ifLabel));
+                //ELSELABEL
+                this.instructions.add(new Label(elseLabel));
+
+                if(t.getChildCount()>3){ //On s'assure de l'existence de l'instruction Else
+                    visit(t.getChild(3));
+                }
+                //ENDLABEL
+                this.instructions.add(new Label(ifLabel));
             }
-            //ENDLABEL
-            this.instructions.add(new Label(ifLabel));
+            else{
+                //INSTRUCTIONS CONDITION DU IF
+                Register r = new Register();
+                this.instructions.add(new Affectation(r.getName(), t.getChild(0).toString()));
+
+                String ifLabel = "if"+id++;
+                String elseLabel = "else"+id++;
+
+                // if OP goto ELSELABEL
+                this.instructions.add(new IfzGoto(r.getName(), elseLabel));
+
+                //CORPS DU IF
+                visit(t.getChild(1));
+
+                // goto ENDLABEL
+                this.instructions.add(new Goto(ifLabel));
+                //ELSELABEL
+                this.instructions.add(new Label(elseLabel));
+
+                if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
+                    visit(t.getChild(2));
+                }
+                //ENDLABEL
+                this.instructions.add(new Label(ifLabel));
+            }
         }
 
         public void treatingElse(Tree t) {

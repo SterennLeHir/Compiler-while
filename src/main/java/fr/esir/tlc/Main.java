@@ -10,7 +10,6 @@ import java.io.File;
 
 public class Main {
 
-
     public static void main(String[] args) throws Exception {
         //On vérifie si les arguments de main sont vides ou non.
         if(args.length == 0) {

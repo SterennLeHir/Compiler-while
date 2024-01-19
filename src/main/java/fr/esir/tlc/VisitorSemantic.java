@@ -270,11 +270,20 @@ public class VisitorSemantic {
         String name = t.getChild(0).toString();
         //On vérifie que la fonction existe bien (dans notre implémentation elle n'existe que si elle est déclarée avant + pas d'appels recursifs @TODO)
         boolean functionFound = false;
-        for(Table child : this.rootTable.getChildren()){
-            if(name.equals(child.getName())){ //pas d'appel recursif ?? (pas encore fait) @TODO
-                functionFound = true;
-                this.N_params = child.getN_inputs(); //le nombre de param que prend la fonction appelée
-                this.rightSum += child.getN_outputs(); //on ajoute le nombre d'outputs de la fonction
+        if(name.equals("not")){
+            functionFound = true;
+        }else if(name.equals("true")||name.equals("false")){
+            functionFound = true;
+            this.N_params = 0;
+            this.rightSum += 1;
+        }
+        else{
+            for(Table child : this.rootTable.getChildren()){
+                if(name.equals(child.getName())){ //pas d'appel recursif ?? (pas encore fait) @TODO
+                    functionFound = true;
+                    this.N_params = child.getN_inputs(); //le nombre de param que prend la fonction appelée
+                    this.rightSum += child.getN_outputs(); //on ajoute le nombre d'outputs de la fonction
+                }
             }
         }
 
@@ -328,11 +337,22 @@ public class VisitorSemantic {
         Table oldTable = currentTable; //pour le else
         //Trois enfants : Op (ne peut pas être directement un appel de fontion), Node_Bloc, Node_Else (optionnel)
         currentTable = table;
-        visit(t.getChild(1));
-
-        if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
-            currentTable = oldTable;
+        
+        //On regarde si "not"
+        if("Node_Call".equals(t.getChild(0).toString())){
+            //on visite pas le node 1
             visit(t.getChild(2));
+            if(t.getChildCount()>3){ //On s'assure de l'existence de l'instruction Else
+                currentTable = oldTable;
+                visit(t.getChild(3));
+            }
+        }
+        else{
+            visit(t.getChild(1));
+            if(t.getChildCount()>2){ //On s'assure de l'existence de l'instruction Else
+                currentTable = oldTable;
+                visit(t.getChild(2));
+            }
         }
     }
 
