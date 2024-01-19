@@ -28,7 +28,7 @@ public class VisitorSemantic {
     }
 
     public void visit(Tree t) throws Exception {
-        if(correctSemantic){//On ne continue de visiter que si jusque là, la sémantique est correcte
+        if(correctSemantic){//On ne continue de visiter que si jusque-là, la sémantique est correcte
             switch (t.toString()){
                 case "Node_Function": {
                     //System.out.println("VISITE FONCTION");
